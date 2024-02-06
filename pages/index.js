@@ -7,7 +7,7 @@ const Home = () => (
   <div>
     <Navibar />
     <div className="flex justify-center items-center h-screen">
-    <Image src={TemMan} width={350} height={350} />
+      <Image src={TemMan} width={350} height={350} />
     </div>
   </div>
 );
