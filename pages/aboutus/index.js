@@ -1,8 +1,8 @@
-import Navbar from "../components/navbar/index";
+import Navibar from "../../components/navbar/index";
 
 const Aboutus = () => (
   <div>
-    <Navbar />
+    <Navibar />
   </div>
 );
 

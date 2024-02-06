@@ -12,7 +12,7 @@ import {
 } from "@nextui-org/react";
 import { AcmeLogo } from "./acmeLogo";
 
-export default function Navibar() {
+export default function NaviBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [

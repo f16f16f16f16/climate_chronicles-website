@@ -1,8 +1,8 @@
-import Navbar from "../components/navbar/index";
+import NaviBar from "../../components/navbar/index";
 
 const Category = () => (
   <div>
-    <Navbar />
+    <NaviBar />
   </div>
 );
 
