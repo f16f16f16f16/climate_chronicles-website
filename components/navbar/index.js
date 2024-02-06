@@ -31,7 +31,7 @@ export default function Navibar() {
         />
         <NavbarBrand>
           {/* <AcmeLogo/> */}
-          <a className="font-bold text-inherit" href="/">Climate Chronicles</a>
+          <Link className="font-bold text-inherit" href="/">Climate Chronicles</Link>
         </NavbarBrand>
       </NavbarContent>
 
