@@ -1,5 +1,12 @@
 import "@/styles/globals.css";
+import {NextUIProvider} from '@nextui-org/react'
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }) {
+  return (
+    <NextUIProvider className="bg-blue-200">
+      <Component {...pageProps} />
+    </NextUIProvider>
+  )
 }
+
+export default MyApp;
