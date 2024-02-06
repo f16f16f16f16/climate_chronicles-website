@@ -121,19 +121,19 @@ export default function NaviBar() {
         </Dropdown>
 
         <NavbarItem>
-          <Link color="foreground" href="status">
+          <Link color="foreground" href="/status">
             Check Status
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="aboutus">
+          <Link color="foreground" href="/aboutus">
             About Us
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="primary" href="contact">
+          <Button as={Link} color="primary" href="/contact">
             Contact Us
           </Button>
         </NavbarItem>
