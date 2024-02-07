@@ -53,11 +53,11 @@ export default function NaviBar() {
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
+          className="sm:hidden text-foreground"
         />
         <NavbarBrand>
           {/* <AcmeLogo/> */}
-          <Link className="font-bold text-inherit" href="/">
+          <Link className="font-bold text-foreground" href="/">
             Climate Chronicles
           </Link>
         </NavbarBrand>
@@ -80,7 +80,7 @@ export default function NaviBar() {
           </NavbarItem>
           <DropdownMenu
             aria-label="ACME features"
-            className="w-[340px]"
+            className="w-[340px] text-foreground"
             itemClasses={{
               base: "gap-4",
             }}
