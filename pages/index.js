@@ -5,9 +5,6 @@ import {
   Textarea,
   Card,
   CardHeader,
-  CardBody,
-  CardFooter,
-  Button,
 } from "@nextui-org/react";
 
 import TemMan from "../assets/images/TemperMan.gif";
