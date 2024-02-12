@@ -30,9 +30,9 @@ const Air = () => {
         >
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
             <p className="text-tiny text-white/60 uppercase font-bold">
-              ฝุ่นควัน ฝุ่นควัน ฝุ่นควัน ฝุ่นควัน ฝุ่นควัน ฝุ่นควัน
+            Air Pollution Air Pollution Air Pollution
             </p>
-            <h4 className="text-white font-medium text-large">ฝุ่นควัน</h4>
+            <h4 className="text-white font-medium text-large">Air Pollution</h4>
           </CardHeader>
           <Image
             removeWrapper

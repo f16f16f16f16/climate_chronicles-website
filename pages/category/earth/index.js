@@ -30,9 +30,9 @@ const Earth = () => {
         >
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
             <p className="text-tiny text-white/60 uppercase font-bold">
-            ไฟป่า ไฟป่า ไฟป่า ไฟป่า ไฟป่า ไฟป่า
+            Wildfire Wildfire Wildfire Wildfire
             </p>
-            <h4 className="text-white font-medium text-large">ไฟป่า</h4>
+            <h4 className="text-white font-medium text-large">Wildfire</h4>
           </CardHeader>
           <Image
             removeWrapper

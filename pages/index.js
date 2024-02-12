@@ -69,9 +69,9 @@ const Home = () => {
         >
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
             <p className="text-tiny text-white/60 uppercase font-bold">
-              Earth Earth Earth Earth Earth Earth
+            Forests, Soil and Life Forests, Soil and Life
             </p>
-            <h4 className="text-white font-medium text-large">Earth</h4>
+            <h4 className="text-white font-medium text-large">Forests, Soil and Life</h4>
           </CardHeader>
           <Image
             removeWrapper

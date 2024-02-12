@@ -30,9 +30,9 @@ const Water = () => {
         >
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
             <p className="text-tiny text-white/60 uppercase font-bold">
-            สึนามิ สึนามิ สึนามิ สึนามิ สึนามิ สึนามิ
+            Tsunami Tsunami Tsunami Tsunami
             </p>
-            <h4 className="text-white font-medium text-large">สึนามิ</h4>
+            <h4 className="text-white font-medium text-large">Tsunami</h4>
           </CardHeader>
           <Image
             removeWrapper
