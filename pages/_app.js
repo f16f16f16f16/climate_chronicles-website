@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import 'mapbox-gl/dist/mapbox-gl.css';
 import {NextUIProvider} from '@nextui-org/react'
 
 function MyApp({ Component, pageProps }) {
