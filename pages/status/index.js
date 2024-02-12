@@ -4,7 +4,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 
 import Navibar from "../../components/navbar/index";
 
-mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
+mapboxgl.accessToken = process.env.MAPBOX_ACCESS_TOKEN;
 
 const Status = () => {
   const mapContainer = useRef(null);
