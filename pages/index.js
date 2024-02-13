@@ -31,6 +31,7 @@ const Home = () => {
         <Textarea
           isReadOnly
           variant="bordered"
+          className="max-w-72 pt-10 md:max-w-md xl:max-w-xl "
           defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
         Donec quis ante at purus pulvinar tempus. Vivamus et tellus id libero imperdiet congue. 
         Aenean consectetur magna odio, quis porttitor ex mollis in. Nulla pretium malesuada molestie. 
@@ -38,7 +39,6 @@ const Home = () => {
         volutpat maximus lacus. Nulla vel odio in ipsum fringilla malesuada quis eu velit. Nullam id euismod enim, 
         at fringilla nisl. Proin quis rutrum purus. Vestibulum gravida urna tellus, mattis cursus ante pharetra id.
          Mauris ut lorem elit. Maecenas a lorem mauris."
-          className="max-w-72 pt-10 md:max-w-md"
         />
         <Image className="w-36 py-10 md:w-64" src={TemMan} />
       </div>
