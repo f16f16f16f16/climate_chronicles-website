@@ -10,7 +10,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <NextUIProvider className="bg-blue-200">
       <Head>
-        <title>Climate Chronicles - Stories of Origin &amp; Impact in Our Environment</title>
+        <title>Climate Chronicles - Stories of Origin &amp; Impact in Our Environment.</title>
+        <meta name="description" content="Explore 'The Climate Chronicles' for impactful stories on environmental origins and effects. Discover tales of change, resilience, and innovation in our fight for a sustainable planet." />
       </Head>
       <Component {...pageProps} />
       <Analytics />
