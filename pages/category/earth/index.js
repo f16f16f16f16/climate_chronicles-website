@@ -35,7 +35,6 @@ const Earth = () => {
             <h4 className="text-white font-medium text-large">Wildfire</h4>
           </CardHeader>
           <Image
-            removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
             src={ImgEarth2}

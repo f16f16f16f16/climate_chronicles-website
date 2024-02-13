@@ -40,7 +40,7 @@ const Home = () => {
         at fringilla nisl. Proin quis rutrum purus. Vestibulum gravida urna tellus, mattis cursus ante pharetra id.
          Mauris ut lorem elit. Maecenas a lorem mauris."
         />
-        <Image className="w-36 py-10 md:w-64" src={TemMan} />
+        <Image className="w-36 py-10 md:w-64" alt="TemperMan" src={TemMan} />
       </div>
 
       <div className=" gap-2 grid grid-cols-1 px-10 pb-20 space-y-6">
@@ -56,6 +56,7 @@ const Home = () => {
             <h4 className="text-white font-medium text-large">Air</h4>
           </CardHeader>
           <Image
+            removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
             src={Air}
@@ -73,6 +74,7 @@ const Home = () => {
             <h4 className="text-white font-medium text-large">Forests, Soil and Life</h4>
           </CardHeader>
           <Image
+            removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
             src={Earth}
@@ -90,6 +92,7 @@ const Home = () => {
             <h4 className="text-white font-medium text-large">Water</h4>
           </CardHeader>
           <Image
+            removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
             src={Water}

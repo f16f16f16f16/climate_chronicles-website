@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import 'mapbox-gl/dist/mapbox-gl.css';
 import {NextUIProvider} from '@nextui-org/react'
 import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function MyApp({ Component, pageProps }) {
   return (
