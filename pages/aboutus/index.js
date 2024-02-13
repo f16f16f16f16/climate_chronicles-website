@@ -16,39 +16,39 @@ const Aboutus = () => (
       About Us
     </p>
 
-    <div class="flex flex-col items-center space-y-8 p-10 md:flex-row md:justify-center  md:space-y-0 md:space-x-24">
-      <div class="flex flex-col items-center space-y-2">
+    <div className="flex flex-col items-center space-y-8 p-10 md:flex-row md:justify-center  md:space-y-0 md:space-x-24">
+      <div className="flex flex-col items-center space-y-2">
         <Image className="w-60 md:w-72 " src={ImgProO} />
-        {/* <span class="block font-semibold text-md md:text-lg text-gray-900">Nontaphat Pongpis</span>
-        <span class="block text-xs md:text-sm text-gray-600">folkyuseforwork@gmail.com</span>
-        <span class="block text-xs md:text-sm text-blue-500">Programmer (Frontend, Backend)</span> */}
+        {/* <span className="block font-semibold text-md md:text-lg text-gray-900">Nontaphat Pongpis</span>
+        <span className="block text-xs md:text-sm text-gray-600">folkyuseforwork@gmail.com</span>
+        <span className="block text-xs md:text-sm text-blue-500">Programmer (Frontend, Backend)</span> */}
       </div>
-      <div class="flex flex-col items-center space-y-2">
+      <div className="flex flex-col items-center space-y-2">
         <Image className="w-60 md:w-72 " src={ImgProP} />
-        {/* <span class="block font-semibold text-md md:text-lg text-gray-900">Pomphet Damlert</span>
-        <span class="block text-xs md:text-sm text-gray-600">pomphetdamlert@gmail.com</span>
-        <span class="block text-xs md:text-sm text-blue-500">Programmer (Backend)</span> */}
+        {/* <span className="block font-semibold text-md md:text-lg text-gray-900">Pomphet Damlert</span>
+        <span className="block text-xs md:text-sm text-gray-600">pomphetdamlert@gmail.com</span>
+        <span className="block text-xs md:text-sm text-blue-500">Programmer (Backend)</span> */}
       </div>
     </div>
     <Divider className="my-4" style={{height: '2px'}} />
-    <div class="flex flex-col items-center space-y-8 p-10 md:flex-row md:justify-center  md:space-y-0 md:space-x-8">
-      <div class="flex flex-col items-center space-y-2">
+    <div className="flex flex-col items-center space-y-8 p-10 md:flex-row md:justify-center  md:space-y-0 md:space-x-8">
+      <div className="flex flex-col items-center space-y-2">
         <Image className="w-60 md:w-72 " src={ImgF} />
-        {/* <span class="block font-semibold text-md md:text-lg text-gray-900">Nontaphat Pongpis</span>
-        <span class="block text-xs md:text-sm text-gray-600">folkyuseforwork@gmail.com</span>
-        <span class="block text-xs md:text-sm text-blue-500">Programmer (Frontend, Backend)</span> */}
+        {/* <span className="block font-semibold text-md md:text-lg text-gray-900">Nontaphat Pongpis</span>
+        <span className="block text-xs md:text-sm text-gray-600">folkyuseforwork@gmail.com</span>
+        <span className="block text-xs md:text-sm text-blue-500">Programmer (Frontend, Backend)</span> */}
       </div>
-      <div class="flex flex-col items-center space-y-2">
+      <div className="flex flex-col items-center space-y-2">
         <Image className="w-60 md:w-72 " src={ImgJ} />
-        {/* <span class="block font-semibold text-md md:text-lg text-gray-900">Pomphet Damlert</span>
-        <span class="block text-xs md:text-sm text-gray-600">pomphetdamlert@gmail.com</span>
-        <span class="block text-xs md:text-sm text-blue-500">Programmer (Backend)</span> */}
+        {/* <span className="block font-semibold text-md md:text-lg text-gray-900">Pomphet Damlert</span>
+        <span className="block text-xs md:text-sm text-gray-600">pomphetdamlert@gmail.com</span>
+        <span className="block text-xs md:text-sm text-blue-500">Programmer (Backend)</span> */}
       </div>
-      <div class="flex flex-col items-center space-y-2">
+      <div className="flex flex-col items-center space-y-2">
         <Image className="w-60 md:w-72 " src={ImgO} />
-        {/* <span class="block font-semibold text-md md:text-lg text-gray-900">Tanapat Kongnomnan</span>
-        <span class="block text-xs md:text-sm text-gray-600">owensickzz@gmail.com</span>
-        <span class="block text-xs md:text-sm text-blue-500">UX/UI Designer</span> */}
+        {/* <span className="block font-semibold text-md md:text-lg text-gray-900">Tanapat Kongnomnan</span>
+        <span className="block text-xs md:text-sm text-gray-600">owensickzz@gmail.com</span>
+        <span className="block text-xs md:text-sm text-blue-500">UX/UI Designer</span> */}
       </div>
     </div>
   </div>

@@ -34,8 +34,7 @@ const Category = () => {
             </p>
             <h4 className="text-white font-medium text-large">Air</h4>
           </CardHeader>
-          <Image
-            removeWrapper
+          <Image          
             alt="Card background"
             className="z-0 w-full h-full object-cover"
             src={ImgAir}
@@ -53,7 +52,6 @@ const Category = () => {
             <h4 className="text-white font-medium text-large">Earth</h4>
           </CardHeader>
           <Image
-            removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
             src={ImgEarth}
@@ -71,7 +69,6 @@ const Category = () => {
             <h4 className="text-white font-medium text-large">Water</h4>
           </CardHeader>
           <Image
-            removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
             src={ImgWater}

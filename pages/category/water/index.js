@@ -34,8 +34,7 @@ const Water = () => {
             </p>
             <h4 className="text-white font-medium text-large">Tsunami</h4>
           </CardHeader>
-          <Image
-            removeWrapper
+          <Image            
             alt="Card background"
             className="z-0 w-full h-full object-cover"
             src={ImgWater2}

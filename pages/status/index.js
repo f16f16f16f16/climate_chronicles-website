@@ -33,7 +33,7 @@ const Status = () => {
     <div>
       <Navibar />
       <div>
-        <div class="bg-[rgb(35,55,75,0.9)] text-white px-3 py-1.5 font-mono z-10 absolute m-3 rounded">
+        <div className="bg-[rgb(35,55,75,0.9)] text-white px-3 py-1.5 font-mono z-10 absolute m-3 rounded">
           Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
         </div>
         <div ref={mapContainer} className="h-96" />
