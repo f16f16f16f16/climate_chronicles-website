@@ -56,7 +56,6 @@ const Home = () => {
             <h4 className="text-white font-medium text-large">Air</h4>
           </CardHeader>
           <Image
-            removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
             src={Air}
@@ -74,7 +73,6 @@ const Home = () => {
             <h4 className="text-white font-medium text-large">Forests, Soil and Life</h4>
           </CardHeader>
           <Image
-            removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
             src={Earth}
@@ -92,7 +90,6 @@ const Home = () => {
             <h4 className="text-white font-medium text-large">Water</h4>
           </CardHeader>
           <Image
-            removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
             src={Water}
