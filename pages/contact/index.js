@@ -36,7 +36,7 @@ const Contact = () => (
           disableAutosize
           classNames={{
             base: "max-w-xs md:max-w-lg xl:max-w-xl",
-            input: "resize-y min-h-[40px]",
+            input: "resize-y min-h-[120px]",
           }}
         />
         <Button className="w-28 md:w-36 xl:w-40" radius="full" color="primary">
