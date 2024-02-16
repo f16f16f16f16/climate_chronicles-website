@@ -49,15 +49,15 @@ export default function NaviBar() {
   };
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar style={{ backgroundColor: '#1A3257' }} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden text-foreground"
+          className="sm:hidden text-white"
         />
         <NavbarBrand>
           {/* <AcmeLogo/> */}
-          <Link className="font-bold text-foreground" href="/">
+          <Link className="font-bold text-foreground text-white" href="/">
             Climate Chronicles
           </Link>
         </NavbarBrand>
@@ -69,7 +69,7 @@ export default function NaviBar() {
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="text-medium text-foreground p-0 bg-transparent data-[hover=true]:bg-transparent "
+                className="text-medium text-foreground text-white p-0 bg-transparent data-[hover=true]:bg-transparent "
                 endContent={icons.chevron}
                 radius="sm"
                 variant="light"
@@ -121,12 +121,12 @@ export default function NaviBar() {
         </Dropdown>
 
         <NavbarItem>
-          <Link color="foreground" href="/status">
+          <Link className="text-white" href="/status">
             Check Status
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/aboutus">
+          <Link className="text-white" href="/aboutus">
             About Us
           </Link>
         </NavbarItem>

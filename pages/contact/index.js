@@ -40,7 +40,7 @@ const Contact = () => (
           }}
         />
         <Button className="w-28 md:w-36 xl:w-40" radius="full" color="primary">
-          Button
+          Submit
         </Button>
       </div>
     </div>
