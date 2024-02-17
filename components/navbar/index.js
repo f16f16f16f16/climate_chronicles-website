@@ -13,6 +13,7 @@ import {
   DropdownTrigger,
   DropdownMenu,
   DropdownItem,
+  Spacer
 } from "@nextui-org/react";
 
 import {
@@ -49,7 +50,10 @@ export default function NaviBar() {
   };
 
   return (
-    <Navbar style={{ backgroundColor: '#1A3257' }} onMenuOpenChange={setIsMenuOpen}>
+    <Navbar
+      style={{ backgroundColor: "#1A3257" }}
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -57,8 +61,15 @@ export default function NaviBar() {
         />
         <NavbarBrand>
           {/* <AcmeLogo/> */}
-          <Link className="font-bold text-foreground text-white" href="/">
-            Climate Chronicles
+          <Link
+            className="font-bold text-foreground text-white text-lg"
+            href="/"
+          >
+            <div className="flex flex-col">
+              <span>Climate</span>
+              <Spacer y={-5} />
+              <span>Chronicles</span>
+            </div>
           </Link>
         </NavbarBrand>
       </NavbarContent>
