@@ -17,6 +17,7 @@ const Earth = () => {
       <NaviBar />
       <div className="w-full h-64 md:flex md:h-full">
         <Image
+        alt="Earth"
           className="w-full h-full object-cover md:object-fill"
           src={ImgEarth}
         />
@@ -35,7 +36,7 @@ const Earth = () => {
             <h4 className="text-white font-medium text-large">Wildfire</h4>
           </CardHeader>
           <Image
-            alt="Card background"
+            alt="Wildfire"
             className="z-0 w-full h-full object-cover"
             src={ImgEarth2}
           />

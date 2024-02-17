@@ -17,6 +17,7 @@ const Water = () => {
       <NaviBar />
       <div className="w-full h-64 md:flex md:h-full">
         <Image
+          alt="Water"
           className="w-full h-full object-cover md:object-fill"
           src={ImgWater}
         />
@@ -30,12 +31,12 @@ const Water = () => {
         >
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
             <p className="text-tiny text-white/60 uppercase font-bold">
-            Tsunami Tsunami Tsunami Tsunami
+              Tsunami Tsunami Tsunami Tsunami
             </p>
             <h4 className="text-white font-medium text-large">Tsunami</h4>
           </CardHeader>
-          <Image            
-            alt="Card background"
+          <Image
+            alt="Tsunami"
             className="z-0 w-full h-full object-cover"
             src={ImgWater2}
           />

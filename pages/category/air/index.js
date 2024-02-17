@@ -17,6 +17,7 @@ const Air = () => {
       <NaviBar />
       <div className="w-full h-64 md:flex md:h-full">
         <Image
+          alt="Air"
           className="w-full h-full object-cover md:object-fill"
           src={ImgAir}
         />
@@ -30,12 +31,12 @@ const Air = () => {
         >
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
             <p className="text-tiny text-white/60 uppercase font-bold">
-            Air Pollution Air Pollution Air Pollution
+              Air Pollution Air Pollution Air Pollution
             </p>
             <h4 className="text-white font-medium text-large">Air Pollution</h4>
           </CardHeader>
           <Image
-            alt="Card background"
+            alt="Air Pollution"
             className="z-0 w-full h-full object-cover"
             src={ImgAir2}
           />
