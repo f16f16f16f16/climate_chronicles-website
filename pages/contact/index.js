@@ -62,7 +62,9 @@ const Contact = () => {
         "Missing information. Please check your entries and try again."
       );
     } else {
-      setModalMessage("This form is currently under construction. We appreciate your patience and will have it available soon."); //Thank you! Your information has been submitted.
+      setModalMessage(
+        "This form is currently under construction. We appreciate your patience and will have it available soon."
+      ); //Thank you! Your information has been submitted.
       // Here you could also handle the form submission, e.g., sending data to an API
     }
 
@@ -78,7 +80,7 @@ const Contact = () => {
             FEEL FREE TO CONTACT US
           </p>
           <p className="font-bold text-black text-2xl py-2 md:text-3xl xl:text-4xl">
-            Service Request Form
+            Feedback Form
           </p>
         </div>
         <div className="flex flex-col items-center justify-center space-y-8 py-10">
