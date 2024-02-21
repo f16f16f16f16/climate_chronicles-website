@@ -6,13 +6,23 @@ import TemperMan from "../../assets/images/TemperMan.gif";
 
 const Temperature = () => {
   const [citiesWeather, setCitiesWeather] = useState([]);
+  const [airPollution, setAirPollution] = useState([]);
   const API_KEY = process.env.NEXT_PUBLIC_OPENWEATHER; // Replace with your OpenWeatherMap API key
-  const cities = ["Bangkok", "New York", "Tokyo"]; // Example cities, add more as needed
+  const cities = [
+    { name: "Bangkok", lat: "13.7563", lon: "100.5018" },
+    { name: "New York", lat: "40.7128", lon: "-74.0060" },
+    { name: "Tokyo", lat: "35.6895", lon: "139.6917" },
+  ];
 
   useEffect(() => {
     const fetchWeatherData = async () => {
-      const weatherDataPromises = cities.map((city) => {
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+      const weatherDataPromises = cities.map(({ name, lat, lon }) => {
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${API_KEY}&units=metric`;
+        return fetch(url).then((response) => response.json());
+      });
+
+      const airPollutionPromises = cities.map(({ lat, lon }) => {
+        const url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
         return fetch(url).then((response) => response.json());
       });
 
@@ -28,10 +38,46 @@ const Temperature = () => {
         .catch((error) =>
           console.error("Failed to fetch weather data:", error)
         );
+
+      Promise.all(airPollutionPromises)
+        .then((data) => {
+          const pollutionData = data.map((item, index) => ({
+            city: cities[index].name,
+            aqi: item.list[0].main.aqi,
+            aqiDescription: mapAqiToDescription(item.list[0].main.aqi),
+            pm2_5: item.list[0].components.pm2_5,
+            pm10: item.list[0].components.pm10,
+            no2: item.list[0].components.no2,
+            so2: item.list[0].components.so2,
+            co: item.list[0].components.co,
+            o3: item.list[0].components.o3,
+          }));
+          setAirPollution(pollutionData);
+        })
+        .catch((error) =>
+          console.error("Failed to fetch air pollution data:", error)
+        );
     };
 
     fetchWeatherData();
   }, []);
+
+  const mapAqiToDescription = (aqi) => {
+    switch (aqi) {
+      case 1:
+        return "Good";
+      case 2:
+        return "Fair";
+      case 3:
+        return "Moderate";
+      case 4:
+        return "Poor";
+      case 5:
+        return "Very Poor";
+      default:
+        return "Unknown";
+    }
+  };
 
   return (
     <div className="py-10 space-y-10">
@@ -54,18 +100,24 @@ const Temperature = () => {
         </div> */}
       </div>
 
-      <div className="flex justify-center items-start gap-16 px-5">
-        <div className="w-5/6 md:w-3/6 p-5 border border-gray-200 shadow-lg rounded-md bg-white">
-          <p className="text-xl text-gray-700 mb-2">Current Air Pollution</p>
-          <div className="flex items-start gap-4">
-            <p className="text-xl text-gray-700 mb-2">AQI</p>
-            <p className="text-xl text-gray-700 mb-2">999</p>
+      <div className="md:flex justify-center items-start gap-6 px-5 space-y-6 md:space-y-0">
+        {airPollution.map(({ city, aqi, aqiDescription, pm2_5, pm10, no2, so2, co, o3 }) => (
+          <div
+            key={city}
+            className="w-6/6 md:w-3/6 p-5 border border-gray-200 shadow-lg rounded-md bg-white mx-auto"
+          >
+            <p className="text-xl text-gray-700 mb-2">
+              Air Pollution in {city}
+            </p>
+            <p className="text-lg text-gray-700 mb-2">AQI: {aqi} - {aqiDescription}</p>
+            <p className="text-xl text-gray-700 mb-2">PM₂.₅ : {pm2_5}5</p>
+            <p className="text-xl text-gray-700 mb-2">PM₁₀ : {pm10}</p>
+            <p className="text-xl text-gray-700 mb-2">NO₂ (Nitrogen dioxide) : {no2}</p>
+            <p className="text-xl text-gray-700 mb-2">SO₂ (Sulphur dioxide) : {so2}</p>
+            <p className="text-xl text-gray-700 mb-2">CO (Carbon monoxide) : {co}</p>
+            <p className="text-xl text-gray-700">O₃ (Ozone) : {o3}</p>
           </div>
-          <div className="flex items-start gap-4">
-            <p className="text-xl text-gray-700">PM 2.5</p>
-            <p className="text-xl text-gray-700">999</p>
-          </div>
-        </div>
+        ))}
         {/* <Image className="w-2/6 mr-6 md:w-64" alt="TemperMan" src={TemperMan} /> */}
       </div>
     </div>
