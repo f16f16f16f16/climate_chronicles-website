@@ -8,6 +8,8 @@ import {
 } from "@nextui-org/react";
 
 import TemperMan from "../assets/images/TemperMan.gif";
+import God from "../assets/images/God.gif";
+import Stair from "../assets/images/Stair.gif";
 import Air from "../assets/images/Air.jpg";
 import Earth from "../assets/images/Earth.jpg";
 import Water from "../assets/images/Water.jpg";
@@ -31,7 +33,7 @@ const Home = () => {
         <Textarea
           isReadOnly
           variant="bordered"
-          className="max-w-72 pt-10 md:max-w-md xl:max-w-xl "
+          className="max-w-72 pt-10 md:max-w-md xl:max-w-xl text-black "
           defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
         Donec quis ante at purus pulvinar tempus. Vivamus et tellus id libero imperdiet congue. 
         Aenean consectetur magna odio, quis porttitor ex mollis in. Nulla pretium malesuada molestie. 
@@ -41,6 +43,8 @@ const Home = () => {
          Mauris ut lorem elit. Maecenas a lorem mauris."
         />
         <Image className="w-36 py-10 md:w-64" alt="TemperMan" src={TemperMan} />
+        {/* <Image className="w-36 py-10 md:w-64" alt="TemperMan" src={God} />
+        <Image className="w-36 py-10 md:w-64" alt="TemperMan" src={Stair} /> */}
       </div>
 
       <div className=" gap-2 grid grid-cols-1 px-10 pb-20 space-y-6">
