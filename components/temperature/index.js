@@ -81,7 +81,7 @@ const Temperature = () => {
 
   return (
     <div className="py-10 space-y-10">
-      <div className="flex justify-center items-start gap-5 px-5">
+      {/* <div className="flex justify-center items-start gap-5 px-5">
         {citiesWeather.map(({ city, temperatureC, temperatureF }) => (
           <div
             key={city}
@@ -91,14 +91,14 @@ const Temperature = () => {
             <p className="text-lg text-gray-700 mb-2">{temperatureC} °C</p>
             <p className="text-lg text-gray-700">{temperatureF} °F</p>
           </div>
-        ))}
+        ))} */}
         {/* <div className="w-3/6 p-5 border border-gray-200 shadow-lg rounded-md bg-white">
           <p className="text-xl text-gray-700 mb-2">
             วันนี้น้องปรอทขอแนะนำให้ใส่เสื้อผ้าสบาย ๆ
             และสวมใส่แมสก์เพื่อป้องกันฝุ่นนะครับ
           </p>
         </div> */}
-      </div>
+      {/* </div> */}
 
       <div className="md:flex justify-center items-start gap-6 px-5 space-y-6 md:space-y-0">
         {airPollution.map(({ city, aqi, aqiDescription, pm2_5, pm10, no2, so2, co, o3 }) => (
