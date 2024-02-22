@@ -10,7 +10,7 @@ const Temperature = () => {
   const API_KEY = process.env.NEXT_PUBLIC_OPENWEATHER; // Replace with your OpenWeatherMap API key
   const cities = [
     { name: "Bangkok", lat: "13.7563", lon: "100.5018" },
-    { name: "New York", lat: "40.7128", lon: "-74.0060" },
+    { name: "London", lat: "51.5073510", lon: "-0.127758" },
     { name: "Tokyo", lat: "35.6895", lon: "139.6917" },
   ];
 
