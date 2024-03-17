@@ -31,3 +31,16 @@ body {
     text-wrap: balance;
   }
 }
+
+.long-gradient {
+  background-image: linear-gradient(
+    to bottom,
+    #ff0000, /* red */
+    #ff7f00, /* orange */
+    #ffff00, /* yellow */
+    #00ff00, /* green */
+    #0000ff, /* blue */
+    #8b00ff, /* purple */
+    #000000  /* black */
+  );
+}
