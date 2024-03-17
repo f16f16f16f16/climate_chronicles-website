@@ -187,7 +187,9 @@ export default function NaviBar() {
       onMenuOpenChange={setIsMenuOpen}
     >
       <div className="hidden sm:flex xl:fixed xl:left-6">
-        <Logo />
+        <Link href="/">
+          <Logo />
+        </Link>
       </div>
       <NavbarContent className="flex justify-between items-center w-full">
         <NavbarMenuToggle
