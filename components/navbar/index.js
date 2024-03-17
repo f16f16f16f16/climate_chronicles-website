@@ -194,7 +194,7 @@ export default function NaviBar() {
       <NavbarContent className="flex justify-between items-center w-full">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden text-white"
+          className="sm:hidden text-black"
         />
         <NavbarItem className="basis-1/4 flex justify-center">
           <Link className="foreground underline underline-offset-8" href="/">
