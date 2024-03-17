@@ -183,7 +183,7 @@ export default function NaviBar() {
     // </Navbar>
 
     <Navbar
-      style={{ backgroundColor: "#1A3257" }}
+      className="bg-blue-200"
       onMenuOpenChange={setIsMenuOpen}
     >
       <div className="hidden sm:flex xl:fixed xl:left-6">
@@ -197,13 +197,13 @@ export default function NaviBar() {
           className="sm:hidden text-white"
         />
         <NavbarItem className="basis-1/4 flex justify-center">
-          <Link className="text-white underline underline-offset-8" href="/">
+          <Link className="foreground underline underline-offset-8" href="/">
             HOME
           </Link>
         </NavbarItem>
         <NavbarItem className="basis-1/4 flex justify-center">
           <Link
-            className="hidden sm:flex text-white underline underline-offset-8"
+            className="hidden sm:flex foreground underline underline-offset-8"
             href="/status"
           >
             WEATHER
@@ -211,7 +211,7 @@ export default function NaviBar() {
         </NavbarItem>
         <NavbarItem className="basis-1/4 flex justify-center">
           <Link
-            className="hidden sm:flex text-white underline underline-offset-8"
+            className="hidden sm:flex foreground underline underline-offset-8"
             href="/aboutus"
           >
             ABOUT US
@@ -219,7 +219,7 @@ export default function NaviBar() {
         </NavbarItem>
         <NavbarItem className="basis-1/4 flex justify-center">
           <Link
-            className="text-white underline underline-offset-8"
+            className="foreground underline underline-offset-8"
             href="/contact"
           >
             CONTACT US
