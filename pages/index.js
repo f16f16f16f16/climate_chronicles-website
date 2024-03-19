@@ -8,8 +8,6 @@ import {
 } from "@nextui-org/react";
 
 import TemperMan from "../assets/images/TemperMan.gif";
-import God from "../assets/images/God.gif";
-import Stair from "../assets/images/Stair.gif";
 import Air from "../assets/images/Air.jpg";
 import Earth from "../assets/images/Earth.jpg";
 import Water from "../assets/images/Water.jpg";
