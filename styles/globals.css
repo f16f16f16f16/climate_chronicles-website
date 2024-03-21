@@ -32,15 +32,59 @@ body {
   }
 }
 
-.long-gradient {
-  background-image: linear-gradient(
-    to bottom,
-    #ff0000, /* red */
-    #ff7f00, /* orange */
-    #ffff00, /* yellow */
-    #00ff00, /* green */
-    #0000ff, /* blue */
-    #8b00ff, /* purple */
-    #000000  /* black */
-  );
+.heavenly-background {
+  background: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+
+.space-background {
+  background: radial-gradient(ellipse at bottom, #00010d 0%, #0d0221 100%);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Stars: White and Yellow */
+.space-background::before {
+  content: " ";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  box-shadow:
+    /* Add more stars here with random positions and colors */
+    1020px 340px #FFF, 1340px 240px #FFD700, 980px 800px #FFF,
+    450px 300px #FFD700, 230px 760px #FFF, 800px 500px #FFD700;
+}
+
+/* Shooting Star */
+@keyframes shooting-star {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--shooting-x), var(--shooting-y));
+    opacity: 0;
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow: 0 0 6px #FFF;
+  animation: shooting-star 2s linear infinite;
+  animation-delay: var(--shooting-delay, 0s);
+  top: var(--shooting-top);
+  left: var(--shooting-left);
 }
