@@ -97,20 +97,11 @@ body {
   filter: brightness(0) invert(1) contrast(100);
 }
 
-.blink {
-  animation: blinkEffect 2s infinite;
-}
-
 @keyframes blinkEffect {
   0%, 100% { filter: brightness(0) invert(1) contrast(100); }
   50% { filter: brightness(1); }
 }
 
-.blink2 {
-  animation: blinkEffect2 2s infinite;
-}
-
-@keyframes blinkEffect2 {
-  0%, 100% { filter: brightness(0); }
-  50% { filter: brightness(1); }
+.blink {
+  animation: blinkEffect 2s infinite;
 }
