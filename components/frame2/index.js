@@ -19,28 +19,8 @@ const Frame2 = () => {
         {/* Background and Avatar */}
         <div className="w-full h-full p-24 bg-gradient-to-t from-purple-700 to-black overflow-hidden flex justify-center items-center z-10">
           <Image
-            className="w-36 md:w-44 xl:w-64 brightness-0"
+            className="w-36 md:w-44 xl:w-64 blink"
             src={Dek}
-            alt="Avatar"
-          />
-        </div>
-      </div>
-
-      {/* Transformation Stage Middle */}
-      <div className="relative w-full h-full">
-        {/* Green Energy Burst */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-green-500 opacity-20 animate-pulse" />
-          <div className="absolute inset-0 flex justify-center items-center">
-            <div className="bg-green-500 opacity-10 animate-spin rounded-full w-44 h-96" />
-          </div>
-        </div>
-
-        {/* Background and Avatar */}
-        <div className="w-full h-full p-24 bg-gradient-to-t from-blue-800 via-purple-800 to-black bg-[url('/path/to/your/pattern.png')] bg-opacity-10 overflow-hidden flex justify-center items-center z-10">
-          <Image
-            className="w-36 md:w-44 xl:w-64 white-filter"
-            src={DekSpeak}
             alt="Avatar"
           />
         </div>
