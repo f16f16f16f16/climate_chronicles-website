@@ -185,7 +185,7 @@ const Frame1 = () => {
           <div className="flex justify-center items-center">
             <Image
               src={Sun}
-              className="md:w-[40rem] xl:w-[60rem] h-full opacity-60"
+              className="md:w-[40rem] xl:w-[60rem] h-full"
               alt="Sun"
             />
           </div>
@@ -195,7 +195,7 @@ const Frame1 = () => {
           <div className="flex justify-center items-center">
             <Image
               src={Earth}
-              className="w-44 md:w-[26rem] xl:w-[30rem]  h-full opacity-60"
+              className="w-44 md:w-[26rem] xl:w-[30rem]  h-full"
               alt="Earth"
               ref={earthRef}
             />
