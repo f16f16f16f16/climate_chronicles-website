@@ -76,7 +76,7 @@ const Frame1 = () => {
         <Image src={Climate} className="w-full" />
       </div>
 
-      <div className="relative py-16 md:py-28 xl:py-32 heavenly-background overflow-hidden flex flex-col items-center">
+      <div className="relative pt-16 md:pt-28 xl:pt-32 heavenly-background overflow-hidden flex flex-col items-center">
         <div className="relative">
           <div className="absolute top-0 left-0 w-full h-full z-10">
             {/* Evenly Distributed Clouds */}
@@ -113,7 +113,7 @@ const Frame1 = () => {
           </div>
         </div>
 
-        {/* Responsive spacer */}
+        {/* Spacer */}
         <div className="mt-10 md:mt-12 xl:mt-18"></div>
 
         <div className="relative z-30 -bottom-10 md:-bottom-24 xl:-bottom-32">
@@ -125,6 +125,7 @@ const Frame1 = () => {
           />
         </div>
 
+        {/* Foreground Cloud to Dek */}
         <div className="relative z-10 bottom-0 h-20 md:h-48 xl:h-64 overflow-hidden">
           <Image
             src={Cloud1}
@@ -137,6 +138,8 @@ const Frame1 = () => {
             alt="Foreground Cloud 2"
           />
         </div>
+
+        {/* Space Scene */}
         <div className="w-full p-24 bg-black space-background">
           {stars.map((star, index) => (
             <div
@@ -195,7 +198,7 @@ const Frame1 = () => {
           <div className="flex justify-center items-center">
             <Image
               src={Earth}
-              className="w-44 md:w-[26rem] xl:w-[30rem]  h-full"
+              className="w-44 md:w-[26rem] xl:w-[30rem] h-full"
               alt="Earth"
               ref={earthRef}
             />

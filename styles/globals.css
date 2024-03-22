@@ -32,12 +32,16 @@ body {
   }
 }
 
+.shadow-effect {
+  filter: grayscale(100%);
+}
+
+
 .heavenly-background {
   background: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
   overflow: hidden;
   position: relative;
 }
-
 
 .space-background {
   background: radial-gradient(ellipse at bottom, #00010d 0%, #0d0221 100%);
@@ -87,4 +91,8 @@ body {
   animation-delay: var(--shooting-delay, 0s);
   top: var(--shooting-top);
   left: var(--shooting-left);
+}
+
+.white-filter {
+  filter: brightness(0) invert(1) contrast(100);
 }
