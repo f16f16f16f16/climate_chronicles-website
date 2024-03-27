@@ -36,8 +36,8 @@ const Frame2 = () => {
   }, []);
 
   return (
-    <div className="">
-      <div className="bg-gradient-to-b from-zinc-900 via-indigo-700 to-sky-200 pt-24 min-h-[600vh]">
+    <div className="overflow-hidden">
+      <div className="bg-gradient-to-b from-zinc-900 via-indigo-700 to-sky-200 pt-24 min-h-[600vh] ">
         <div className="ufo">
           <Image src={UFO} alt="ufo" />
         </div>
