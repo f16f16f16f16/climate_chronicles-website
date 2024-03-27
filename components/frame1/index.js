@@ -192,7 +192,7 @@ const Frame1 = () => {
               </div>
 
               <Image
-                className="w-48 md:w-64 xl:w-96 blink z-30"
+                className="w-48 md:w-64 xl:w-96 z-30"
                 src={Capsule}
                 alt="Capsule"
                 ref={landingRef}
