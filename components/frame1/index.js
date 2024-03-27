@@ -13,6 +13,8 @@ import Heaven from "../../assets/frame1/images/Heaven.png";
 import God from "../../assets/frame1/images/God.png";
 import Earth from "../../assets/frame1/images/Earth.png";
 import Sun from "../../assets/frame1/images/Sun.png";
+import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
+import Capsule from "../../assets/frame1/gif/TranformationCapsule.gif";
 
 const generateStars = (count) => {
   const stars = [];
@@ -27,7 +29,9 @@ const generateStars = (count) => {
 
 const Frame1 = () => {
   const dekRef = useRef(null);
-  const earthRef = useRef(null);
+  const ccmanRef = useRef(null);
+  const landingRef = useRef(null);
+  const landing2Ref = useRef(null);
   const stars = generateStars(100);
   const cloudPositions = [
     "top-0 left-0",
@@ -48,11 +52,11 @@ const Frame1 = () => {
     // Register the ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
-    if (dekRef.current && earthRef.current) {
+    if (dekRef.current && landingRef.current) {
       // Calculate the difference in the y-position between Dek and Earth
       const dekPosition = dekRef.current.getBoundingClientRect().top;
-      const earthPosition = earthRef.current.getBoundingClientRect().top;
-      const distanceToEarth = earthPosition - dekPosition;
+      const landingPosition = landingRef.current.getBoundingClientRect().top;
+      const distanceToLanding = landingPosition - dekPosition;
 
       // GSAP animation with ScrollTrigger
       gsap.to(dekRef.current, {
@@ -60,11 +64,36 @@ const Frame1 = () => {
           trigger: dekRef.current, // Use the Dek image as the trigger
           start: "bottom center", // Start the animation when the top of Dek hits the center of the viewport
           end: "bottom top", // End the animation when the bottom of Dek is at the top of the viewport
-          scrub: 7, // Smooth scrubbing, linking animation progress to scroll progress
+          scrub: 1, // Smooth scrubbing, linking animation progress to scroll progress
           markers: true, // Shows start and end markers; useful for debugging, remove in production
         },
-        rotation: 360, // Rotate by 360 degrees
-        y: distanceToEarth, // Move Dek to the Earth image
+        // rotation: 360, // Rotate by 360 degrees
+        y: distanceToLanding + 60, // Move Dek to the Earth image
+        ease: "none", // No easing for smooth, continuous animation
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    // Register the ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+
+    if (ccmanRef.current && landingRef.current) {
+      // Calculate the difference in the y-position between CCMan and Landing (Capsule)
+      const ccmanPosition = ccmanRef.current.getBoundingClientRect().top;
+      const landingPosition = landing2Ref.current.getBoundingClientRect().top;
+      const distanceToLanding = landingPosition - ccmanPosition;
+
+      // GSAP animation with ScrollTrigger for CCMan moving towards the Landing (Capsule)
+      gsap.to(ccmanRef.current, {
+        scrollTrigger: {
+          trigger: ccmanRef.current,
+          start: "bottom center",
+          end: "bottom top",
+          scrub: 17,
+          markers: true,
+        },
+        y: distanceToLanding, // Move CCMan closer to the Landing (Capsule) image
         ease: "none", // No easing for smooth, continuous animation
       });
     }
@@ -119,9 +148,9 @@ const Frame1 = () => {
         <div className="relative z-30 -bottom-10 md:-bottom-24 xl:-bottom-32">
           <Image
             src={Dek}
-            className="w-20 md:w-44 xl:w-64 h-auto"
+            className="w-24 md:w-44 xl:w-64 h-auto"
             alt="Dek Speaking"
-            ref={dekRef} // Step 2: Apply the reference to the Image component
+            ref={dekRef}
           />
         </div>
 
@@ -139,8 +168,63 @@ const Frame1 = () => {
           />
         </div>
 
+        {/* Transformation Scene */}
+        <div className="w-full">
+          {/* Transformation Stage Start */}
+          <div className="relative">
+            {/* Green Energy Burst */}
+            <div className="absolute inset-0 z-0">
+              <div className="absolute inset-0 bg-green-500 opacity-20 animate-pulse" />
+              <div className="absolute inset-0 flex justify-center items-center">
+                <div className="bg-green-500 opacity-10 animate-spin rounded-full w-44 h-96" />
+              </div>
+            </div>
+
+            {/* Background and Avatar */}
+            <div className="w-full h-full p-24 bg-gradient-to-t from-purple-700 to-black overflow-hidden flex justify-center items-center">
+              <div className="absolute z-10">
+                <Image
+                  className="w-40 md:w-56 xl:w-80"
+                  src={CCMan}
+                  alt="Avatar"
+                  ref={ccmanRef}
+                />
+              </div>
+
+              <Image
+                className="w-48 md:w-64 xl:w-96 blink z-30"
+                src={Capsule}
+                alt="Capsule"
+                ref={landingRef}
+              />
+            </div>
+          </div>
+
+          {/* Transformation Stage Final */}
+          <div className="relative w-full h-full">
+            {/* Dynamic Energy Burst */}
+            <div className="absolute inset-0 z-0 overflow-hidden">
+              <div className="absolute inset-0 bg-red-500 opacity-25 animate-pulse" />
+              <div className="absolute inset-0 ml-20 flex justify-center items-center">
+                <div className="bg-red-500 opacity-20 animate-spin rounded-full w-40 h-40 md:w-52 md:h-52 xl:w-64 xl:h-64"></div>
+                <div className="animate-bounce absolute w-20 h-20 md:w-26 md:h-26 xl:w-32 xl:h-32 bg-yellow-400 opacity-75 rounded-full mix-blend-screen filter blur-xl" />
+              </div>
+            </div>
+
+            {/* Background and Avatar */}
+            <div className="w-full h-full p-24 bg-gradient-to-br from-yellow-700 via-red-700 to-purple-900 bg-opacity-25 overflow-hidden flex justify-center items-center z-10">
+              <Image
+                className="ml-20 w-46 md:w-80 xl:w-96 contrast-125 invisible"
+                src={CCMan}
+                alt="Avatar"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Space Scene */}
-        <div className="w-full p-24 bg-black space-background">
+        <div className="w-full pt-24 bg-black space-background">
           {stars.map((star, index) => (
             <div
               key={index}
@@ -185,23 +269,33 @@ const Frame1 = () => {
               "--shooting-y": "-300px",
             }}
           ></div>
-          <div className="flex justify-center items-center">
-            <Image
-              src={Sun}
-              className="md:w-[40rem] xl:w-[60rem] h-full"
-              alt="Sun"
-            />
-          </div>
-          {/* Spacer */}
-          <div className="mt-16 md:mt-24 xl:mt-36"></div>
 
           <div className="flex justify-center items-center">
             <Image
-              src={Earth}
-              className="w-44 md:w-[26rem] xl:w-[30rem] h-full"
-              alt="Earth"
-              ref={earthRef}
+              src={Sun}
+              className="w-32 md:w-56 xl:w-96 h-full"
+              alt="Sun"
             />
+          </div>
+
+          {/* Spacer */}
+          <div className="mt-16 md:mt-24 xl:mt-36"></div>
+
+          <div className="-mb-64 md:-mb-[30rem] xl:-mb-[55rem] flex justify-center items-center">
+            <Image src={Earth} className="h-full slow-rotate" alt="Earth" />
+          </div>
+
+          <div className="z-20 relative">
+            <Image src={Cloud2} />
+            <Image
+              src={Cloud1}
+              className="-mt-16 md:-mt-32 xl:-mt-60 2xl:-mt-80"
+              ref={landing2Ref}
+            />
+            <Image src={Cloud3} className="-mt-20 md:-mt-36 xl:-mt-72 2xl:-mt-96" />
+            <Image src={Cloud2} className="-mt-16 md:-mt-32 xl:-mt-64 2xl:-mt-80" />
+            <Image src={Cloud1} className="-mt-20 md:-mt-32 xl:-mt-56 2xl:-mt-80" />
+            <Image src={Cloud2} className="-mt-16 md:-mt-32 xl:-mt-56 2xl:-mt-80" />
           </div>
         </div>
       </div>

@@ -105,3 +105,17 @@ body {
 .blink {
   animation: blinkEffect 2s infinite;
 }
+
+@keyframes slowRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.slow-rotate {
+  animation: slowRotate 300s linear infinite;
+}
