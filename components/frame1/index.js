@@ -90,7 +90,7 @@ const Frame1 = () => {
           trigger: ccmanRef.current,
           start: "bottom center",
           end: "bottom top",
-          scrub: 17,
+          scrub: 18,
           markers: true,
         },
         y: distanceToLanding, // Move CCMan closer to the Landing (Capsule) image
@@ -290,12 +290,13 @@ const Frame1 = () => {
             <Image
               src={Cloud1}
               className="-mt-16 md:-mt-32 xl:-mt-60 2xl:-mt-80"
-              ref={landing2Ref}
             />
             <Image src={Cloud3} className="-mt-20 md:-mt-36 xl:-mt-72 2xl:-mt-96" />
             <Image src={Cloud2} className="-mt-16 md:-mt-32 xl:-mt-64 2xl:-mt-80" />
             <Image src={Cloud1} className="-mt-20 md:-mt-32 xl:-mt-56 2xl:-mt-80" />
-            <Image src={Cloud2} className="-mt-16 md:-mt-32 xl:-mt-56 2xl:-mt-80" />
+            <Image src={Cloud2} className="-mt-16 md:-mt-32 xl:-mt-56 2xl:-mt-80" ref={landing2Ref}/>
+            <Image src={Cloud1} className="-mt-16 md:-mt-32 xl:-mt-56 2xl:-mt-80" />
+            <Image src={Cloud3} className="-mt-20 md:-mt-36 xl:-mt-72 2xl:-mt-96" />
           </div>
         </div>
       </div>
