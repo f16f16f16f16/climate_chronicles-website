@@ -4,7 +4,7 @@ import Navibar from "../components/navbar/index";
 
 const Fade = () => {
   return (
-    <div className="min-h-[1000vh]">
+    <div className="">
       <Navibar />
       <Frame1/>
       <Frame2/>
