@@ -65,7 +65,7 @@ const Frame1 = () => {
           start: "bottom center", // Start the animation when the top of Dek hits the center of the viewport
           end: "bottom top", // End the animation when the bottom of Dek is at the top of the viewport
           scrub: 1, // Smooth scrubbing, linking animation progress to scroll progress
-          markers: true, // Shows start and end markers; useful for debugging, remove in production
+          // markers: true, // Shows start and end markers; useful for debugging, remove in production
         },
         // rotation: 360, // Rotate by 360 degrees
         y: distanceToLanding + 60, // Move Dek to the Earth image
@@ -91,7 +91,7 @@ const Frame1 = () => {
           start: "bottom center",
           end: "bottom top",
           scrub: 18,
-          markers: true,
+          // markers: true,
         },
         y: distanceToLanding, // Move CCMan closer to the Landing (Capsule) image
         ease: "none", // No easing for smooth, continuous animation
