@@ -168,61 +168,6 @@ const Frame1 = () => {
           />
         </div>
 
-        {/* Transformation Scene */}
-        <div className="w-full">
-          {/* Transformation Stage Start */}
-          <div className="relative">
-            {/* Green Energy Burst */}
-            <div className="absolute inset-0 z-0">
-              <div className="absolute inset-0 bg-green-500 opacity-20 animate-pulse" />
-              <div className="absolute inset-0 flex justify-center items-center">
-                <div className="bg-green-500 opacity-10 animate-spin rounded-full w-44 h-96" />
-              </div>
-            </div>
-
-            {/* Background and Avatar */}
-            <div className="w-full h-full p-24 bg-gradient-to-t from-purple-700 to-black overflow-hidden flex justify-center items-center">
-              <div className="absolute z-10">
-                <Image
-                  className="w-40 md:w-56 xl:w-80"
-                  src={CCMan}
-                  alt="Avatar"
-                  ref={ccmanRef}
-                />
-              </div>
-
-              <Image
-                className="w-48 md:w-64 xl:w-96 z-30"
-                src={Capsule}
-                alt="Capsule"
-                ref={landingRef}
-              />
-            </div>
-          </div>
-
-          {/* Transformation Stage Final */}
-          <div className="relative w-full h-full">
-            {/* Dynamic Energy Burst */}
-            <div className="absolute inset-0 z-0 overflow-hidden">
-              <div className="absolute inset-0 bg-red-500 opacity-25 animate-pulse" />
-              <div className="absolute inset-0 ml-20 flex justify-center items-center">
-                <div className="bg-red-500 opacity-20 animate-spin rounded-full w-40 h-40 md:w-52 md:h-52 xl:w-64 xl:h-64"></div>
-                <div className="animate-bounce absolute w-20 h-20 md:w-26 md:h-26 xl:w-32 xl:h-32 bg-yellow-400 opacity-75 rounded-full mix-blend-screen filter blur-xl" />
-              </div>
-            </div>
-
-            {/* Background and Avatar */}
-            <div className="w-full h-full p-24 bg-gradient-to-br from-yellow-700 via-red-700 to-purple-900 bg-opacity-25 overflow-hidden flex justify-center items-center z-10">
-              <Image
-                className="ml-20 w-46 md:w-80 xl:w-96 contrast-125 invisible"
-                src={CCMan}
-                alt="Avatar"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-
         {/* Space Scene */}
         <div className="w-full pt-24 bg-black space-background">
           {stars.map((star, index) => (
@@ -270,6 +215,24 @@ const Frame1 = () => {
             }}
           ></div>
 
+          <div className="w-full h-full p-24 overflow-hidden flex justify-center items-center">
+            <div className="absolute z-10">
+              <Image
+                className="w-40 md:w-56 xl:w-80"
+                src={CCMan}
+                alt="Avatar"
+                ref={ccmanRef}
+              />
+            </div>
+
+            <Image
+              className="w-48 md:w-64 xl:w-96 z-30"
+              src={Capsule}
+              alt="Capsule"
+              ref={landingRef}
+            />
+          </div>
+
           <div className="flex justify-center items-center">
             <Image
               src={Sun}
@@ -291,12 +254,31 @@ const Frame1 = () => {
               src={Cloud1}
               className="-mt-16 md:-mt-32 xl:-mt-60 2xl:-mt-80"
             />
-            <Image src={Cloud3} className="-mt-20 md:-mt-36 xl:-mt-72 2xl:-mt-96" />
-            <Image src={Cloud2} className="-mt-16 md:-mt-32 xl:-mt-64 2xl:-mt-80" />
-            <Image src={Cloud1} className="-mt-20 md:-mt-32 xl:-mt-56 2xl:-mt-80" ref={landing2Ref}/>
-            <Image src={Cloud2} className="-mt-16 md:-mt-32 xl:-mt-56 2xl:-mt-80" />
-            <Image src={Cloud1} className="-mt-16 md:-mt-32 xl:-mt-56 2xl:-mt-80" />
-            <Image src={Cloud3} className="-mt-20 md:-mt-36 xl:-mt-72 2xl:-mt-96" />
+            <Image
+              src={Cloud3}
+              className="-mt-20 md:-mt-36 xl:-mt-72 2xl:-mt-96"
+            />
+            <Image
+              src={Cloud2}
+              className="-mt-16 md:-mt-32 xl:-mt-64 2xl:-mt-80"
+            />
+            <Image
+              src={Cloud1}
+              className="-mt-20 md:-mt-32 xl:-mt-56 2xl:-mt-80"
+              ref={landing2Ref}
+            />
+            <Image
+              src={Cloud2}
+              className="-mt-16 md:-mt-32 xl:-mt-56 2xl:-mt-80"
+            />
+            <Image
+              src={Cloud1}
+              className="-mt-16 md:-mt-32 xl:-mt-56 2xl:-mt-80"
+            />
+            <Image
+              src={Cloud3}
+              className="-mt-20 md:-mt-36 xl:-mt-72 2xl:-mt-96"
+            />
           </div>
         </div>
       </div>

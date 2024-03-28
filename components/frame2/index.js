@@ -97,12 +97,14 @@ const Frame2 = () => {
             src={Aura}
             className="h-72 md:h-[35rem] xl:h-[64rem] 2xl:h-[85rem] 2xl:w-screen object-cover"
           />
-          <Image src={CH4} />
-          <Image src={CO2} />
-          <Image src={HFCs} />
-          <Image src={N20} />
-          <Image src={PFCs} />
-          <Image src={SF6} />
+          <div className="w-44 md:w-96 xl:w-[40rem] space-y-20 md:space-y-32 xl:space-y-52">
+            <Image src={CH4} />
+            <Image src={CO2} />
+            <Image src={HFCs} />
+            <Image src={N20} />
+            <Image src={PFCs} />
+            <Image src={SF6} />
+          </div>
         </div>
       </div>
     </div>

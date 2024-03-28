@@ -183,7 +183,7 @@ export default function NaviBar() {
     // </Navbar>
 
     <Navbar
-      className="bg-blue-200"
+      className="bg-transparent"
       onMenuOpenChange={setIsMenuOpen}
     >
       <div className="hidden sm:flex xl:fixed xl:left-6">
