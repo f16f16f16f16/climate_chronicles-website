@@ -95,7 +95,7 @@ const Frame2 = () => {
           </h1>
           <Image
             src={Aura}
-            className="h-72 md:h-[35rem] xl:h-[64rem] object-cover"
+            className="h-72 md:h-[35rem] xl:h-[64rem] 2xl:h-[85rem] 2xl:w-screen object-cover"
           />
           <Image src={CH4} />
           <Image src={CO2} />
