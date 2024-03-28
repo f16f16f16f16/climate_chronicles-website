@@ -6,7 +6,14 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 
 import CCMan from "../../assets/frame2/gif/CCManFly.gif";
+import Aura from "../../assets/frame2/images/Aura.png";
 import UFO from "../../assets/frame2/images/UFO.png";
+import CH4 from "../../assets/frame2/images/CH4.png";
+import CO2 from "../../assets/frame2/images/CO2.png";
+import HFCs from "../../assets/frame2/images/HFCs.png";
+import N20 from "../../assets/frame2/images/N2O.png";
+import PFCs from "../../assets/frame2/images/PFCs.png";
+import SF6 from "../../assets/frame2/images/SF6.png";
 
 // Register GSAP plugins outside of the component to avoid registering multiple times.
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
@@ -81,6 +88,21 @@ const Frame2 = () => {
             alt="CCMan Flying"
             className="ccman-image w-52 md:w-96 xl:w-[35rem]"
           />
+        </div>
+        <div className="flex flex-col items-center">
+          <h1 className="text-white text-4xl md:text-6xl lg:text-8xl py-5 font-bold shadow-md">
+            Ozone Layer
+          </h1>
+          <Image
+            src={Aura}
+            className="h-72 md:h-[35rem] xl:h-[64rem] object-cover"
+          />
+          <Image src={CH4} />
+          <Image src={CO2} />
+          <Image src={HFCs} />
+          <Image src={N20} />
+          <Image src={PFCs} />
+          <Image src={SF6} />
         </div>
       </div>
     </div>
