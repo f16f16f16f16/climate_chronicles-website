@@ -12,7 +12,7 @@ import Car3 from "../../assets/frame3/gif/Car3GIF.gif";
 
 const Frame3 = () => {
   return (
-    <div classNameName="bg-sky-200">
+    <div className="bg-sky-200">
       <div className="flex justify-center items-center">
         <Image
           src={Plane}
