@@ -16,7 +16,7 @@ const Frame3 = () => {
       <div className="flex justify-center items-center">
         <Image
           src={Plane}
-          className="w-28 md:w-52 xl:w-96 py-20 md:py-36 xl:py-52 2xl:py-72"
+          className="w-28 md:w-52 xl:w-96 py-20 md:py-36 xl:py-52 2xl:py-72 plane-flip-animation"
         />
       </div>
       <div className="flex gap-x-4 overflow-hidden">

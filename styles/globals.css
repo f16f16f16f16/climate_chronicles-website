@@ -119,3 +119,22 @@ body {
 .slow-rotate {
   animation: slowRotate 300s linear infinite;
 }
+
+@keyframes moveAndFlipPlane {
+  0%, 100% {
+    transform: translateX(0%) scaleX(1);
+  }
+  25% {
+    transform: translateX(-100%) scaleX(1); /* Move further to the left */
+  }
+  50% {
+    transform: translateX(0%) scaleX(-1); /* Flip when moving to the right */
+  }
+  75% {
+    transform: translateX(100%) scaleX(-1); /* Move further to the right */
+  }
+}
+
+.plane-flip-animation {
+  animation: moveAndFlipPlane 10s linear infinite;
+}
