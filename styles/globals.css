@@ -138,3 +138,21 @@ body {
 .plane-flip-animation {
   animation: moveAndFlipPlane 10s linear infinite;
 }
+
+/* Animation to simulate rolling to the right and fading out */
+@keyframes rollToRight {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Class to apply the rolling animation */
+.rollingImage {
+  animation: rollToRight 2s forwards ease-out; /* Adjust time as needed */
+}
+

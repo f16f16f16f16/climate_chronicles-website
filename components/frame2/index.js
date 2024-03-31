@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 import gsap from "gsap";
@@ -20,6 +20,14 @@ gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 const Frame2 = () => {
   const ccmanRef = useRef(null);
+  // Handler to add the animation class to the clicked image
+  const handleImageClick = (event) => {
+    // Ensure only the img element inside the button triggers the animation
+    const imgElement = event.currentTarget.querySelector("img");
+    if (imgElement) {
+      imgElement.className = "rollingImage";
+    }
+  };
 
   useEffect(() => {
     // Define the zigzag path for CCMan. Adjust the points as needed.
@@ -98,12 +106,24 @@ const Frame2 = () => {
             className="h-72 md:h-[35rem] xl:h-[64rem] 2xl:h-[85rem] 2xl:w-screen object-cover"
           />
           <div className="w-44 md:w-96 xl:w-[40rem] space-y-20 md:space-y-32 xl:space-y-52">
-            <Image src={CH4} />
-            <Image src={CO2} />
-            <Image src={HFCs} />
-            <Image src={N20} />
-            <Image src={PFCs} />
-            <Image src={SF6} />
+            <button onClick={handleImageClick}>
+              <Image src={CH4} alt="CH4" />
+            </button>
+            <button onClick={handleImageClick}>
+              <Image src={CO2} alt="CO2" />
+            </button>
+            <button onClick={handleImageClick}>
+              <Image src={HFCs} alt="HFCs" />
+            </button>
+            <button onClick={handleImageClick}>
+              <Image src={N20} alt="N2O" />
+            </button>
+            <button onClick={handleImageClick}>
+              <Image src={PFCs} alt="PFCs" />
+            </button>
+            <button onClick={handleImageClick}>
+              <Image src={SF6} alt="SF6" />
+            </button>
           </div>
         </div>
       </div>
