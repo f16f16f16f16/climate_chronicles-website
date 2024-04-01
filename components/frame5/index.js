@@ -78,7 +78,7 @@ const Frame5 = () => {
             alt="Tractor"
             className="w-1/3 -mt-[12rem] md:-mt-[26rem] xl:-mt-[46rem] 2xl:-mt-[67rem]"
           />
-          <Image src={Rice} alt="Rice" className="w-5/12 -ml-48 md:-ml-[23rem] xl:-ml-[37rem] 2xl:-ml-[50rem] -mb-[8rem] md:-mb-[17rem] xl:-mb-[30rem] 2xl:-mb-[36rem]" />
+          <Image src={Rice} alt="Rice" className="w-5/12 -ml-48 md:-ml-[23rem] xl:-ml-[37rem] 2xl:-ml-[50rem] -mb-[9rem] md:-mb-[20rem] xl:-mb-[38rem] 2xl:-mb-[42rem]" />
         </div>
         <div>
           <Image src={Fence} alt="Fence" className="w-1/2 " />

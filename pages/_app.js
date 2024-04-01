@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import "@/styles/globals.css";
 import "mapbox-gl/dist/mapbox-gl.css";
+import Footer from "@/components/footer";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Explore 'The Climate Chronicles' for impactful stories on environmental origins and effects. Discover tales of change, resilience, and innovation in our fight for a sustainable planet." />
       </Head>
       <Component {...pageProps} />
+      <Footer/>
       <Analytics />
       <SpeedInsights />
     </NextUIProvider>
