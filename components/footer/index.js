@@ -13,7 +13,7 @@ export default function Footer() {
               Climate Chronicles
             </h6>
             <p>
-              Explore 'The Climate Chronicles' for impactful stories on
+              Explore &apos;The Climate Chronicles&apos; for impactful stories on
               environmental origins and effects. Discover tales of change,
               resilience, and innovation in our fight for a sustainable planet.
             </p>
