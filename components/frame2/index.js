@@ -111,7 +111,7 @@ const Frame2 = () => {
           </h1>
           <Image
             src={Aura}
-            className="h-72 md:h-[35rem] xl:h-[64rem] 2xl:h-[85rem] 2xl:w-screen object-cover"
+            className="h-72 md:h-[45rem] xl:h-[64rem] 2xl:h-[85rem] 2xl:w-screen object-cover"
           />
           <div className="w-44 md:w-96 xl:w-[40rem]">
             <div className="w-1/2 md:w-full space-y-[100%]">
