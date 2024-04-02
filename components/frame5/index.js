@@ -15,7 +15,7 @@ import Shiiit from "../../assets/frame5/images/Shiiit.png";
 const Frame5 = () => {
   return (
     <div className="mt-96 overflow-hidden">
-      <div className="bg-sky-200 py-24"></div>
+      <div className="bg-sky-200 py-[20%]"></div>
       <div className="bg-lime-700">
         <div className="flex items-center">
           <Image
