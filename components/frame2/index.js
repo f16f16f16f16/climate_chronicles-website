@@ -126,7 +126,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 variant="bordered"
-                className="w-[80%] h-32 overflow-auto"
+                className="w-[60%] h-32 overflow-auto"
                 defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <button
@@ -153,7 +153,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 variant="bordered"
-                className="w-[80%] h-32 overflow-auto"
+                className="w-[60%] h-32 overflow-auto"
                 defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <button
@@ -180,7 +180,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 variant="bordered"
-                className="w-[80%] h-32 overflow-auto"
+                className="w-[60%] h-32 overflow-auto"
                 defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <button
@@ -207,7 +207,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 variant="bordered"
-                className="w-[80%] h-32 overflow-auto"
+                className="w-[60%] h-32 overflow-auto"
                 defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <button
@@ -234,7 +234,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 variant="bordered"
-                className="w-[80%] h-32 overflow-auto"
+                className="w-[60%] h-32 overflow-auto"
                 defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <button
@@ -261,7 +261,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 variant="bordered"
-                className="w-[80%] h-32 overflow-auto"
+                className="w-[60%] h-32 overflow-auto"
                 defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <button
