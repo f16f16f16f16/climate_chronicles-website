@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { Textarea } from "@nextui-org/react";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -27,13 +28,20 @@ gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 const Frame2 = () => {
   const ccmanRef = useRef(null);
   // Initialize state as an object where keys are image set identifiers and values are booleans
-  const [isActive, setIsActive] = useState({ CH4: false, CO2: false, HFCs: false, N2O: false, PFCs: false, SF6: false });
+  const [isActive, setIsActive] = useState({
+    CH4: false,
+    CO2: false,
+    HFCs: false,
+    N2O: false,
+    PFCs: false,
+    SF6: false,
+  });
 
   // Handler function that takes an image set identifier
   const handleImageClick = (id) => {
-    setIsActive(prevState => ({
+    setIsActive((prevState) => ({
       ...prevState,
-      [id]: !prevState[id] // Toggle the state for the specific image set
+      [id]: !prevState[id], // Toggle the state for the specific image set
     }));
   };
 
@@ -105,7 +113,7 @@ const Frame2 = () => {
             className="ccman-image w-52 md:w-96 xl:w-[35rem]"
           />
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center justify-center">
           <h1 className="text-white text-4xl md:text-6xl lg:text-8xl py-5 font-bold shadow-md">
             Ozone Layer
           </h1>
@@ -113,44 +121,168 @@ const Frame2 = () => {
             src={Aura}
             className="h-72 md:h-[45rem] xl:h-[64rem] 2xl:h-[85rem] 2xl:w-screen object-cover"
           />
-          <div className="w-44 md:w-96 xl:w-[40rem]">
-            <div className="w-1/2 md:w-full space-y-[100%]">
-              <div>
-                <button className="flex -space-x-[3%]" onClick={() => handleImageClick('CH4')}>
-                  <Image src={CH4_1} alt="CH4" className={`transition-transform duration-500 ${isActive.CH4 ? '-translate-x-[100%]' : ''}`}/>
-                  <Image src={CH4_2} alt="CH4" className={`transition-transform duration-500 ${isActive.CH4 ? 'translate-x-[100%]' : ''}`}/>
-                </button>
-              </div>
-              <div>
-                <button className="flex -space-x-[3%]" onClick={() => handleImageClick('CO2')}>
-                  <Image src={CO2_1} alt="CO2" className={`transition-transform duration-500 ${isActive.CO2 ? '-translate-x-[100%]' : ''}`}/>
-                  <Image src={CO2_2} alt="CO2" className={`transition-transform duration-500 ${isActive.CO2 ? 'translate-x-[100%]' : ''}`}/>
-                </button>
-              </div>
-              <div>
-                <button className="flex -space-x-[3%]" onClick={() => handleImageClick('HFCs')}>
-                  <Image src={HFCs_1} alt="HFCs" className={`transition-transform duration-500 ${isActive.HFCs ? '-translate-x-[100%]' : ''}`}/>
-                  <Image src={HFCs_2} alt="HFCs" className={`transition-transform duration-500 ${isActive.HFCs ? 'translate-x-[100%]' : ''}`}/>
-                </button>
-              </div>
-              <div>
-                <button className="flex -space-x-[3%]" onClick={() => handleImageClick('N2O')}>
-                  <Image src={N2O_1} alt="N2O" className={`transition-transform duration-500 ${isActive.N2O ? '-translate-x-[100%]' : ''}`}/>
-                  <Image src={N2O_2} alt="N2O" className={`transition-transform duration-500 ${isActive.N2O ? 'translate-x-[100%]' : ''}`}/>
-                </button>
-              </div>
-              <div>
-                <button className="flex -space-x-[3%]" onClick={() => handleImageClick('PFCs')}>
-                  <Image src={PFCs_1} alt="PFCs" className={`transition-transform duration-500 ${isActive.PFCs ? '-translate-x-[100%]' : ''}`}/>
-                  <Image src={PFCs_2} alt="PFCs" className={`transition-transform duration-500 ${isActive.PFCs ? 'translate-x-[100%]' : ''}`}/>
-                </button>
-              </div>
-              <div>
-                <button className="flex -space-x-[3%]" onClick={() => handleImageClick('SF6')}>
-                  <Image src={SF6_1} alt="SF6" className={`transition-transform duration-500 ${isActive.SF6 ? '-translate-x-[100%]' : ''}`}/>
-                  <Image src={SF6_2} alt="SF6" className={`transition-transform duration-500 ${isActive.SF6 ? 'translate-x-[100%]' : ''}`}/>
-                </button>
-              </div>
+          <div className="space-y-48 md:space-y-[34rem] xl:space-y-[60rem]">
+            <div className="flex flex-col items-center justify-center">
+              <Textarea
+                isReadOnly
+                variant="bordered"
+                className="w-[80%] h-32 overflow-auto"
+                defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              />
+              <button
+                className="absolute flex -space-x-[1%] scale-50 xl:scale-100"
+                onClick={() => handleImageClick("CH4")}
+              >
+                <Image
+                  src={CH4_1}
+                  alt="CH4"
+                  className={`transition-transform duration-500 ${
+                    isActive.CH4 ? "-translate-x-[100%]" : ""
+                  }`}
+                />
+                <Image
+                  src={CH4_2}
+                  alt="CH4"
+                  className={`transition-transform duration-500 ${
+                    isActive.CH4 ? "translate-x-[100%]" : ""
+                  }`}
+                />
+              </button>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <Textarea
+                isReadOnly
+                variant="bordered"
+                className="w-[80%] h-32 overflow-auto"
+                defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              />
+              <button
+                className="absolute flex -space-x-[1%] scale-50 xl:scale-100"
+                onClick={() => handleImageClick("CO2")}
+              >
+                <Image
+                  src={CO2_1}
+                  alt="CO2"
+                  className={`transition-transform duration-500 ${
+                    isActive.CO2 ? "-translate-x-[100%]" : ""
+                  }`}
+                />
+                <Image
+                  src={CO2_2}
+                  alt="CO2"
+                  className={`transition-transform duration-500 ${
+                    isActive.CO2 ? "translate-x-[100%]" : ""
+                  }`}
+                />
+              </button>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <Textarea
+                isReadOnly
+                variant="bordered"
+                className="w-[80%] h-32 overflow-auto"
+                defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              />
+              <button
+                className="absolute flex -space-x-[1%] scale-50 xl:scale-100"
+                onClick={() => handleImageClick("HFCs")}
+              >
+                <Image
+                  src={HFCs_1}
+                  alt="HFCs"
+                  className={`transition-transform duration-500 ${
+                    isActive.HFCs ? "-translate-x-[100%]" : ""
+                  }`}
+                />
+                <Image
+                  src={HFCs_2}
+                  alt="HFCs"
+                  className={`transition-transform duration-500 ${
+                    isActive.HFCs ? "translate-x-[100%]" : ""
+                  }`}
+                />
+              </button>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <Textarea
+                isReadOnly
+                variant="bordered"
+                className="w-[80%] h-32 overflow-auto"
+                defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              />
+              <button
+                className="absolute flex -space-x-[1%] scale-50 xl:scale-100"
+                onClick={() => handleImageClick("N2O")}
+              >
+                <Image
+                  src={N2O_1}
+                  alt="N2O"
+                  className={`transition-transform duration-500 ${
+                    isActive.N2O ? "-translate-x-[100%]" : ""
+                  }`}
+                />
+                <Image
+                  src={N2O_2}
+                  alt="N2O"
+                  className={`transition-transform duration-500 ${
+                    isActive.N2O ? "translate-x-[100%]" : ""
+                  }`}
+                />
+              </button>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <Textarea
+                isReadOnly
+                variant="bordered"
+                className="w-[80%] h-32 overflow-auto"
+                defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              />
+              <button
+                className="absolute flex -space-x-[1%] scale-50 xl:scale-100"
+                onClick={() => handleImageClick("PFCs")}
+              >
+                <Image
+                  src={PFCs_1}
+                  alt="PFCs"
+                  className={`transition-transform duration-500 ${
+                    isActive.PFCs ? "-translate-x-[100%]" : ""
+                  }`}
+                />
+                <Image
+                  src={PFCs_2}
+                  alt="PFCs"
+                  className={`transition-transform duration-500 ${
+                    isActive.PFCs ? "translate-x-[100%]" : ""
+                  }`}
+                />
+              </button>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <Textarea
+                isReadOnly
+                variant="bordered"
+                className="w-[80%] h-32 overflow-auto"
+                defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              />
+              <button
+                className="absolute flex -space-x-[1%] scale-50 xl:scale-100"
+                onClick={() => handleImageClick("SF6")}
+              >
+                <Image
+                  src={SF6_1}
+                  alt="SF6"
+                  className={`transition-transform duration-500 ${
+                    isActive.SF6 ? "-translate-x-[100%]" : ""
+                  }`}
+                />
+                <Image
+                  src={SF6_2}
+                  alt="SF6"
+                  className={`transition-transform duration-500 ${
+                    isActive.SF6 ? "translate-x-[100%]" : ""
+                  }`}
+                />
+              </button>
             </div>
           </div>
         </div>
