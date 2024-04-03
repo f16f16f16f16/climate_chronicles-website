@@ -14,6 +14,7 @@ import Earth from "../../assets/frame1/images/Earth.png";
 import Sun from "../../assets/frame1/images/Sun.png";
 import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
 import Capsule from "../../assets/frame1/gif/TranformationCapsule.gif";
+import Astronaut from "../../assets/frame1/images/Astronaut.png";
 
 const generateStars = (count) => {
   const stars = [];
@@ -96,6 +97,35 @@ const Frame1 = () => {
         ease: "none", // No easing for smooth, continuous animation
       });
     }
+  }, []);
+
+  useEffect(() => {
+    // Create a timeline for repeating and yoyo-ing
+    const tl = gsap.timeline({ repeat: -1, yoyo: true, ease: "power1.inOut" });
+
+    // Animate along a circular path
+    tl.to("#astronaut", {
+      motionPath: {
+        path: [
+          { x: 100, y: 0 },
+          { x: 100, y: -100 },
+          { x: 0, y: -100 },
+          { x: 0, y: 0 },
+        ],
+        curviness: 1.5,
+        autoRotate: true,
+      },
+      duration: 10,
+      ease: "linear",
+    });
+
+    // Continuous spin
+    gsap.to("#astronaut", {
+      rotation: "+=360",
+      duration: 5,
+      repeat: -1,
+      ease: "none",
+    });
   }, []);
 
   return (
@@ -243,33 +273,24 @@ const Frame1 = () => {
           {/* Spacer */}
           <div className="mt-16 md:mt-24 xl:mt-36"></div>
 
+          <Image
+            src={Astronaut}
+            alt="Astronaut"
+            className="w-[30%]"
+            id="astronaut"
+          />
+
           <div className="-mb-64 md:-mb-[30rem] xl:-mb-[55rem] flex justify-center items-center">
             <Image src={Earth} className="h-full slow-rotate" alt="Earth" />
           </div>
 
           <div className="z-20 relative">
             <Image src={Cloud2} />
-            <Image
-              src={Cloud1}
-              className="-mt-[17%]"
-            />
-            <Image
-              src={Cloud3}
-              className="-mt-[19%]"
-              ref={landing2Ref}
-            />
-            <Image
-              src={Cloud2}
-              className="-mt-[17%]"
-            />
-            <Image
-              src={Cloud1}
-              className="-mt-[17%]"
-            />
-            <Image
-              src={Cloud2}
-              className="-mt-[17%]"
-            />
+            <Image src={Cloud1} className="-mt-[17%]" />
+            <Image src={Cloud3} className="-mt-[19%]" ref={landing2Ref} />
+            <Image src={Cloud2} className="-mt-[17%]" />
+            <Image src={Cloud1} className="-mt-[17%]" />
+            <Image src={Cloud2} className="-mt-[17%]" />
           </div>
         </div>
       </div>
