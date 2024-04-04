@@ -34,19 +34,19 @@ const Frame3 = () => {
           <div>
             <Image
               src={Car1}
-              className="w-2/3 -mt-16 md:-mt-32 xl:-mt-56 2xl:-mt-72 ml-10 md:ml-16 xl:ml-28 2xl:ml-36"
+              className="w-2/3 -mt-[60%] ml-10 md:ml-16 xl:ml-28 2xl:ml-36"
             />
           </div>
           <div>
             <Image
               src={Car2}
-              className="w-2/3 -mt-20 md:-mt-40 xl:-mt-80 2xl:-mt-96 ml-10 md:ml-16 xl:ml-28 2xl:ml-36"
+              className="w-2/3 -mt-[65%] ml-10 md:ml-16 xl:ml-28 2xl:ml-36"
             />
           </div>
           <div>
             <Image
               src={Car3}
-              className="w-2/3 -mt-12 md:-mt-24 xl:-mt-48 2xl:-mt-60 ml-4 md:ml-16 xl:ml-28 2xl:ml-36"
+              className="w-2/3 -mt-[35%] ml-4 md:ml-16 xl:ml-28 2xl:ml-36"
             />
           </div>
         </div>
