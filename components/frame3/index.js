@@ -28,7 +28,7 @@ const Frame3 = () => {
       <div>
         <Image
           src={Road}
-          className="-mt-[5.7rem] md:-mt-[10.5rem] xl:-mt-[20rem] 2xl:-mt-[26.5rem]"
+          className="-mt-[22%]"
         />
         <div className="flex gap-x-4">
           <div>
