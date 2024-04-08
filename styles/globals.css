@@ -151,8 +151,20 @@ body {
   }
 }
 
-/* Class to apply the rolling animation */
 .rollingImage {
   animation: rollToRight 2s forwards ease-out; /* Adjust time as needed */
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
 }
 
