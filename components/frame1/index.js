@@ -276,7 +276,7 @@ const Frame1 = () => {
           <Image
             src={Astronaut}
             alt="Astronaut"
-            className="w-[30%]"
+            className="w-[15%]"
             id="astronaut"
           />
 

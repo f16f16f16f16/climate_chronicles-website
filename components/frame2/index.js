@@ -130,7 +130,7 @@ const Frame2 = () => {
                 defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <button
-                className="absolute flex -space-x-[1%] scale-50 xl:scale-100"
+                className="absolute flex -space-x-[3%] scale-50 xl:scale-100"
                 onClick={() => handleImageClick("CH4")}
               >
                 <Image
@@ -157,7 +157,7 @@ const Frame2 = () => {
                 defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <button
-                className="absolute flex -space-x-[1%] scale-50 xl:scale-100"
+                className="absolute flex -space-x-[3%] scale-50 xl:scale-100"
                 onClick={() => handleImageClick("CO2")}
               >
                 <Image
@@ -184,7 +184,7 @@ const Frame2 = () => {
                 defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <button
-                className="absolute flex -space-x-[1%] scale-50 xl:scale-100"
+                className="absolute flex -space-x-[3%] scale-50 xl:scale-100"
                 onClick={() => handleImageClick("HFCs")}
               >
                 <Image
@@ -211,7 +211,7 @@ const Frame2 = () => {
                 defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <button
-                className="absolute flex -space-x-[1%] scale-50 xl:scale-100"
+                className="absolute flex -space-x-[3%] scale-50 xl:scale-100"
                 onClick={() => handleImageClick("N2O")}
               >
                 <Image
@@ -238,7 +238,7 @@ const Frame2 = () => {
                 defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <button
-                className="absolute flex -space-x-[1%] scale-50 xl:scale-100"
+                className="absolute flex -space-x-[3%] scale-50 xl:scale-100"
                 onClick={() => handleImageClick("PFCs")}
               >
                 <Image
@@ -265,7 +265,7 @@ const Frame2 = () => {
                 defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <button
-                className="absolute flex -space-x-[1%] scale-50 xl:scale-100"
+                className="absolute flex -space-x-[3%] scale-50 xl:scale-100"
                 onClick={() => handleImageClick("SF6")}
               >
                 <Image
