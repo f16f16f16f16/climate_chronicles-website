@@ -64,7 +64,7 @@ const Frame1 = () => {
           trigger: dekRef.current, // Use the Dek image as the trigger
           start: "bottom center", // Start the animation when the top of Dek hits the center of the viewport
           end: "bottom top", // End the animation when the bottom of Dek is at the top of the viewport
-          scrub: 1, // Smooth scrubbing, linking animation progress to scroll progress
+          scrub: 5, // Smooth scrubbing, linking animation progress to scroll progress
           // markers: true, // Shows start and end markers; useful for debugging, remove in production
         },
         // rotation: 360, // Rotate by 360 degrees
@@ -196,6 +196,9 @@ const Frame1 = () => {
             alt="Foreground Cloud 2"
           />
         </div>
+
+        {/* Fade color */}
+        <div className="bg-gradient-to-b from-[#eef1f5] to-[#00010d] w-full h-[30rem]"/>
 
         {/* Space Scene */}
         <div className="w-full pt-24 bg-black space-background">

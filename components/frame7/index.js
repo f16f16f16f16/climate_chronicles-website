@@ -4,8 +4,8 @@ import BigFrame from "../../assets/frame7/gif/Wastewater.gif";
 
 const Frame7 = () => {
   return (
-    <div className="mt-96 overflow-hidden">
-      <div className="bg-sky-200">
+    <div className="overflow-hidden">
+      <div className="bg-green-300">
         <Image src={BigFrame} alt="BigFrame" />
       </div>
     </div>

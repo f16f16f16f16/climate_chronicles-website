@@ -9,10 +9,11 @@ import Road from "../../assets/frame3/images/Road.png";
 import Car1 from "../../assets/frame3/gif/Car1GIF.gif";
 import Car2 from "../../assets/frame3/gif/Car2GIF.gif";
 import Car3 from "../../assets/frame3/gif/Car3GIF.gif";
+import GasFloat from "../gasFloat";
 
 const Frame3 = () => {
   return (
-    <div className="bg-sky-200">
+    <div className="bg-neutral-500">
       <div className="flex justify-center items-center">
         <Image
           src={Plane}
@@ -26,28 +27,34 @@ const Frame3 = () => {
       </div>
 
       <div>
-        <Image
-          src={Road}
-          className="-mt-[22%]"
-        />
+        <Image src={Road} className="-mt-[22%]" />
         <div className="flex gap-x-4">
           <div>
             <Image
               src={Car1}
               className="w-2/3 -mt-[60%] ml-10 md:ml-16 xl:ml-28 2xl:ml-36"
             />
+            {/* <div className="absolute -mt-[15%] ml-[30%]">
+              <GasFloat />
+            </div> */}
           </div>
           <div>
             <Image
               src={Car2}
               className="w-2/3 -mt-[65%] ml-10 md:ml-16 xl:ml-28 2xl:ml-36"
             />
+            {/* <div className="-mt-[35%] -mr-[88%] ">
+              <GasFloat />
+            </div> */}
           </div>
           <div>
             <Image
               src={Car3}
               className="w-2/3 -mt-[35%] ml-4 md:ml-16 xl:ml-28 2xl:ml-36"
             />
+            {/* <div className="-mt-[30%] -mr-[85%] ">
+              <GasFloat />
+            </div> */}
           </div>
         </div>
       </div>

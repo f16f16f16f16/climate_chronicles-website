@@ -12,11 +12,17 @@ const Fade = () => {
     <div>
       <Navibar/>
       <Frame1/>
+      <div className="bg-gradient-to-b from-[#00010d] to-zinc-900 h-[30rem]"/>
       <Frame2/>
+      <div className="bg-gradient-to-b from-sky-200 to-neutral-500 h-[30rem]"/>
       <Frame3/>
+      <div className="bg-gradient-to-b from-neutral-500 to-orange-400 h-[30rem]"/>
       <Frame4/>
+      <div className="bg-gradient-to-b from-orange-400 to-yellow-200 h-[30rem]"/>
       <Frame5/>
+      <div className="bg-gradient-to-b from-yellow-200 to-amber-700 h-[40rem]"/>
       <Frame6/>
+      <div className="bg-gradient-to-b from-amber-700 to-green-300 h-[40rem]"/>
       <Frame7/>
     </div>
   );

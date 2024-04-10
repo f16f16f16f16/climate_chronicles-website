@@ -104,7 +104,7 @@ const Frame2 = () => {
     <div className="overflow-hidden">
       <div className="bg-gradient-to-b from-zinc-900 via-indigo-700 to-sky-200 py-28 md:py-32 xl:py-40">
         <div className="ufo">
-          <Image src={UFO} alt="ufo" />
+          <Image className="w-[50%]" src={UFO} alt="ufo" />
         </div>
         <div ref={ccmanRef}>
           <Image
