@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import "@/styles/globals.css";
 import "mapbox-gl/dist/mapbox-gl.css";
+import BackgroundAudio from "@/components/bgAudio";
 import Footer from "@/components/footer";
 
 function MyApp({ Component, pageProps }) {
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }) {
         <title>Climate Chronicles - Stories of Origin &amp; Impact in Our Environment.</title>
         <meta name="description" content="Explore 'The Climate Chronicles' for impactful stories on environmental origins and effects. Discover tales of change, resilience, and innovation in our fight for a sustainable planet." />
       </Head>
+      <BackgroundAudio />
       <Component {...pageProps} />
       <Footer/>
       <Analytics />

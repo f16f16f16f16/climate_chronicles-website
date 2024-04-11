@@ -198,7 +198,7 @@ const Frame1 = () => {
         </div>
 
         {/* Fade color */}
-        <div className="bg-gradient-to-b from-[#eef1f5] to-[#00010d] w-full h-[30rem]"/>
+        <div className="bg-gradient-to-b from-[#eef1f5] to-[#00010d] w-full h-[30rem]" />
 
         {/* Space Scene */}
         <div className="w-full pt-24 bg-black space-background">
