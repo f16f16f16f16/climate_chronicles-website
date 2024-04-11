@@ -96,7 +96,7 @@ const Frame2 = () => {
       start: "top bottom", // Adjust as necessary
       end: "bottom top",
       scrub: 40,
-      markers: true,
+      // markers: true,
     });
   }, []);
 

@@ -1,5 +1,9 @@
+import React, { useEffect } from "react";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
+import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
 import Plane from "../../assets/frame3/images/Plane.png";
 import Mask from "../../assets/frame3/gif/Mask.gif";
 import Building from "../../assets/frame3/gif/Mask_Billboard.gif";
@@ -12,8 +16,31 @@ import Car3 from "../../assets/frame3/gif/Car3GIF.gif";
 import GasFloat from "../gasFloat";
 
 const Frame3 = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Create the animation for CCMan
+    gsap.fromTo(
+      ".ccman-animation",
+      {
+        x: "-100%",
+      },
+      {
+        x: "0%",
+        scrollTrigger: {
+          trigger: ".ccman-animation",
+          start: "top center",
+          end: "bottom top",
+          toggleActions: "play none none reverse",
+          // markers: true,
+        },
+      }
+    );
+  }, []);
+
   return (
     <div className="bg-neutral-500">
+      <Image src={CCMan} className="w-[20%] ccman-animation" />
       <div className="flex justify-center items-center">
         <Image
           src={Plane}
@@ -34,27 +61,18 @@ const Frame3 = () => {
               src={Car1}
               className="w-2/3 -mt-[60%] ml-10 md:ml-16 xl:ml-28 2xl:ml-36"
             />
-            {/* <div className="absolute -mt-[15%] ml-[30%]">
-              <GasFloat />
-            </div> */}
           </div>
           <div>
             <Image
               src={Car2}
               className="w-2/3 -mt-[65%] ml-10 md:ml-16 xl:ml-28 2xl:ml-36"
             />
-            {/* <div className="-mt-[35%] -mr-[88%] ">
-              <GasFloat />
-            </div> */}
           </div>
           <div>
             <Image
               src={Car3}
               className="w-2/3 -mt-[35%] ml-4 md:ml-16 xl:ml-28 2xl:ml-36"
             />
-            {/* <div className="-mt-[30%] -mr-[85%] ">
-              <GasFloat />
-            </div> */}
           </div>
         </div>
       </div>
