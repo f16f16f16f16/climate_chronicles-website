@@ -9,7 +9,7 @@ import Cloud1 from "../../assets/frame1/images/Cloud1.png";
 import Cloud2 from "../../assets/frame1/images/Cloud2.png";
 import Cloud3 from "../../assets/frame1/images/Cloud3.png";
 import Heaven from "../../assets/frame1/images/Heaven.png";
-import God from "../../assets/frame1/images/God.png";
+import God from "../../assets/frameQuiz/images/GOD.png";
 import Earth from "../../assets/frame1/images/Earth.png";
 import Sun from "../../assets/frame1/images/Sun.png";
 import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
@@ -164,7 +164,7 @@ const Frame1 = () => {
               />
               <Image
                 src={God}
-                className="w-36 md:w-96 xl:w-[30rem] h-auto absolute top-16 md:top-32 xl:top-52 left-1/2 transform -translate-x-1/2"
+                className="w-32 md:w-64 xl:w-[28rem] h-auto absolute top-16 md:top-32 xl:top-52 left-1/2 transform -translate-x-1/2"
                 alt="God"
               />
             </div>
