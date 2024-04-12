@@ -6,11 +6,13 @@ import Frame5 from "@/components/frame5";
 import Frame6 from "@/components/frame6";
 import Frame7 from "@/components/frame7";
 import Navibar from "../components/navbar/index";
+import BackgroundAudio from "@/components/bgAudio";
 
 const Home = () => {
   return (
     <div>
       <Navibar />
+      <BackgroundAudio />
       <Frame1 />
       <div className="bg-gradient-to-b from-[#00010d] to-zinc-900 h-[30rem]" />
       <Frame2 />
