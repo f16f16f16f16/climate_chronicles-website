@@ -182,10 +182,7 @@ export default function NaviBar() {
     //   </NavbarMenu>
     // </Navbar>
 
-    <Navbar
-      className="bg-transparent"
-      onMenuOpenChange={setIsMenuOpen}
-    >
+    <Navbar className="bg-transparent" onMenuOpenChange={setIsMenuOpen}>
       <div className="hidden sm:flex xl:fixed xl:left-6">
         <Link href="/">
           <Logo />
@@ -197,29 +194,44 @@ export default function NaviBar() {
           className="sm:hidden text-black"
         />
         <NavbarItem className="basis-1/4 flex justify-center">
-          <Link className="foreground underline underline-offset-8" href="/">
+          <Link className="text-black underline underline-offset-8" href="/">
             HOME
           </Link>
         </NavbarItem>
         <NavbarItem className="basis-1/4 flex justify-center">
           <Link
-            className="hidden sm:flex foreground underline underline-offset-8"
+            className="hidden sm:flex text-black underline underline-offset-8"
             href="/status"
           >
             WEATHER
           </Link>
         </NavbarItem>
-        <NavbarItem className="basis-1/4 flex justify-center">
-          <Link
-            className="hidden sm:flex foreground underline underline-offset-8"
-            href="/aboutus"
+
+        <Dropdown className="bg-transparent text-black">
+          <NavbarItem className="basis-1/4 flex justify-center">
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                className="bg-transparent data-[hover=true]:bg-transparent text-black hidden sm:flex underline underline-offset-8"
+                endContent={icons.chevron}
+              >
+                ABOUT US
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu
+            itemClasses={{
+              base: "gap-4",
+            }}
           >
-            ABOUT US
-          </Link>
-        </NavbarItem>
+            <DropdownItem href="/aboutus/team">Our Team Members</DropdownItem>
+            <DropdownItem href="/aboutus/advisor">Our Advisors</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+
         <NavbarItem className="basis-1/4 flex justify-center">
           <Link
-            className="foreground underline underline-offset-8"
+            className="text-black underline underline-offset-8"
             href="/contact"
           >
             CONTACT US

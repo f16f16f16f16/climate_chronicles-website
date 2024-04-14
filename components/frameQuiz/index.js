@@ -178,7 +178,7 @@ const FrameQuiz = () => {
             (answerOption, index) => (
               <button
                 key={index}
-                className="w-full md:max-w-xs py-2 px-4 bg-green-300 text-black text-xs md:text-xl xl:text-2xl rounded hover:bg-green-400 transition duration-300"
+                className="w-full md:max-w-xs py-2 px-4 bg-neutral-100 text-black text-xs md:text-xl xl:text-2xl rounded hover:bg-green-400 transition duration-300"
                 onClick={() => handleAnswerOptionClick(answerOption)}
               >
                 {answerOption.answerText}
