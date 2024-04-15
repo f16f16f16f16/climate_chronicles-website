@@ -6,12 +6,18 @@ import CCManCorrect1 from "../../assets/frameQuiz/gif/CCMan_Dap.gif";
 import CCManCorrect2 from "../../assets/frameQuiz/gif/CCMan_Dap.gif";
 import CCManWrong1 from "../../assets/frameQuiz/gif/CCMan_Crying.gif";
 import CCManWrong2 from "../../assets/frameQuiz/gif/CCMan_Crying.gif";
+import CCManHighScore from "../../assets/frameQuiz/gif/CCMan_Dap.gif";
+import CCManMediumScore from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
+import CCManLowScore from "../../assets/frameQuiz/gif/CCMan_Crying.gif";
 
 import GodDefault from "../../assets/frameQuiz/gif/God_Speaking_GIF.gif";
 import GodCorrect1 from "../../assets/frameQuiz/gif/GOD_Thumbs_up_GIF.gif";
 import GodCorrect2 from "../../assets/frameQuiz/gif/GOD_Thumbs_up_GIF.gif";
 import GodWrong1 from "../../assets/frameQuiz/gif/GOD_Angry_GIF.gif";
 import GodWrong2 from "../../assets/frameQuiz/gif/GOD_Disappointed_GIF.gif";
+import GodHighScore from "../../assets/frameQuiz/gif/GOD_Thumbs_up_GIF.gif";
+import GodMediumScore from "../../assets/frameQuiz/gif/GOD_Disappointed_GIF.gif";
+import GodLowScore from "../../assets/frameQuiz/gif/GOD_Angry_GIF.gif";
 
 const questions = [
   {
@@ -163,8 +169,25 @@ const FrameQuiz = () => {
     const nextQuestionIndex = currentQuestion + 1;
     if (nextQuestionIndex < questions.length) {
       setCurrentQuestion(nextQuestionIndex);
+      setShowAnswers(false);
+      setIsAnswerCorrect(null);
     } else {
-      // Quiz ends, show final score and feedback
+      // Quiz ends, calculate score and decide which image to show
+      const percentage = (correctAnswersCount / questions.length) * 100;
+      let newCCManImg, newGodImg;
+      if (percentage >= 80) {
+        newCCManImg = CCManHighScore;
+        newGodImg = GodHighScore;
+      } else if (percentage >= 50) {
+        newCCManImg = CCManMediumScore;
+        newGodImg = GodMediumScore;
+      } else {
+        newCCManImg = CCManLowScore;
+        newGodImg = GodLowScore;
+      }
+      setCCManImg(newCCManImg);
+      setGodImg(newGodImg);
+
       const feedback = getFeedbackMessage(
         correctAnswersCount,
         questions.length
@@ -172,12 +195,8 @@ const FrameQuiz = () => {
       setExplanation(
         `You scored ${correctAnswersCount} out of ${questions.length}. ${feedback}`
       );
-      setCurrentQuestion(-1); // Using -1 to signify the quiz is complete
+      setCurrentQuestion(-1); // Signifying that the quiz is complete
     }
-    setShowAnswers(false);
-    setIsAnswerCorrect(null);
-    setCCManImg(CCManDefault);
-    setGodImg(GodDefault);
   };
 
   const getFeedbackMessage = (score, total) => {
