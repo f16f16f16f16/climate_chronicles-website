@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
 import BigFrame from "../../assets/frame4/gif/BigFrame.gif";
-import GasFloat from "../gasFloat";
 
 const Frame4 = () => {
   useEffect(() => {

@@ -13,7 +13,7 @@ import Farmer1 from "../../assets/frame5/images/Farmer1.png";
 import Farmer2 from "../../assets/frame5/images/Farmer2.png";
 import Cow from "../../assets/frame5/gif/Cow.gif";
 import Horse from "../../assets/frame5/gif/Horse.gif";
-import Rice from "../../assets/frame5/images/Rice.png";
+import Rice from "../../assets/frame5/gif/Rice.gif";
 import Shiiit from "../../assets/frame5/images/Shiiit.png";
 
 const Frame5 = () => {
