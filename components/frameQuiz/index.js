@@ -171,6 +171,8 @@ const FrameQuiz = () => {
       setCurrentQuestion(nextQuestionIndex);
       setShowAnswers(false);
       setIsAnswerCorrect(null);
+      setCCManImg(CCManDefault);
+      setGodImg(GodDefault);
     } else {
       // Quiz ends, calculate score and decide which image to show
       const percentage = (correctAnswersCount / questions.length) * 100;
