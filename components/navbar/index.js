@@ -212,7 +212,7 @@ export default function NaviBar() {
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="bg-transparent data-[hover=true]:bg-transparent text-black hidden sm:flex"
+                className="bg-transparent data-[hover=true]:bg-transparent text-black text-base hidden sm:flex"
                 endContent={icons.chevron}
               >
                 ABOUT US
