@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
+import { Textarea } from "@nextui-org/react";
 
 import Climate from "../../assets/frame1/images/Climate.png";
 import Dek from "../../assets/frame1/images/Dek.png";
@@ -183,6 +184,13 @@ const Frame1 = () => {
             className="w-24 md:w-44 xl:w-64 h-auto"
             alt="Dek Speaking"
             ref={dekRef}
+          />
+          <Textarea
+            isReadOnly
+            disableAutosize
+            className="absolute left-32 text-black "
+            label="CCMan"
+            defaultValue="I'm not aware, sir."
           />
         </div>
 
