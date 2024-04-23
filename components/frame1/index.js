@@ -171,14 +171,14 @@ const Frame1 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute top-0 text-black "
+                className="absolute top-0 w-[40%] text-black"
                 label="CCMan"
                 defaultValue="My lord, I wonder what's beneath us. It feels so hot down there."
               />
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute top-24  text-black "
+                className="absolute top-24 right-0 w-[40%] text-black "
                 label="God"
                 defaultValue="You still don't know why it's so hot down below?"
               />
@@ -195,14 +195,14 @@ const Frame1 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute bottom-0 text-black "
+                className="absolute bottom-0 w-[40%] text-black "
                 label="God"
                 defaultValue="Well then, I'll send you down to see what's happening to our world below."
               />
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute pt-2 text-black "
+                className="absolute right-0 pt-2 w-[40%] text-black "
                 label="God"
                 defaultValue="But before you go down, you'll need to change your outfit because you'll have to pass through the atmosphere and encounter various gases, which might make it hard to breathe."
               />
