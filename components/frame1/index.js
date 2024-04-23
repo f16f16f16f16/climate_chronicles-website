@@ -138,6 +138,7 @@ const Frame1 = () => {
           autoPlay
           loop
           muted
+          playsInline
         />
       </div>
 
