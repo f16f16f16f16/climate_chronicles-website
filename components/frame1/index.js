@@ -168,6 +168,20 @@ const Frame1 = () => {
             }}
           >
             <div className="relative">
+              <Textarea
+                isReadOnly
+                disableAutosize
+                className="absolute top-0 text-black "
+                label="CCMan"
+                defaultValue="My lord, I wonder what's beneath us. It feels so hot down there."
+              />
+              <Textarea
+                isReadOnly
+                disableAutosize
+                className="absolute top-24  text-black "
+                label="God"
+                defaultValue="You still don't know why it's so hot down below?"
+              />
               <Image
                 src={Heaven}
                 className="w-96 md:w-[60rem] xl:w-[80rem] h-auto"
@@ -178,6 +192,20 @@ const Frame1 = () => {
                 className="w-32 md:w-64 xl:w-[28rem] h-auto absolute top-16 md:top-32 xl:top-52 left-1/2 transform -translate-x-1/2"
                 alt="God"
               />
+              <Textarea
+                isReadOnly
+                disableAutosize
+                className="absolute bottom-0 text-black "
+                label="God"
+                defaultValue="Well then, I'll send you down to see what's happening to our world below."
+              />
+              <Textarea
+                isReadOnly
+                disableAutosize
+                className="absolute pt-2 text-black "
+                label="God"
+                defaultValue="But before you go down, you'll need to change your outfit because you'll have to pass through the atmosphere and encounter various gases, which might make it hard to breathe."
+              />
             </div>
           </div>
         </div>
@@ -186,18 +214,18 @@ const Frame1 = () => {
         <div className="mt-10 md:mt-12 xl:mt-18"></div>
 
         <div className="relative z-30 -bottom-10 md:-bottom-24 xl:-bottom-32">
+          <Textarea
+            isReadOnly
+            disableAutosize
+            className="absolute  right-28 text-black"
+            label="CCMan"
+            defaultValue="I'm not aware, sir."
+          />
           <Image
             src={Dek}
             className="w-24 md:w-44 xl:w-64 h-auto"
             alt="Dek Speaking"
             ref={dekRef}
-          />
-          <Textarea
-            isReadOnly
-            disableAutosize
-            className="absolute left-32 text-black "
-            label="CCMan"
-            defaultValue="I'm not aware, sir."
           />
         </div>
 
