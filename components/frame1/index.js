@@ -131,12 +131,18 @@ const Frame1 = () => {
 
   return (
     <div>
-      <div className="flex justify-center items-center w-full p-24 bg-white">
-        <Image src={Climate} className="w-full" />
+      <div className="flex justify-center items-center w-full px-20 pt-24 md:pt-36 xl:pt-44 bg-white">
+        <video
+          src="/videos/frame1/Climate_Chronicles.mov"
+          className="w-full"
+          autoPlay
+          loop
+          muted
+        />
       </div>
 
       {/* Fade color */}
-      <div className="bg-gradient-to-b from-white to-[#eef1f5] w-full h-[10rem]" />
+      <div className="bg-gradient-to-b from-white to-[#eef1f5] w-full h-[6rem]" />
 
       <div className="relative pt-16 md:pt-28 xl:pt-32 heavenly-background overflow-hidden flex flex-col items-center">
         <div className="relative">
