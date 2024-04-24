@@ -13,8 +13,8 @@ import Heaven from "../../assets/frame1/images/Heaven.webp";
 import God from "../../assets/frameQuiz/images/GOD.webp";
 import Earth from "../../assets/frame1/images/Earth.webp";
 import Sun from "../../assets/frame1/images/Sun.webp";
-import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
-import Capsule from "../../assets/frame1/gif/TranformationCapsule.gif";
+import CCMan from "../../assets/frame1/gif/CCMan_Droping.webp";
+import Capsule from "../../assets/frame1/gif/TranformationCapsule.webp";
 import Astronaut from "../../assets/frame1/images/Astronaut.webp";
 
 const generateStars = (count) => {

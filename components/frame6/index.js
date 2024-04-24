@@ -3,9 +3,9 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
-import BigFrame from "../../assets/frame6/gif/BigFrame.gif";
-import Boomer from "../../assets/frame6/gif/Boomer.gif";
+import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.webp";
+import BigFrame from "../../assets/frame6/gif/BigFrame.webp";
+import Boomer from "../../assets/frame6/gif/Boomer.webp";
 
 const Frame6 = () => {
   useEffect(() => {

@@ -1,23 +1,23 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import CCManDefault from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
-import CCManCorrect1 from "../../assets/frameQuiz/gif/CCMan_Dap.gif";
-import CCManCorrect2 from "../../assets/frameQuiz/gif/CCMan_Dap.gif";
-import CCManWrong1 from "../../assets/frameQuiz/gif/CCMan_Crying.gif";
-import CCManWrong2 from "../../assets/frameQuiz/gif/CCMan_Crying.gif";
-import CCManHighScore from "../../assets/frameQuiz/gif/CCMan_Dap.gif";
-import CCManMediumScore from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
-import CCManLowScore from "../../assets/frameQuiz/gif/CCMan_Crying.gif";
+import CCManDefault from "../../assets/frame1/gif/CCMan_Stand&speak.webp";
+import CCManCorrect1 from "../../assets/frameQuiz/gif/CCMan_Dap.webp";
+import CCManCorrect2 from "../../assets/frameQuiz/gif/CCMan_Happy.webp";
+import CCManWrong1 from "../../assets/frameQuiz/gif/CCMan_Crying.webp";
+import CCManWrong2 from "../../assets/frameQuiz/gif/CCMan_Crying.webp";
+import CCManHighScore from "../../assets/frameQuiz/gif/CCMan_Dap.webp";
+import CCManMediumScore from "../../assets/frameQuiz/gif/CCMan_Happy.webp";
+import CCManLowScore from "../../assets/frameQuiz/gif/CCMan_Crying.webp";
 
-import GodDefault from "../../assets/frameQuiz/gif/God_Speaking_GIF.gif";
-import GodCorrect1 from "../../assets/frameQuiz/gif/GOD_Thumbs_up_GIF.gif";
-import GodCorrect2 from "../../assets/frameQuiz/gif/GOD_Thumbs_up_GIF.gif";
-import GodWrong1 from "../../assets/frameQuiz/gif/GOD_Angry_GIF.gif";
-import GodWrong2 from "../../assets/frameQuiz/gif/GOD_Disappointed_GIF.gif";
-import GodHighScore from "../../assets/frameQuiz/gif/GOD_Thumbs_up_GIF.gif";
-import GodMediumScore from "../../assets/frameQuiz/gif/GOD_Disappointed_GIF.gif";
-import GodLowScore from "../../assets/frameQuiz/gif/GOD_Angry_GIF.gif";
+import GodDefault from "../../assets/frameQuiz/gif/God_Speaking.webp";
+import GodCorrect1 from "../../assets/frameQuiz/gif/GOD_Thumbs_up.webp";
+import GodCorrect2 from "../../assets/frameQuiz/gif/God_Dancing.webp";
+import GodWrong1 from "../../assets/frameQuiz/gif/GOD_Angry.webp";
+import GodWrong2 from "../../assets/frameQuiz/gif/GOD_Disappointed.webp";
+import GodHighScore from "../../assets/frameQuiz/gif/God_Dancing.webp";
+import GodMediumScore from "../../assets/frameQuiz/gif/GOD_Thumbs_up.webp";
+import GodLowScore from "../../assets/frameQuiz/gif/GOD_Angry.webp";
 
 const questions = [
   {

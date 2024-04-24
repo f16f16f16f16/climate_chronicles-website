@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 
-import CCMan from "../../assets/frame2/gif/CCManFly.gif";
+import CCMan from "../../assets/frame2/gif/CCManFly.webp";
 import Aura from "../../assets/frame2/images/Aura.webp";
 import UFO from "../../assets/frame2/images/UFO.webp";
 import CH4_1 from "../../assets/frame2/images/gasSeparate/CH4_1.webp";

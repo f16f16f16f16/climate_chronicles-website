@@ -3,8 +3,8 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
-import BigFrame from "../../assets/frame4/gif/BigFrame.gif";
+import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.webp";
+import BigFrame from "../../assets/frame4/gif/BigFrame.webp";
 
 const Frame4 = () => {
   useEffect(() => {

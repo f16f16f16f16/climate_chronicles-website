@@ -3,17 +3,17 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
+import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.webp";
 import Mill from "../../assets/frame5/images/Mill.webp";
 import Straw from "../../assets/frame5/images/Straw.webp";
-import Tractor from "../../assets/frame5/gif/Tractor.gif";
+import Tractor from "../../assets/frame5/gif/Tractor.webp";
 import Fence from "../../assets/frame5/images/Fence.webp";
 import Fertilizer from "../../assets/frame5/images/Fertilizer.webp";
 import Farmer1 from "../../assets/frame5/images/Farmer1.webp";
 import Farmer2 from "../../assets/frame5/images/Farmer2.webp";
-import Cow from "../../assets/frame5/gif/Cow.gif";
-import Horse from "../../assets/frame5/gif/Horse.gif";
-import Rice from "../../assets/frame5/gif/Rice.gif";
+import Cow from "../../assets/frame5/gif/Cow.webp";
+import Horse from "../../assets/frame5/gif/Horse.webp";
+import Rice from "../../assets/frame5/gif/Rice.webp";
 
 const Frame5 = () => {
   useEffect(() => {

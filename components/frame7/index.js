@@ -4,8 +4,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Button, Link } from "@nextui-org/react";
 
-import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
-import BigFrame from "../../assets/frame7/gif/Wastewater.gif";
+import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.webp";
+import BigFrame from "../../assets/frame7/gif/Wastewater.webp";
 
 const Frame7 = () => {
   useEffect(() => {
