@@ -4,17 +4,16 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
-import Mill from "../../assets/frame5/images/Mill.png";
-import Straw from "../../assets/frame5/images/Straw.png";
+import Mill from "../../assets/frame5/images/Mill.webp";
+import Straw from "../../assets/frame5/images/Straw.webp";
 import Tractor from "../../assets/frame5/gif/Tractor.gif";
-import Fence from "../../assets/frame5/images/Fence.png";
-import Fertilizer from "../../assets/frame5/images/Fertilizer.png";
-import Farmer1 from "../../assets/frame5/images/Farmer1.png";
-import Farmer2 from "../../assets/frame5/images/Farmer2.png";
+import Fence from "../../assets/frame5/images/Fence.webp";
+import Fertilizer from "../../assets/frame5/images/Fertilizer.webp";
+import Farmer1 from "../../assets/frame5/images/Farmer1.webp";
+import Farmer2 from "../../assets/frame5/images/Farmer2.webp";
 import Cow from "../../assets/frame5/gif/Cow.gif";
 import Horse from "../../assets/frame5/gif/Horse.gif";
 import Rice from "../../assets/frame5/gif/Rice.gif";
-import Shiiit from "../../assets/frame5/images/Shiiit.png";
 
 const Frame5 = () => {
   useEffect(() => {

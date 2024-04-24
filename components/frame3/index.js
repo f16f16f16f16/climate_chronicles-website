@@ -4,11 +4,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
-import Plane from "../../assets/frame3/images/Plane.png";
+import Plane from "../../assets/frame3/images/Plane.webp";
 import Building from "../../assets/frame3/gif/Mask_Billboard.gif";
 import Factory1 from "../../assets/frame3/gif/Factory1.gif";
 import Factory2 from "../../assets/frame3/gif/Factory2.gif";
-import Road from "../../assets/frame3/images/Road.png";
+import Road from "../../assets/frame3/images/Road.webp";
 import Car1 from "../../assets/frame3/gif/Car1.gif";
 import Car2 from "../../assets/frame3/gif/Car2.gif";
 import Car3 from "../../assets/frame3/gif/Car3.gif";

@@ -4,18 +4,18 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { Textarea } from "@nextui-org/react";
 
-import Climate from "../../assets/frame1/images/Climate.png";
-import Dek from "../../assets/frame1/images/Dek.png";
-import Cloud1 from "../../assets/frame1/images/Cloud1.png";
-import Cloud2 from "../../assets/frame1/images/Cloud2.png";
-import Cloud3 from "../../assets/frame1/images/Cloud3.png";
-import Heaven from "../../assets/frame1/images/Heaven.png";
-import God from "../../assets/frameQuiz/images/GOD.png";
-import Earth from "../../assets/frame1/images/Earth.png";
-import Sun from "../../assets/frame1/images/Sun.png";
+import Climate from "../../assets/frame1/gif/Scene0.webp";
+import Dek from "../../assets/frame1/images/Dek.webp";
+import Cloud1 from "../../assets/frame1/images/Cloud1.webp";
+import Cloud2 from "../../assets/frame1/images/Cloud2.webp";
+import Cloud3 from "../../assets/frame1/images/Cloud3.webp";
+import Heaven from "../../assets/frame1/images/Heaven.webp";
+import God from "../../assets/frameQuiz/images/GOD.webp";
+import Earth from "../../assets/frame1/images/Earth.webp";
+import Sun from "../../assets/frame1/images/Sun.webp";
 import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.gif";
 import Capsule from "../../assets/frame1/gif/TranformationCapsule.gif";
-import Astronaut from "../../assets/frame1/images/Astronaut.png";
+import Astronaut from "../../assets/frame1/images/Astronaut.webp";
 
 const generateStars = (count) => {
   const stars = [];

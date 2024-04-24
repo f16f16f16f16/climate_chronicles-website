@@ -7,20 +7,20 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 
 import CCMan from "../../assets/frame2/gif/CCManFly.gif";
-import Aura from "../../assets/frame2/images/Aura.png";
-import UFO from "../../assets/frame2/images/UFO.png";
-import CH4_1 from "../../assets/frame2/images/gasSeparate/CH4.1.png";
-import CH4_2 from "../../assets/frame2/images/gasSeparate/CH4.2.png";
-import CO2_1 from "../../assets/frame2/images/gasSeparate/CO2.1.png";
-import CO2_2 from "../../assets/frame2/images/gasSeparate/CO2.2.png";
-import HFCs_1 from "../../assets/frame2/images/gasSeparate/HFCs.1.png";
-import HFCs_2 from "../../assets/frame2/images/gasSeparate/HFCs.2.png";
-import N2O_1 from "../../assets/frame2/images/gasSeparate/N2O.1.png";
-import N2O_2 from "../../assets/frame2/images/gasSeparate/N2O.2.png";
-import PFCs_1 from "../../assets/frame2/images/gasSeparate/PFCs.1.png";
-import PFCs_2 from "../../assets/frame2/images/gasSeparate/PFCs.2.png";
-import SF6_1 from "../../assets/frame2/images/gasSeparate/SF6.1.png";
-import SF6_2 from "../../assets/frame2/images/gasSeparate/SF6.2.png";
+import Aura from "../../assets/frame2/images/Aura.webp";
+import UFO from "../../assets/frame2/images/UFO.webp";
+import CH4_1 from "../../assets/frame2/images/gasSeparate/CH4.1.webp";
+import CH4_2 from "../../assets/frame2/images/gasSeparate/CH4.2.webp";
+import CO2_1 from "../../assets/frame2/images/gasSeparate/CO2.1.webp";
+import CO2_2 from "../../assets/frame2/images/gasSeparate/CO2.2.webp";
+import HFCs_1 from "../../assets/frame2/images/gasSeparate/HFCs.1.webp";
+import HFCs_2 from "../../assets/frame2/images/gasSeparate/HFCs.2.webp";
+import N2O_1 from "../../assets/frame2/images/gasSeparate/N2O.1.webp";
+import N2O_2 from "../../assets/frame2/images/gasSeparate/N2O.2.webp";
+import PFCs_1 from "../../assets/frame2/images/gasSeparate/PFCs.1.webp";
+import PFCs_2 from "../../assets/frame2/images/gasSeparate/PFCs.2.webp";
+import SF6_1 from "../../assets/frame2/images/gasSeparate/SF6.1.webp";
+import SF6_2 from "../../assets/frame2/images/gasSeparate/SF6.2.webp";
 
 // Register GSAP plugins outside of the component to avoid registering multiple times.
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
