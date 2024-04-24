@@ -16,6 +16,7 @@ import Sun from "../../assets/frame1/images/Sun.webp";
 import CCMan from "../../assets/frame1/gif/CCMan_Droping.webp";
 import Capsule from "../../assets/frame1/gif/TranformationCapsule.webp";
 import Astronaut from "../../assets/frame1/images/Astronaut.webp";
+import Warp from "../../assets/frame1/gif/Warp.webp";
 
 const generateStars = (count) => {
   const stars = [];
@@ -323,16 +324,11 @@ const Frame1 = () => {
           />
 
           <div className="-mb-64 md:-mb-[30rem] xl:-mb-[55rem] flex justify-center items-center">
-            <Image src={Earth} className="h-full slow-rotate" alt="Earth" />
+            <Image src={Earth} className="w-[75%] slow-rotate" alt="Earth" />
           </div>
 
           <div className="z-20 relative">
-            <Image src={Cloud2} />
-            <Image src={Cloud1} className="-mt-[17%]" />
-            <Image src={Cloud3} className="-mt-[19%]" ref={landing2Ref} />
-            <Image src={Cloud2} className="-mt-[17%]" />
-            <Image src={Cloud1} className="-mt-[17%]" />
-            <Image src={Cloud2} className="-mt-[17%]" />
+            <Image src={Warp} className="mt-24 md:mt-36 xl:mt-64" ref={landing2Ref} />
           </div>
         </div>
       </div>
