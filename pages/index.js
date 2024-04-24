@@ -14,7 +14,7 @@ const Home = () => {
       <Navibar />
       <BackgroundAudio />
       <Frame1 />
-      <div className="bg-gradient-to-b from-[#00010d] to-zinc-900 h-[30rem]" />
+      {/* <div className="bg-gradient-to-b from-[#00010d] to-zinc-900 h-[30rem]" />
       <Frame2 />
       <div className="bg-gradient-to-b from-sky-200 to-neutral-500 h-[30rem]" />
       <Frame3 />
@@ -25,7 +25,7 @@ const Home = () => {
       <div className="bg-gradient-to-b from-yellow-200 to-amber-700 h-[40rem]" />
       <Frame6 />
       <div className="bg-gradient-to-b from-amber-700 to-green-300 h-[40rem]" />
-      <Frame7 />
+      <Frame7 /> */}
     </div>
   );
 };
