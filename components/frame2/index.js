@@ -6,21 +6,21 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 
-// import CCMan from "../../assets/frame2/gif/CCManFly.gif";
-// import Aura from "../../assets/frame2/images/Aura.webp";
-// import UFO from "../../assets/frame2/images/UFO.webp";
-// import CH4_1 from "../../assets/frame2/images/gasSeparate/CH4.1.webp";
-// import CH4_2 from "../../assets/frame2/images/gasSeparate/CH4.2.webp";
-// import CO2_1 from "../../assets/frame2/images/gasSeparate/CO2.1.webp";
-// import CO2_2 from "../../assets/frame2/images/gasSeparate/CO2.2.webp";
-// import HFCs_1 from "../../assets/frame2/images/gasSeparate/HFCs.1.webp";
-// import HFCs_2 from "../../assets/frame2/images/gasSeparate/HFCs.2.webp";
-// import N2O_1 from "../../assets/frame2/images/gasSeparate/N2O.1.webp";
-// import N2O_2 from "../../assets/frame2/images/gasSeparate/N2O.2.webp";
-// import PFCs_1 from "../../assets/frame2/images/gasSeparate/PFCs.1.webp";
-// import PFCs_2 from "../../assets/frame2/images/gasSeparate/PFCs.2.webp";
-// import SF6_1 from "../../assets/frame2/images/gasSeparate/SF6.1.webp";
-// import SF6_2 from "../../assets/frame2/images/gasSeparate/SF6.2.webp";
+import CCMan from "../../assets/frame2/gif/CCManFly.gif";
+import Aura from "../../assets/frame2/images/Aura.webp";
+import UFO from "../../assets/frame2/images/UFO.webp";
+import CH4_1 from "../../assets/frame2/images/gasSeparate/CH4_1.webp";
+import CH4_2 from "../../assets/frame2/images/gasSeparate/CH4_2.webp";
+import CO2_1 from "../../assets/frame2/images/gasSeparate/CO2_1.webp";
+import CO2_2 from "../../assets/frame2/images/gasSeparate/CO2_2.webp";
+import HFCs_1 from "../../assets/frame2/images/gasSeparate/HFCs_1.webp";
+import HFCs_2 from "../../assets/frame2/images/gasSeparate/HFCs_2.webp";
+import N2O_1 from "../../assets/frame2/images/gasSeparate/N2O_1.webp";
+import N2O_2 from "../../assets/frame2/images/gasSeparate/N2O_2.webp";
+import PFCs_1 from "../../assets/frame2/images/gasSeparate/PFCs_1.webp";
+import PFCs_2 from "../../assets/frame2/images/gasSeparate/PFCs_2.webp";
+import SF6_1 from "../../assets/frame2/images/gasSeparate/SF6_1.webp";
+import SF6_2 from "../../assets/frame2/images/gasSeparate/SF6_2.webp";
 
 // Register GSAP plugins outside of the component to avoid registering multiple times.
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
@@ -114,7 +114,7 @@ const Frame2 = () => {
 
   return (
     <div className="bg-gradient-to-b from-zinc-900 via-indigo-700 to-sky-200 py-28 md:py-32 xl:py-40 overflow-hidden">
-      {/* <div className="ufo">
+      <div className="ufo">
         <Image className="w-[50%]" src={UFO} alt="ufo" />
       </div>
       <div ref={ccmanRef}>
@@ -308,7 +308,7 @@ const Frame2 = () => {
             </button>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
