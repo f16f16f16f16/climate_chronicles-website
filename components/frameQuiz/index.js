@@ -197,7 +197,7 @@ const FrameQuiz = () => {
       setExplanation(
         `You scored ${correctAnswersCount} out of ${questions.length}. ${feedback}`
       );
-      setCurrentQuestion(-1); // Signifying that the quiz is complete
+      setCurrentQuestion(-1);
     }
   };
 
