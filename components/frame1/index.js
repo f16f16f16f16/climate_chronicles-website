@@ -323,12 +323,12 @@ const Frame1 = () => {
             id="astronaut"
           />
 
-          <div className="-mb-64 md:-mb-[30rem] xl:-mb-[55rem] flex justify-center items-center">
+          <div className="flex justify-center items-center">
             <Image src={Earth} className="w-[75%] slow-rotate" alt="Earth" />
           </div>
 
           <div className="z-20 relative">
-            <Image src={Warp} className="mt-24 md:mt-36 xl:mt-64" ref={landing2Ref} />
+            <Image src={Warp} className="" ref={landing2Ref} />
           </div>
         </div>
       </div>
