@@ -191,18 +191,18 @@ const Frame1 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute bottom-0 w-[40%] text-black "
-                color="warning"
-                label="God"
-                defaultValue="Well then, I'll send you down to see what's happening to our world below."
+                className="absolute bottom-0 w-[40%] text-black"
+                color="primary"
+                label="CCMan"
+                defaultValue="I'm not aware, sir."
               />
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute right-0 pt-2 w-[40%] text-black "
+                className="absolute right-0 pt-2 w-[40%] text-black"
                 color="warning"
                 label="God"
-                defaultValue="But before you go down, you'll need to change your outfit because you'll have to pass through the atmosphere and encounter various gases, which might make it hard to breathe."
+                defaultValue="Well then, I'll send you down to see what's happening to our world below."
               />
             </div>
           </div>
@@ -215,10 +215,10 @@ const Frame1 = () => {
           <Textarea
             isReadOnly
             disableAutosize
-            className="absolute  right-28 text-black"
-            color="primary"
-            label="CCMan"
-            defaultValue="I'm not aware, sir."
+            className="absolute  right-24 md:right-48 xl:right-72 text-black"
+            color="warning"
+            label="God"
+            defaultValue="But before you go down, you'll need to change your outfit because you'll have to pass through the atmosphere and encounter various gases, which might make it hard to breathe."
           />
           <Image
             src={Dek}
