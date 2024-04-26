@@ -194,13 +194,13 @@ export default function NaviBar() {
           className="sm:hidden text-black"
         />
         <NavbarItem className="basis-1/4 flex justify-center">
-          <Link className="text-black font-semibold underline underline-offset-8" href="/">
+          <Link className="text-black font-semibold " href="/">
             HOME
           </Link>
         </NavbarItem>
         <NavbarItem className="basis-1/4 flex justify-center">
           <Link
-            className="hidden sm:flex text-black font-semibold underline underline-offset-8"
+            className="hidden sm:flex text-black font-semibold "
             href="/status"
           >
             WEATHER
@@ -231,7 +231,7 @@ export default function NaviBar() {
 
         <NavbarItem className="basis-1/4 flex justify-center">
           <Link
-            className="text-black font-semibold underline underline-offset-8"
+            className="text-black font-semibold "
             href="/contact"
           >
             CONTACT US
