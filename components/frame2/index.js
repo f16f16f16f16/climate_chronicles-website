@@ -133,7 +133,17 @@ const Frame2 = () => {
           className="h-72 md:h-[45rem] xl:h-[64rem] 2xl:h-[85rem] 2xl:w-screen object-cover"
         />
         <div className="space-y-48 md:space-y-[34rem] xl:space-y-[60rem]">
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center mt-12">
+            <div>
+              <Textarea
+                isReadOnly
+                disableAutosize
+                className="absolute left-0 -mt-[40%] w-[40%] "
+                color="primary"
+                label="CCMan"
+                defaultValue="What is this, sir?"
+              />
+            </div>
             <Textarea
               isReadOnly
               variant="bordered"
@@ -163,6 +173,16 @@ const Frame2 = () => {
             </button>
           </div>
           <div className="flex flex-col items-center justify-center">
+            <div>
+              <Textarea
+                isReadOnly
+                disableAutosize
+                className="absolute left-0 -mt-[40%] w-[40%] "
+                color="primary"
+                label="CCMan"
+                defaultValue="Oh dear, I have no clue about these gases at all."
+              />
+            </div>
             <Textarea
               isReadOnly
               variant="bordered"
@@ -192,6 +212,16 @@ const Frame2 = () => {
             </button>
           </div>
           <div className="flex flex-col items-center justify-center">
+            <div>
+              <Textarea
+                isReadOnly
+                disableAutosize
+                className="absolute left-0 -mt-[40%] w-[40%] "
+                color="primary"
+                label="CCMan"
+                defaultValue="Why does it feel so stifling and hot here?"
+              />
+            </div>
             <Textarea
               isReadOnly
               variant="bordered"
@@ -221,6 +251,16 @@ const Frame2 = () => {
             </button>
           </div>
           <div className="flex flex-col items-center justify-center">
+            <div>
+              <Textarea
+                isReadOnly
+                disableAutosize
+                className="absolute left-0 -mt-[40%] w-[40%] "
+                color="primary"
+                label="CCMan"
+                defaultValue="I feel the same heat sensation here as well."
+              />
+            </div>
             <Textarea
               isReadOnly
               variant="bordered"
@@ -250,6 +290,16 @@ const Frame2 = () => {
             </button>
           </div>
           <div className="flex flex-col items-center justify-center">
+            <div>
+              <Textarea
+                isReadOnly
+                disableAutosize
+                className="absolute left-0 -mt-[40%] w-[40%] "
+                color="primary"
+                label="CCMan"
+                defaultValue="There are several gases here that can both destroy greenhouse gases and contribute to increased atmospheric heat."
+              />
+            </div>
             <Textarea
               isReadOnly
               variant="bordered"
@@ -279,6 +329,16 @@ const Frame2 = () => {
             </button>
           </div>
           <div className="flex flex-col items-center justify-center">
+            <div>
+              <Textarea
+                isReadOnly
+                disableAutosize
+                className="absolute left-0 -mt-[40%] w-[40%] "
+                color="primary"
+                label="CCMan"
+                defaultValue="Before reaching the Earth's surface, we have to pass through multiple atmospheric layers and encounter gases that are destroying greenhouse gases."
+              />
+            </div>
             <Textarea
               isReadOnly
               variant="bordered"
