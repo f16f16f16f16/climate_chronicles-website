@@ -126,7 +126,7 @@ const Frame2 = () => {
       </div>
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-white text-4xl md:text-6xl lg:text-8xl py-5 font-bold shadow-md">
-          Earth's Atmosphere
+          Earth&apos;s Atmosphere
         </h1>
         <Image
           src={Aura}
