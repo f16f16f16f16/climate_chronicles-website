@@ -95,7 +95,7 @@ const Frame1 = () => {
           scrub: 18,
           // markers: true,
         },
-        y: distanceToLanding, // Move CCMan closer to the Landing (Capsule) image
+        y: distanceToLanding + 800, // Move CCMan closer to the Landing (Capsule) image
         ease: "none", // No easing for smooth, continuous animation
       });
     }
