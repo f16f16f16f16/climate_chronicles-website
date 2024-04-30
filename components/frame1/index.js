@@ -333,7 +333,7 @@ const Frame1 = () => {
           </div>
 
           <div className="z-20 relative flex justify-center items-center">
-            <Image src={Warp} className="" ref={landing2Ref} />
+            <Image src={Warp} className="w-[70%]" ref={landing2Ref} />
           </div>
         </div>
       </div>
