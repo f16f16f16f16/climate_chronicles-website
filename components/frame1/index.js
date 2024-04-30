@@ -332,7 +332,7 @@ const Frame1 = () => {
             <Image src={Earth} className="w-[75%] slow-rotate" alt="Earth" />
           </div>
 
-          <div className="z-20 relative">
+          <div className="z-20 relative flex justify-center items-center">
             <Image src={Warp} className="" ref={landing2Ref} />
           </div>
         </div>
