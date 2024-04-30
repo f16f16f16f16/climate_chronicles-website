@@ -36,7 +36,7 @@ const Frame7 = () => {
         <Image src={CCMan} className="w-[20%] ccman-animation5" />
         <Image src={BigFrame} alt="BigFrame" />
       </div>
-      <div className="bg-rose-950 py-24 flex justify-center">
+      <div className="bg-black py-24 flex justify-center">
         <Link href="/quiz">
           <Button color="secondary" variant="faded">
             Go Answer Questions!!!
