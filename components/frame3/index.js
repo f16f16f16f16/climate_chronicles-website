@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { Textarea } from "@nextui-org/react";
 
 import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.webp";
 import Plane from "../../assets/frame3/images/Plane.webp";
@@ -38,13 +39,41 @@ const Frame3 = () => {
 
   return (
     <div className="bg-neutral-500">
-      <Image src={CCMan} className="w-[20%] ccman-animation" />
+      <div className="flex">
+        <Image src={CCMan} className="w-[20%] ccman-animation" />
+        <div>
+          <Textarea
+            isReadOnly
+            disableAutosize
+            className=""
+            color="primary"
+            label="CCMan"
+            defaultValue="Does everyone understand, right?"
+          />
+          <Textarea
+            isReadOnly
+            disableAutosize
+            className="absolute w-[60%]"
+            color="primary"
+            label="CCMan"
+            defaultValue="Next, Ccman will tell everyone about human activities that produce various gases, which also contribute to greenhouse gases. They also have the effect of increasing heat in the atmosphere"
+          />
+        </div>
+      </div>
       <div className="flex justify-center items-center">
         <Image
           src={Plane}
           className="w-28 md:w-52 xl:w-96 py-20 md:py-36 xl:py-52 2xl:py-72 plane-flip-animation"
         />
       </div>
+      <Textarea
+        isReadOnly
+        disableAutosize
+        className=""
+        color="primary"
+        label="CCMan"
+        defaultValue="Whether it's industrial factories, machinery, transportation by land or air, or even shopping malls, all of the mentioned activities are involved in processes that result in the emission of carbon dioxide (CO2)"
+      />
       <div className="flex gap-x-4 overflow-hidden">
         <Image src={Building} className="w-1/3" />
         <Image src={Factory1} className="w-1/3" />

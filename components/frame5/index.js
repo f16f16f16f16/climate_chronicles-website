@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { Textarea } from "@nextui-org/react";
 
 import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.webp";
 import Mill from "../../assets/frame5/images/Mill.webp";
@@ -41,7 +42,17 @@ const Frame5 = () => {
   return (
     <div className="overflow-hidden">
       <div className="bg-yellow-200 py-[20%]">
-        <Image src={CCMan} className="w-[20%] ccman-animation3" />
+        <div className="flex">
+          <Image src={CCMan} className="w-[20%] ccman-animation3" />
+          <Textarea
+            isReadOnly
+            disableAutosize
+            className=""
+            color="primary"
+            label="CCMan"
+            defaultValue="Do you see villagers farming? Did you know that agriculture also contributes to global warming?"
+          />
+        </div>
       </div>
       <div className="bg-lime-700">
         <div className="flex items-center">
@@ -115,6 +126,13 @@ const Frame5 = () => {
           <Image src={Fence} alt="Fence" className="w-1/2 " />
         </div>
       </div>
+      <Textarea
+        isReadOnly
+        className=""
+        color="primary"
+        label="CCMan"
+        defaultValue="This is because nitrous oxide (N2O) is a natural gas originating from various sources, including bacteria in soil and oceans, as well as the decomposition of organic matter (chemical fertilizers). Additionally, industrial and energy sectors, including burning agricultural residues and various fuels, are major human activities that release nitrous oxide into the Earth's atmosphere. Furthermore, some human activities also produce methane (CH4), such as agriculture and livestock farming, from animal waste, such as cows and buffaloes, and from flooded rice paddies."
+      />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { Button, Link } from "@nextui-org/react";
+import { Button, Link, Textarea } from "@nextui-org/react";
 
 import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.webp";
 import BigFrame from "../../assets/frame7/gif/Wastewater.webp";
@@ -33,7 +33,19 @@ const Frame7 = () => {
   return (
     <div className="overflow-hidden">
       <div className="bg-green-300">
-        <Image src={CCMan} className="w-[20%] ccman-animation5" />
+        <div className="flex">
+          <Image src={CCMan} className="w-[20%] ccman-animation5" />
+          <div>
+            <Textarea
+              isReadOnly
+              disableAutosize
+              className="absolute w-[60%]"
+              color="primary"
+              label="CCMan"
+              defaultValue="ha-ha-ha, those foul-smelling waters are indeed a result of human intervention. Stagnant or foul water often occurs due to the decomposition or fermentation of organic matter in oxygen-deprived conditions. This process can generate significant amounts of gases when sewage is trapped, possibly producing carbon dioxide (CO2) and methane (CH4) as it decomposes. The unpleasant odor emitted can be hydrogen sulfide gas (H2S), a byproduct of organic decomposition in anaerobic conditions, or other odors from various industrial facilities like fish processing plants and slaughterhouses."
+            />
+          </div>
+        </div>
         <Image src={BigFrame} alt="BigFrame" />
       </div>
       <div className="bg-black py-24 flex justify-center">

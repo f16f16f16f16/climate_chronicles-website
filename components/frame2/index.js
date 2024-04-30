@@ -303,7 +303,7 @@ const Frame2 = () => {
             <Textarea
               isReadOnly
               variant="bordered"
-              className={`h-full w-[80%] md:w-[150%] xl:w-[200%] text-white ${
+              className={`h-full w-[80%] md:w-[150%] xl:w-[200%] text-black ${
                 zIndexes.PFCs === 10 ? "z-10" : "z-0"
               }`}
               defaultValue="PFCs (Perfluorocarbons), synthetic greenhouse gases originating from industrial processes, primarily used as solvents and starting materials in various industrial productions. They have a high heat-trapping potential and can contribute significantly to the greenhouse effect, even more so than carbon dioxide."
@@ -342,7 +342,7 @@ const Frame2 = () => {
             <Textarea
               isReadOnly
               variant="bordered"
-              className={`h-full w-[80%] md:w-[150%] xl:w-[200%] text-white ${
+              className={`h-full w-[80%] md:w-[150%] xl:w-[200%] text-black ${
                 zIndexes.SF6 === 10 ? "z-10" : "z-0"
               }`}
               defaultValue="SF6 (Sulfur hexafluoride), a gas with high density and mass compared to air. It's commonly used in the electronics industry as electrical insulation to prevent electrical sparks from high-voltage electrical switchgear or to assist in dissipating heat from high-voltage electrical equipment."
