@@ -234,7 +234,7 @@ const FrameQuiz = () => {
       </div>
       {currentQuestion !== -1 ? (
         <div className="w-full flex flex-col items-center px-4">
-          <p className="text-sm md:text-xl xl:text-2xl font-semibold mb-4 text-center text-black">
+          <p className="text-xl md:text-2xl xl:text-3xl font-semibold mb-6 md:mb-10 xl:mb-12 text-center text-black">
             {questions[currentQuestion].questionText}
           </p>
           {!showAnswers &&

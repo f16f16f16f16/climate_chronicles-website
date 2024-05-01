@@ -33,17 +33,6 @@ const Frame4 = () => {
   return (
     <div className="overflow-hidden">
       <div className="bg-orange-400">
-        <Textarea
-          isReadOnly
-          className=""
-          color="primary"
-          label="CCMan"
-          defaultValue="When burning fossil fuels like gasoline for vehicles, coal for electricity generation, or wood for cooking, the combustion process releases carbon dioxide (CO2) into the atmosphere
-          The operation of machinery, such as factory equipment or transportation vehicles, requires energy, and this energy consumption often leads to the burning of fossil fuels within the machinery, resulting in the emission of carbon dioxide (CO2) 
-          Air conditioning: The use of air conditioning units in homes or buildings often relies on energy produced from burning fossil fuels, such as oil or natural gas 
-          The movement of vehicles, such as cars, airplanes, or ships, typically relies on energy derived from burning fossil fuels, such as gasoline or other combustible fuels. 
-          "
-        />
         <div className="flex">
           <Image src={CCMan} className="w-[20%] ccman-animation2" />
           <Textarea

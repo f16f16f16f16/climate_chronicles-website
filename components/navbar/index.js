@@ -207,7 +207,7 @@ export default function NaviBar() {
           </Link>
         </NavbarItem>
 
-        <Dropdown className="bg-transparent text-black">
+        <Dropdown className="bg-blue-200 text-black">
           <NavbarItem className="basis-1/4 flex justify-center">
             <DropdownTrigger>
               <Button
@@ -224,8 +224,8 @@ export default function NaviBar() {
               base: "gap-4",
             }}
           >
-            <DropdownItem href="/aboutus/team">Our Team Members</DropdownItem>
-            <DropdownItem href="/aboutus/advisor">Our Advisors</DropdownItem>
+            <DropdownItem href="/aboutus/team">Team members</DropdownItem>
+            <DropdownItem href="/aboutus/advisor">Advisors</DropdownItem>
           </DropdownMenu>
         </Dropdown>
 
