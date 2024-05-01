@@ -2,7 +2,13 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { Textarea, Popover, PopoverTrigger, PopoverContent, Button } from "@nextui-org/react";
+import {
+  Textarea,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  Button,
+} from "@nextui-org/react";
 
 import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.webp";
 import Plane from "../../assets/frame3/images/Plane.webp";
@@ -133,18 +139,18 @@ const Frame3 = () => {
           The movement of vehicles, such as cars, airplanes, or ships, typically relies on energy derived from burning fossil fuels, such as gasoline or other combustible fuels. 
           "
         />
-            <div className="flex flex-wrap gap-4">
-      {colors.map((color) => (
-        <Popover key={color} placement="bottom" color={color}>
-          <PopoverTrigger>
-            <Button color={color} className="capitalize">
-              {color}
-            </Button>
-          </PopoverTrigger>
-          {content}
-        </Popover>
-      ))}
-    </div>
+        {/* <div className="flex flex-wrap gap-4">
+          {colors.map((color) => (
+            <Popover key={color} placement="bottom" color={color}>
+              <PopoverTrigger>
+                <Button color={color} className="capitalize">
+                  {color}
+                </Button>
+              </PopoverTrigger>
+              {content}
+            </Popover>
+          ))}
+        </div> */}
       </div>
     </div>
   );
