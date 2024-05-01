@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Modal,
   ModalContent,
@@ -14,17 +15,13 @@ import {
 import Navibar from "../../components/navbar/index";
 
 const Contact = () => {
+  const form = useRef(); // Reference for the form for EmailJS
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-  // State to store input values
   const [email, setEmail] = useState("");
   const [contactName, setContactName] = useState("");
-
-  // State to manage input validation
   const [isEmailInvalid, setEmailInvalid] = useState(false);
   const [isContactNameInvalid, setContactNameInvalid] = useState(false);
-
-  // State to manage modal message
   const [modalMessage, setModalMessage] = useState("");
 
   // Function to handle email change
@@ -61,14 +58,26 @@ const Contact = () => {
       setModalMessage(
         "Missing information. Please check your entries and try again."
       );
+      onOpen();
     } else {
-      setModalMessage(
-        "This form is currently under construction. We appreciate your patience and will have it available soon."
-      ); //Thank you! Your information has been submitted.
-      // Here you could also handle the form submission, e.g., sending data to an API
+      emailjs
+        .sendForm(
+          process.env.NEXT_PUBLIC_EMAIL_SERVICE,
+          process.env.NEXT_PUBLIC_EMAIL_TEMPLATE,
+          form.current,
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        )
+        .then(
+          (result) => {
+            setModalMessage("Thank you! Your information has been submitted.");
+            onOpen();
+          },
+          (error) => {
+            setModalMessage("Failed to send email. Please try again later.");
+            onOpen();
+          }
+        );
     }
-
-    onOpen(); // Open the modal after setting the appropriate message
   };
 
   return (
@@ -83,7 +92,11 @@ const Contact = () => {
             Feedback Form
           </p>
         </div>
-        <div className="flex flex-col items-center justify-center space-y-8 py-10">
+
+        <form
+          ref={form}
+          className="flex flex-col items-center justify-center space-y-8 py-10"
+        >
           <Input
             isRequired
             radius="full"
@@ -93,6 +106,7 @@ const Contact = () => {
             className="max-w-xs md:max-w-lg xl:max-w-xl"
             value={email}
             onChange={handleEmailChange}
+            name="email" // for EmailJS
           />
           <Input
             isRequired
@@ -103,6 +117,7 @@ const Contact = () => {
             className="max-w-xs md:max-w-lg xl:max-w-xl"
             value={contactName}
             onChange={handleContactNameChange}
+            name="contactName" // for EmailJS
           />
           <Textarea
             label="Tell us !!!"
@@ -113,11 +128,11 @@ const Contact = () => {
               base: "max-w-xs md:max-w-lg xl:max-w-xl",
               input: "resize-y min-h-[120px]",
             }}
+            name="message" // for EmailJS
           />
           <Button
             className="w-28 md:w-36 xl:w-40"
             onPress={() => {
-              onOpen(); // Assuming onOpen is defined somewhere in your component or imported
               handleSubmit();
             }}
             radius="full"
@@ -129,11 +144,11 @@ const Contact = () => {
             <ModalContent>
               {(onClose) => (
                 <>
-                  <ModalHeader className="flex flex-col gap-1">
+                  <ModalHeader className="flex flex-col gap-1 text-black">
                     Notice
                   </ModalHeader>
                   <ModalBody>
-                    <p>{modalMessage}</p>
+                    <p className="text-black">{modalMessage}</p>
                   </ModalBody>
                   <ModalFooter>
                     <Button color="danger" variant="light" onPress={onClose}>
@@ -144,7 +159,7 @@ const Contact = () => {
               )}
             </ModalContent>
           </Modal>
-        </div>
+        </form>
       </div>
     </div>
   );
