@@ -138,7 +138,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute left-0 -mt-[40%] w-[40%] "
+                className="absolute left-0 md:left-20 xl:left-32 2xl:left-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
                 color="primary"
                 label="CCMan"
                 defaultValue="What is this, sir?"
@@ -177,7 +177,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute left-0 -mt-[40%] w-[40%] "
+                className="absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
                 color="primary"
                 label="CCMan"
                 defaultValue="Oh dear, I have no clue about these gases at all."
@@ -216,7 +216,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute left-0 -mt-[40%] w-[40%] "
+                className="absolute left-0 md:left-20 xl:left-32 2xl:left-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
                 color="primary"
                 label="CCMan"
                 defaultValue="Why does it feel so stifling and hot here?"
@@ -255,7 +255,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute left-0 -mt-[40%] w-[40%] "
+                className="absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
                 color="primary"
                 label="CCMan"
                 defaultValue="I feel the same heat sensation here as well."
@@ -294,7 +294,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute left-0 -mt-[40%] w-[40%] "
+                className="absolute left-0 md:left-20 xl:left-32 2xl:left-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
                 color="primary"
                 label="CCMan"
                 defaultValue="There are several gases here that can both destroy greenhouse gases and contribute to increased atmospheric heat."
@@ -333,7 +333,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute left-0 -mt-[40%] w-[40%] "
+                className="absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
                 color="primary"
                 label="CCMan"
                 defaultValue="Before reaching the Earth's surface, we have to pass through multiple atmospheric layers and encounter gases that are destroying greenhouse gases."
