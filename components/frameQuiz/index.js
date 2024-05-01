@@ -265,7 +265,7 @@ const FrameQuiz = () => {
                 className="w-full md:max-w-xs py-2 px-4 bg-blue-500 text-white text-sm md:text-xl xl:text-2xl rounded hover:bg-blue-700 transition duration-300"
                 onClick={nextQuestion}
               >
-                Next Question
+                {currentQuestion === questions.length - 1 ? "Show Scores" : "Next Question"}
               </button>
             </>
           )}
