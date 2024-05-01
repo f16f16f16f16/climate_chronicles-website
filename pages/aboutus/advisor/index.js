@@ -5,7 +5,7 @@ import Navibar from "../../../components/navbar/index";
 import ImgProO from "../../../assets/images/RjarnOak.png";
 import ImgProP from "../../../assets/images/RjarnPat.png";
 
-const Aboutus = () => (
+const Advisor = () => (
   <div>
     <Navibar />
     <p className="flex justify-center items-center p-6 mt-8 text-black text-5xl md:text-7xl xl:text-8xl font-semibold">
@@ -23,4 +23,4 @@ const Aboutus = () => (
   </div>
 );
 
-export default Aboutus;
+export default Advisor;

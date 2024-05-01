@@ -226,14 +226,12 @@ export default function NaviBar() {
           >
             <DropdownItem href="/aboutus/team">Team members</DropdownItem>
             <DropdownItem href="/aboutus/advisor">Advisors</DropdownItem>
+            <DropdownItem href="/aboutus/specialist">Specialist</DropdownItem>
           </DropdownMenu>
         </Dropdown>
 
         <NavbarItem className="basis-1/4 flex justify-center">
-          <Link
-            className="text-black font-semibold "
-            href="/contact"
-          >
+          <Link className="text-black font-semibold " href="/contact">
             CONTACT US
           </Link>
         </NavbarItem>
