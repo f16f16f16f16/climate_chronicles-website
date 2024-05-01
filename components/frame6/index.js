@@ -59,7 +59,7 @@ const Frame6 = () => {
                 className="absolute w-[60%]"
                 color="primary"
                 label="CCMan"
-                defaultValue="Furthermore, mining is another factor contributing to the production of methane (CH4) and carbon dioxide (CO2). This is because mining involves drilling, blasting, and machinery for crushing rocks or minerals obtained from mining. Gases are released during coal extraction, and there are also trucks transporting rocks that emit CO2 and particulate matter. All of these activities have adverse effects on workers and people in nearby areas. "
+                defaultValue="Having beautiful jewelry, diamonds, and minerals Did you know that these things also come from mining, and mining also can cause greenhouse gases?"
               />
             </div>
             <Button
@@ -76,6 +76,13 @@ const Frame6 = () => {
         <Image src={BigFrame} alt="BigFrame" />
         <Image src={Boomer} alt="Boomer" className="w-1/3 -mt-[24%] ml-[60%]" />
       </div>
+      <Textarea
+        isReadOnly
+        className=""
+        color="primary"
+        label="CCMan"
+        defaultValue="Furthermore, mining is another factor contributing to the production of methane (CH4) and carbon dioxide (CO2). This is because mining involves drilling, blasting, and machinery for crushing rocks or minerals obtained from mining. Gases are released during coal extraction, and there are also trucks transporting rocks that emit CO2 and particulate matter. All of these activities have adverse effects on workers and people in nearby areas."
+      />
     </div>
   );
 };
