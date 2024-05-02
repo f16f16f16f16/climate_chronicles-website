@@ -4,7 +4,7 @@ import Navibar from "../../../components/navbar/index";
 
 import ImgSpecLnw from "../../../assets/images/RjarnLnw.png";
 
-const Specialist = () => (
+const Expert = () => (
   <div>
     <Navibar />
     <p className="flex justify-center items-center p-6 mt-8 text-black text-5xl md:text-7xl xl:text-8xl font-semibold">
@@ -19,4 +19,4 @@ const Specialist = () => (
   </div>
 );
 
-export default Specialist;
+export default Expert;

@@ -1,27 +1,60 @@
-import { Button } from "@nextui-org/react";
+import { Button, Card, CardHeader } from "@nextui-org/react";
+import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 import Navibar from "../../components/navbar/index";
 
-const Aboutus = () => (
-  <div>
-    <Navibar />
-    <p className="flex justify-center items-center p-6 mt-8 text-black text-5xl md:text-7xl xl:text-8xl">
-      About Us
-    </p>
+import Team from "../../assets/images/Team.png";
+import Advisor from "../../assets/images/Advisor.png";
+import Expert from "../../assets/images/Expert.png";
 
-    <div className="flex flex-row">
-      <Link className="w-1/2" href="/aboutus/team">
-        <Button className="w-full bg-red-500 text-white text-4xl md:text-6xl xl:text-7xl font-bold py-56 rounded-none text-center">
-          Team
-        </Button>
-      </Link>
-      <Link className="w-1/2" href="/aboutus/advisor">
-        <Button className="w-full bg-blue-500 text-white text-4xl md:text-6xl xl:text-7xl font-bold py-56 rounded-none text-center">
-          Advisor
-        </Button>
-      </Link>
+const Aboutus = () => {
+  const router = useRouter();
+  const navToTeam = () => {
+    router.push("/aboutus/team");
+  };
+  const navToAdvisor = () => {
+    router.push("/aboutus/advisor");
+  };
+  const navToExpert = () => {
+    router.push("/aboutus/expert");
+  };
+
+
+  return (
+    <div>
+      <Navibar />
+      <p className="flex justify-center items-center p-6 mt-8 text-black text-5xl md:text-7xl xl:text-8xl">
+        About Us
+      </p>
+
+      <div className="flex flex-col space-y-6 p-6 ">
+        <Card className="" isPressable onPress={navToTeam}>
+          <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+            <p className="text-tiny text-black/60 uppercase font-bold">Team</p>
+            <h4 className="text-black font-medium text-large">Team</h4>
+          </CardHeader>
+          <Image alt="Team" className="z-0 " src={Team} />
+        </Card>
+
+        <Card className="" isPressable onPress={navToAdvisor}>
+          <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+            <p className="text-tiny text-black/60 uppercase font-bold">Advisor</p>
+            <h4 className="text-black font-medium text-large">Advisor</h4>
+          </CardHeader>
+          <Image alt="Advisor" className="z-0" src={Advisor} />
+        </Card>
+
+        <Card className="" isPressable onPress={navToExpert}>
+          <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+            <p className="text-tiny text-black/60 uppercase font-bold">Expert</p>
+            <h4 className="text-black font-medium text-large">Expert</h4>
+          </CardHeader>
+          <Image alt="Expert" className="z-0" src={Expert} />
+        </Card>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Aboutus;
