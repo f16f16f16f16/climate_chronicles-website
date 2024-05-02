@@ -57,7 +57,7 @@ const Frame7 = () => {
       />
       <div className="bg-black py-24 flex justify-center">
         <Link href="/quiz">
-          <Button color="secondary" variant="faded">
+          <Button className="text-xl text-blue font-medium h-20" variant="faded">
             Go Answer Questions!!!
           </Button>
         </Link>

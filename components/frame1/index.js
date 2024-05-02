@@ -132,7 +132,7 @@ const Frame1 = () => {
 
   return (
     <div>
-      <div className="flex justify-center items-center w-full px-20 pt-24 md:pt-36 xl:pt-44 bg-white">
+      <div className="flex justify-center items-center w-full px-20 pt-32 md:pt-44 xl:pt-56 bg-white -mt-16">
         <Image src={Climate} className="w-full" />
       </div>
 

@@ -226,7 +226,7 @@ export default function NaviBar() {
           >
             <DropdownItem href="/aboutus/team">Team members</DropdownItem>
             <DropdownItem href="/aboutus/advisor">Advisors</DropdownItem>
-            <DropdownItem href="/aboutus/specialist">Specialist</DropdownItem>
+            <DropdownItem href="/aboutus/specialist">Expert</DropdownItem>
           </DropdownMenu>
         </Dropdown>
 
