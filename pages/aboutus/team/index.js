@@ -9,7 +9,7 @@ import ImgO from "../../../assets/images/Owen.png";
 const Team = () => (
   <div>
     <Navibar />
-    <p className="flex justify-center items-center p-6 mt-8 text-black text-5xl md:text-7xl xl:text-8xl font-semibold">
+    <p className="flex justify-center items-center p-6 mt-8 text-black text-[43px] md:text-7xl xl:text-8xl font-semibold">
       Team members
     </p>
     <div className="flex flex-col items-center space-y-8 p-10 md:flex-row md:justify-center  md:space-y-0 md:space-x-8">

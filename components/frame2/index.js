@@ -133,51 +133,12 @@ const Frame2 = () => {
           className="h-72 md:h-[45rem] xl:h-[64rem] 2xl:h-[85rem] 2xl:w-screen object-cover"
         />
         <div className="space-y-48 md:space-y-[34rem] xl:space-y-[60rem]">
-          <div className="flex flex-col items-center justify-center mt-12">
+        <div className="flex flex-col items-center justify-center mt-12">
             <div>
               <Textarea
                 isReadOnly
                 disableAutosize
                 className="absolute left-0 md:left-20 xl:left-32 2xl:left-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
-                color="primary"
-                label="CCMan"
-                defaultValue="What is this, sir?"
-              />
-            </div>
-            <Textarea
-              isReadOnly
-              variant="bordered"
-              className={`h-full w-[80%] md:w-[150%] xl:w-[200%] text-white ${
-                zIndexes.CH4 === 10 ? "z-10" : "z-0"
-              }`}
-              defaultValue="This is methane gas (CH4), a greenhouse gas released into the Earth's atmosphere in large quantities. It occurs naturally but 60% of it in the atmosphere is due to human activities, which can have a greater greenhouse effect than carbon dioxide, up to 25 times more."
-            />
-            <button
-              className="absolute flex -space-x-[1%] scale-[.65] md:scale-50 xl:scale-100 overflow-hidden"
-              onClick={() => handleImageClick("CH4")}
-            >
-              <Image
-                src={CH4_1}
-                alt="CH4"
-                className={`transition-transform duration-500 ${
-                  isActive.CH4 ? "-translate-x-[100%]" : ""
-                }`}
-              />
-              <Image
-                src={CH4_2}
-                alt="CH4"
-                className={`transition-transform duration-500 ${
-                  isActive.CH4 ? "translate-x-[120%]" : ""
-                }`}
-              />
-            </button>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <div>
-              <Textarea
-                isReadOnly
-                disableAutosize
-                className="absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
                 color="primary"
                 label="CCMan"
                 defaultValue="Oh dear, I have no clue about these gases at all."
@@ -207,6 +168,45 @@ const Frame2 = () => {
                 alt="CO2"
                 className={`transition-transform duration-500 ${
                   isActive.CO2 ? "translate-x-[120%]" : ""
+                }`}
+              />
+            </button>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <div>
+              <Textarea
+                isReadOnly
+                disableAutosize
+                className="absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
+                color="primary"
+                label="CCMan"
+                defaultValue="What is this, sir?"
+              />
+            </div>
+            <Textarea
+              isReadOnly
+              variant="bordered"
+              className={`h-full w-[80%] md:w-[150%] xl:w-[200%] text-white ${
+                zIndexes.CH4 === 10 ? "z-10" : "z-0"
+              }`}
+              defaultValue="This is methane gas (CH4), a greenhouse gas released into the Earth's atmosphere in large quantities. It occurs naturally but 60% of it in the atmosphere is due to human activities, which can have a greater greenhouse effect than carbon dioxide, up to 25 times more."
+            />
+            <button
+              className="absolute flex -space-x-[1%] scale-[.65] md:scale-50 xl:scale-100 overflow-hidden"
+              onClick={() => handleImageClick("CH4")}
+            >
+              <Image
+                src={CH4_1}
+                alt="CH4"
+                className={`transition-transform duration-500 ${
+                  isActive.CH4 ? "-translate-x-[100%]" : ""
+                }`}
+              />
+              <Image
+                src={CH4_2}
+                alt="CH4"
+                className={`transition-transform duration-500 ${
+                  isActive.CH4 ? "translate-x-[120%]" : ""
                 }`}
               />
             </button>
