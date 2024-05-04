@@ -34,7 +34,7 @@ export default function NaviBar() {
   const menuItems = [
     { name: "HOME", path: "/" },
     // { name: "CATEGORY", path: "/category" },
-    { name: "WEATHER", path: "/status" },
+    { name: "WEATHER", path: "/weather" },
     { name: "ABOUT US", path: "/aboutus" },
     { name: "NEWS", path: "/news" },
   ];
@@ -203,7 +203,7 @@ export default function NaviBar() {
         <NavbarItem className="basis-1/4 flex justify-center">
           <Link
             className="hidden sm:flex text-black font-bold "
-            href="/status"
+            href="/weather"
           >
             WEATHER
           </Link>

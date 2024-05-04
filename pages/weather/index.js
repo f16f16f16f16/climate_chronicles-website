@@ -2,7 +2,7 @@ import MapHeat from "@/components/mapbox/map-heat";
 import Temperature from "@/components/temperature";
 import Navibar from "../../components/navbar/index";
 
-const Status = () => {
+const Weather = () => {
   return (
     <div>
       <Navibar />
@@ -12,4 +12,4 @@ const Status = () => {
   );
 };
 
-export default Status;
+export default Weather;
