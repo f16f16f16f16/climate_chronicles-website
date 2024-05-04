@@ -36,6 +36,7 @@ export default function NaviBar() {
     // { name: "CATEGORY", path: "/category" },
     { name: "WEATHER", path: "/status" },
     { name: "ABOUT US", path: "/aboutus" },
+    { name: "NEWS", path: "/news" },
   ];
 
   const icons = {
@@ -194,16 +195,26 @@ export default function NaviBar() {
           className="sm:hidden text-black"
         />
         <NavbarItem className="basis-1/4 flex justify-center">
-          <Link className="text-black font-semibold " href="/">
+          <Link className="text-black font-bold " href="/">
             HOME
           </Link>
         </NavbarItem>
+
         <NavbarItem className="basis-1/4 flex justify-center">
           <Link
-            className="hidden sm:flex text-black font-semibold "
+            className="hidden sm:flex text-black font-bold "
             href="/status"
           >
             WEATHER
+          </Link>
+        </NavbarItem>
+
+        <NavbarItem className="basis-1/4 flex justify-center">
+          <Link
+            className="hidden sm:flex text-black font-bold "
+            href="/news"
+          >
+            NEWS
           </Link>
         </NavbarItem>
 
@@ -212,7 +223,7 @@ export default function NaviBar() {
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="bg-transparent data-[hover=true]:bg-transparent text-black font-semibold text-base hidden sm:flex"
+                className="bg-transparent data-[hover=true]:bg-transparent text-black font-bold text-base hidden sm:flex"
                 endContent={icons.chevron}
               >
                 ABOUT US
@@ -231,7 +242,7 @@ export default function NaviBar() {
         </Dropdown>
 
         <NavbarItem className="basis-1/4 flex justify-center">
-          <Link className="text-black font-semibold " href="/contact">
+          <Link className="text-black font-bold " href="/contact">
             CONTACT US
           </Link>
         </NavbarItem>

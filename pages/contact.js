@@ -12,7 +12,7 @@ import {
   Textarea,
 } from "@nextui-org/react";
 
-import Navibar from "../../components/navbar/index";
+import Navibar from "../components/navbar/index";
 
 const Contact = () => {
   const form = useRef(); // Reference for the form for EmailJS
