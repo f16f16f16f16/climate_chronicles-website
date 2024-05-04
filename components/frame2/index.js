@@ -133,7 +133,7 @@ const Frame2 = () => {
           className="h-72 md:h-[45rem] xl:h-[64rem] 2xl:h-[85rem] 2xl:w-screen object-cover"
         />
         <div className="space-y-48 md:space-y-[34rem] xl:space-y-[60rem]">
-        <div className="flex flex-col items-center justify-center mt-12">
+          <div className="flex flex-col items-center justify-center mt-12">
             <div>
               <Textarea
                 isReadOnly
@@ -219,45 +219,6 @@ const Frame2 = () => {
                 className="absolute left-0 md:left-20 xl:left-32 2xl:left-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
                 color="primary"
                 label="CCMan"
-                defaultValue="Why does it feel so stifling and hot here?"
-              />
-            </div>
-            <Textarea
-              isReadOnly
-              variant="bordered"
-              className={`h-full w-[80%] md:w-[150%] xl:w-[200%] text-white ${
-                zIndexes.HFCs === 10 ? "z-10" : "z-0"
-              }`}
-              defaultValue="HFCs (Hydrofluorocarbons) are synthetic greenhouse gases used in various cooling systems such as air conditioners, refrigerators, sprays, and fire extinguishers. They have a high heat-trapping potential and can contribute significantly to the greenhouse effect, even more so than carbon dioxide, ranging from 124 to 14,800 times."
-            />
-            <button
-              className="absolute flex -space-x-[1%] scale-[.65] md:scale-50 xl:scale-100 overflow-hidden"
-              onClick={() => handleImageClick("HFCs")}
-            >
-              <Image
-                src={HFCs_1}
-                alt="HFCs"
-                className={`transition-transform duration-500 ${
-                  isActive.HFCs ? "-translate-x-[100%]" : ""
-                }`}
-              />
-              <Image
-                src={HFCs_2}
-                alt="HFCs"
-                className={`transition-transform duration-500 ${
-                  isActive.HFCs ? "translate-x-[120%]" : ""
-                }`}
-              />
-            </button>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <div>
-              <Textarea
-                isReadOnly
-                disableAutosize
-                className="absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
-                color="primary"
-                label="CCMan"
                 defaultValue="I feel the same heat sensation here as well."
               />
             </div>
@@ -285,6 +246,45 @@ const Frame2 = () => {
                 alt="N2O"
                 className={`transition-transform duration-500 ${
                   isActive.N2O ? "translate-x-[120%]" : ""
+                }`}
+              />
+            </button>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <div>
+              <Textarea
+                isReadOnly
+                disableAutosize
+                className="absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
+                color="primary"
+                label="CCMan"
+                defaultValue="Why does it feel so stifling and hot here?"
+              />
+            </div>
+            <Textarea
+              isReadOnly
+              variant="bordered"
+              className={`h-full w-[80%] md:w-[150%] xl:w-[200%] text-white ${
+                zIndexes.HFCs === 10 ? "z-10" : "z-0"
+              }`}
+              defaultValue="HFCs (Hydrofluorocarbons) are synthetic greenhouse gases used in various cooling systems such as air conditioners, refrigerators, sprays, and fire extinguishers. They have a high heat-trapping potential and can contribute significantly to the greenhouse effect, even more so than carbon dioxide, ranging from 124 to 14,800 times."
+            />
+            <button
+              className="absolute flex -space-x-[1%] scale-[.65] md:scale-50 xl:scale-100 overflow-hidden"
+              onClick={() => handleImageClick("HFCs")}
+            >
+              <Image
+                src={HFCs_1}
+                alt="HFCs"
+                className={`transition-transform duration-500 ${
+                  isActive.HFCs ? "-translate-x-[100%]" : ""
+                }`}
+              />
+              <Image
+                src={HFCs_2}
+                alt="HFCs"
+                className={`transition-transform duration-500 ${
+                  isActive.HFCs ? "translate-x-[120%]" : ""
                 }`}
               />
             </button>
