@@ -19,6 +19,7 @@ import Car1 from "../../assets/frame3/gif/Car1.webp";
 import Car2 from "../../assets/frame3/gif/Car2.webp";
 import Car3 from "../../assets/frame3/gif/Car3.webp";
 import { animateCCMan, animateTextAreas } from "../gsap";
+import VoiceOver from "../voiceOver";
 
 const Frame3 = () => {
   const audioRef = useRef(null);
@@ -65,15 +66,7 @@ const Frame3 = () => {
         <Image src={CCMan} className="absolute w-[20%] ccman-animation" />
         <div className="ml-[20%] md:ml-[30%] xl:ml-[30%]">
           <div className="flex fade-textarea">
-            <Button
-              isIconOnly
-              color="primary"
-              aria-label="Audio"
-              className=""
-              onClick={playAudio}
-            >
-              <SpeakerWaveIcon className="h-5 w-5" />
-            </Button>
+            <VoiceOver src="/audio-file-two.mp3" />
             <Textarea
               isReadOnly
               disableAutosize
@@ -84,15 +77,7 @@ const Frame3 = () => {
             />
           </div>
           <div className="flex mt-12 fade-textarea">
-            <Button
-              isIconOnly
-              color="primary"
-              aria-label="Audio"
-              className=""
-              onClick={playAudio}
-            >
-              <SpeakerWaveIcon className="h-5 w-5" />
-            </Button>
+            <VoiceOver src="/audio-file-two.mp3" />
             <Textarea
               isReadOnly
               className=""
@@ -139,15 +124,7 @@ const Frame3 = () => {
           </div>
         </div>
         <div className="flex fade-textarea">
-          <Button
-            isIconOnly
-            color="primary"
-            aria-label="Audio"
-            className=""
-            onClick={playAudio}
-          >
-            <SpeakerWaveIcon className="h-5 w-5" />
-          </Button>
+          <VoiceOver src="/audio-file-two.mp3" />
           <Textarea
             isReadOnly
             disableAutosize
@@ -158,15 +135,7 @@ const Frame3 = () => {
           />
         </div>
         <div className="flex fade-textarea">
-          <Button
-            isIconOnly
-            color="primary"
-            aria-label="Audio"
-            className=""
-            onClick={playAudio}
-          >
-            <SpeakerWaveIcon className="h-5 w-5" />
-          </Button>
+          <VoiceOver src="/audio-file-two.mp3" />
           <Textarea
             isReadOnly
             className="mt-2"

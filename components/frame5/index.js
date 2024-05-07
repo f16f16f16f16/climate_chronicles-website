@@ -14,6 +14,7 @@ import Cow from "../../assets/frame5/gif/Cow.webp";
 import Horse from "../../assets/frame5/gif/Horse.webp";
 import Rice from "../../assets/frame5/gif/Rice.webp";
 import { animateCCMan, animateTextAreas } from "../gsap";
+import VoiceOver from "../voiceOver";
 
 const Frame5 = () => {
   useEffect(() => {
@@ -26,14 +27,16 @@ const Frame5 = () => {
       <div className="bg-yellow-200 py-[30%]">
         <div className="flex">
           <Image src={CCMan} className="w-[20%] ccman-animation" />
-          <Textarea
-            isReadOnly
-            disableAutosize
-            className="fade-textarea"
-            color="primary"
-            label="CCMan"
-            defaultValue="Do you see villagers farming? Did you know that agriculture also contributes to global warming?"
-          />
+          <div className="fade-textarea flex">
+            <VoiceOver src="/audio-file-two.mp3" />
+            <Textarea
+              isReadOnly
+              disableAutosize
+              color="primary"
+              label="CCMan"
+              defaultValue="Do you see villagers farming? Did you know that agriculture also contributes to global warming?"
+            />
+          </div>
         </div>
       </div>
       <div className="bg-lime-700">
@@ -112,13 +115,15 @@ const Frame5 = () => {
           />
         </div>
       </div>
-      <Textarea
-        isReadOnly
-        className="fade-textarea"
-        color="primary"
-        label="CCMan"
-        defaultValue="This is because nitrous oxide (N2O) is a natural gas originating from various sources, including bacteria in soil and oceans, as well as the decomposition of organic matter (chemical fertilizers). Additionally, industrial and energy sectors, including burning agricultural residues and various fuels, are major human activities that release nitrous oxide into the Earth's atmosphere. Furthermore, some human activities also produce methane (CH4), such as agriculture and livestock farming, from animal waste, such as cows and buffaloes, and from flooded rice paddies."
-      />
+      <div className="flex fade-textarea">
+        <VoiceOver src="/audio-file-two.mp3" />
+        <Textarea
+          isReadOnly
+          color="primary"
+          label="CCMan"
+          defaultValue="This is because nitrous oxide (N2O) is a natural gas originating from various sources, including bacteria in soil and oceans, as well as the decomposition of organic matter (chemical fertilizers). Additionally, industrial and energy sectors, including burning agricultural residues and various fuels, are major human activities that release nitrous oxide into the Earth's atmosphere. Furthermore, some human activities also produce methane (CH4), such as agriculture and livestock farming, from animal waste, such as cows and buffaloes, and from flooded rice paddies."
+        />
+      </div>
     </div>
   );
 };
