@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Textarea } from "@nextui-org/react";
 
 import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.webp";
@@ -15,39 +13,23 @@ import Farmer2 from "../../assets/frame5/images/Farmer2.webp";
 import Cow from "../../assets/frame5/gif/Cow.webp";
 import Horse from "../../assets/frame5/gif/Horse.webp";
 import Rice from "../../assets/frame5/gif/Rice.webp";
+import { animateCCMan, animateTextAreas } from "../gsap";
 
 const Frame5 = () => {
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Create the animation for CCMan
-    gsap.fromTo(
-      ".ccman-animation3",
-      {
-        x: "-100%",
-      },
-      {
-        x: "0%",
-        scrollTrigger: {
-          trigger: ".ccman-animation3",
-          start: "top center",
-          end: "bottom top",
-          toggleActions: "play none none reverse",
-          // markers: true,
-        },
-      }
-    );
+    animateCCMan();
+    animateTextAreas();
   }, []);
 
   return (
     <div className="overflow-hidden">
       <div className="bg-yellow-200 py-[30%]">
         <div className="flex">
-          <Image src={CCMan} className="w-[20%] ccman-animation3" />
+          <Image src={CCMan} className="w-[20%] ccman-animation" />
           <Textarea
             isReadOnly
             disableAutosize
-            className=""
+            className="fade-textarea"
             color="primary"
             label="CCMan"
             defaultValue="Do you see villagers farming? Did you know that agriculture also contributes to global warming?"
@@ -123,12 +105,16 @@ const Frame5 = () => {
           />
         </div>
         <div>
-          <Image src={Fence} alt="Fence" className="w-1/2 -mt-20 md:-mt-28 xl:-mt-52 2xl:-mt-72" />
+          <Image
+            src={Fence}
+            alt="Fence"
+            className="w-1/2 -mt-20 md:-mt-28 xl:-mt-52 2xl:-mt-72"
+          />
         </div>
       </div>
       <Textarea
         isReadOnly
-        className=""
+        className="fade-textarea"
         color="primary"
         label="CCMan"
         defaultValue="This is because nitrous oxide (N2O) is a natural gas originating from various sources, including bacteria in soil and oceans, as well as the decomposition of organic matter (chemical fertilizers). Additionally, industrial and energy sectors, including burning agricultural residues and various fuels, are major human activities that release nitrous oxide into the Earth's atmosphere. Furthermore, some human activities also produce methane (CH4), such as agriculture and livestock farming, from animal waste, such as cows and buffaloes, and from flooded rice paddies."

@@ -2,10 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Textarea } from "@nextui-org/react";
 
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
-
 import CCMan from "../../assets/frame2/gif/CCManFly.webp";
 import Aura from "../../assets/frame2/images/Aura.webp";
 import UFO from "../../assets/frame2/images/UFO.webp";
@@ -21,9 +17,8 @@ import PFCs_1 from "../../assets/frame2/images/gasSeparate/PFCs_1.webp";
 import PFCs_2 from "../../assets/frame2/images/gasSeparate/PFCs_2.webp";
 import SF6_1 from "../../assets/frame2/images/gasSeparate/SF6_1.webp";
 import SF6_2 from "../../assets/frame2/images/gasSeparate/SF6_2.webp";
+import { animateTextAreas, ccmanZigzag, ufoZigzag } from "../gsap";
 
-// Register GSAP plugins outside of the component to avoid registering multiple times.
-gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 const Frame2 = () => {
   const ccmanRef = useRef(null);
@@ -58,58 +53,9 @@ const Frame2 = () => {
   };
 
   useEffect(() => {
-    // Define the zigzag path for CCMan. Adjust the points as needed.
-    const ufoPath = [
-      { x: -100, y: 0 }, // start outside the screen on the left
-      { x: window.innerWidth * 0.25, y: 100 }, // move to 1/4 of the screen width and down
-      { x: window.innerWidth * 0.5, y: -100 }, // move to 1/2 of the screen width and up
-      { x: window.innerWidth * 0.75, y: 100 }, // move to 3/4 of the screen width and down
-      { x: window.innerWidth, y: -100 }, // exit the screen on the right and up
-    ];
-
-    const zigzagPath = [
-      { x: 0, y: -window.innerHeight * 0.2 }, // Start higher than the initial position
-      { x: window.innerWidth * 0.3, y: window.innerHeight * 0.5 }, // Increase vertical distance
-      { x: -window.innerWidth * 0.3, y: window.innerHeight * 1.0 },
-      { x: window.innerWidth * 0.3, y: window.innerHeight * 1.5 },
-      { x: -window.innerWidth * 0.3, y: window.innerHeight * 2.0 },
-      { x: window.innerWidth * 0.3, y: window.innerHeight * 2.5 },
-      { x: -window.innerWidth * 0.3, y: window.innerHeight * 3.0 },
-      { x: window.innerWidth * 0.3, y: window.innerHeight * 3.5 },
-      { x: -window.innerWidth * 0.3, y: window.innerHeight * 4.0 },
-      { x: window.innerWidth * 0.3, y: window.innerHeight * 4.5 },
-      { x: 0, y: window.innerHeight * 5.0 },
-    ];
-
-    // Animate UFO separately as before
-    gsap.to(".ufo", {
-      duration: 3,
-      ease: "power1.inOut",
-      motionPath: {
-        path: ufoPath,
-        curviness: 1.5,
-        autoRotate: true,
-      },
-      yoyo: true,
-      repeat: -1,
-    });
-
-    // Animate CCMan along the zigzag path during scroll
-    ScrollTrigger.create({
-      animation: gsap.to(ccmanRef.current, {
-        ease: "none",
-        motionPath: {
-          path: zigzagPath,
-          align: ccmanRef.current,
-          autoRotate: true,
-        },
-      }),
-      trigger: ccmanRef.current,
-      start: "top bottom", // Adjust as necessary
-      end: "bottom top",
-      scrub: 40,
-      // markers: true,
-    });
+    ccmanZigzag(ccmanRef);
+    ufoZigzag();
+    animateTextAreas();
   }, []);
 
   return (
@@ -138,7 +84,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute left-0 md:left-20 xl:left-32 2xl:left-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
+                className="fade-textarea absolute left-0 md:left-20 xl:left-32 2xl:left-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
                 color="primary"
                 label="CCMan"
                 defaultValue="Oh dear, I have no clue about these gases at all."
@@ -177,7 +123,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
+                className="fade-textarea absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
                 color="primary"
                 label="CCMan"
                 defaultValue="What is this, sir?"
@@ -216,7 +162,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute left-0 md:left-20 xl:left-32 2xl:left-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
+                className="fade-textarea absolute left-0 md:left-20 xl:left-32 2xl:left-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
                 color="primary"
                 label="CCMan"
                 defaultValue="I feel the same heat sensation here as well."
@@ -255,7 +201,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
+                className="fade-textarea absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
                 color="primary"
                 label="CCMan"
                 defaultValue="Why does it feel so stifling and hot here?"
@@ -294,7 +240,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute left-0 md:left-20 xl:left-32 2xl:left-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
+                className="fade-textarea absolute left-0 md:left-20 xl:left-32 2xl:left-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
                 color="primary"
                 label="CCMan"
                 defaultValue="There are several gases here that can both destroy greenhouse gases and contribute to increased atmospheric heat."
@@ -333,7 +279,7 @@ const Frame2 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
+                className="fade-textarea absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[37%] md:-mt-[40%] xl:-mt-[37%] 2xl:-mt-[28%] w-[40%] md:w-[30%] xl:w-[20%]"
                 color="primary"
                 label="CCMan"
                 defaultValue="Before reaching the Earth's surface, we have to pass through multiple atmospheric layers and encounter gases that are destroying greenhouse gases."

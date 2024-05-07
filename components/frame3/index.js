@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import {
   Textarea,
   Popover,
@@ -20,6 +18,7 @@ import Road from "../../assets/frame3/images/Road.webp";
 import Car1 from "../../assets/frame3/gif/Car1.webp";
 import Car2 from "../../assets/frame3/gif/Car2.webp";
 import Car3 from "../../assets/frame3/gif/Car3.webp";
+import { animateCCMan, animateTextAreas } from "../gsap";
 
 const Frame3 = () => {
   const audioRef = useRef(null);
@@ -56,25 +55,8 @@ const Frame3 = () => {
   ];
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Create the animation for CCMan
-    gsap.fromTo(
-      ".ccman-animation",
-      {
-        x: "-100%",
-      },
-      {
-        x: "0%",
-        scrollTrigger: {
-          trigger: ".ccman-animation",
-          start: "top center",
-          end: "bottom top",
-          toggleActions: "play none none reverse",
-          // markers: true,
-        },
-      }
-    );
+    animateCCMan();
+    animateTextAreas();
   }, []);
 
   return (
@@ -82,7 +64,7 @@ const Frame3 = () => {
       <div className="flex">
         <Image src={CCMan} className="absolute w-[20%] ccman-animation" />
         <div className="ml-[20%] md:ml-[30%] xl:ml-[30%]">
-          <div className="flex">
+          <div className="flex fade-textarea">
             <Button
               isIconOnly
               color="primary"
@@ -101,7 +83,7 @@ const Frame3 = () => {
               defaultValue="Does everyone understand, right?"
             />
           </div>
-          <div className="flex mt-12">
+          <div className="flex mt-12 fade-textarea">
             <Button
               isIconOnly
               color="primary"
@@ -156,7 +138,7 @@ const Frame3 = () => {
             />
           </div>
         </div>
-        <div className="flex">
+        <div className="flex fade-textarea">
           <Button
             isIconOnly
             color="primary"
@@ -175,7 +157,7 @@ const Frame3 = () => {
             defaultValue="Whether it's industrial factories, machinery, transportation by land or air, or even shopping malls, all of the mentioned activities are involved in processes that result in the emission of carbon dioxide (CO2)"
           />
         </div>
-        <div className="flex">
+        <div className="flex fade-textarea">
           <Button
             isIconOnly
             color="primary"

@@ -1,6 +1,4 @@
 import { useRef, useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { Textarea } from "@nextui-org/react";
 
@@ -17,6 +15,12 @@ import CCMan from "../../assets/frame1/gif/CCMan_Droping.webp";
 import Capsule from "../../assets/frame1/gif/TranformationCapsule.webp";
 import Astronaut from "../../assets/frame1/images/Astronaut.webp";
 import Warp from "../../assets/frame1/gif/Warp.webp";
+import {
+  animateAstronaut,
+  animateCcmanToLanding,
+  animateDekToLanding,
+  animateTextAreas,
+} from "../gsap";
 
 const generateStars = (count) => {
   const stars = [];
@@ -51,83 +55,10 @@ const Frame1 = () => {
   ];
 
   useEffect(() => {
-    // Register the ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
-
-    if (dekRef.current && landingRef.current) {
-      // Calculate the difference in the y-position between Dek and Earth
-      const dekPosition = dekRef.current.getBoundingClientRect().top;
-      const landingPosition = landingRef.current.getBoundingClientRect().top;
-      const distanceToLanding = landingPosition - dekPosition;
-
-      // GSAP animation with ScrollTrigger
-      gsap.to(dekRef.current, {
-        scrollTrigger: {
-          trigger: dekRef.current, // Use the Dek image as the trigger
-          start: "bottom center", // Start the animation when the top of Dek hits the center of the viewport
-          end: "bottom top", // End the animation when the bottom of Dek is at the top of the viewport
-          scrub: 5, // Smooth scrubbing, linking animation progress to scroll progress
-          // markers: true, // Shows start and end markers; useful for debugging, remove in production
-        },
-        // rotation: 360, // Rotate by 360 degrees
-        y: distanceToLanding + 60, // Move Dek to the Earth image
-        ease: "none", // No easing for smooth, continuous animation
-      });
-    }
-  }, []);
-
-  useEffect(() => {
-    // Register the ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
-
-    if (ccmanRef.current && landingRef.current) {
-      // Calculate the difference in the y-position between CCMan and Landing (Capsule)
-      const ccmanPosition = ccmanRef.current.getBoundingClientRect().top;
-      const landingPosition = landing2Ref.current.getBoundingClientRect().top;
-      const distanceToLanding = landingPosition - ccmanPosition;
-
-      // GSAP animation with ScrollTrigger for CCMan moving towards the Landing (Capsule)
-      gsap.to(ccmanRef.current, {
-        scrollTrigger: {
-          trigger: ccmanRef.current,
-          start: "bottom center",
-          end: "bottom top",
-          scrub: 18,
-          // markers: true,
-        },
-        y: distanceToLanding + 800, // Move CCMan closer to the Landing (Capsule) image
-        ease: "none", // No easing for smooth, continuous animation
-      });
-    }
-  }, []);
-
-  useEffect(() => {
-    // Create a timeline for repeating and yoyo-ing
-    const tl = gsap.timeline({ repeat: -1, yoyo: true, ease: "power1.inOut" });
-
-    // Animate along a circular path
-    tl.to("#astronaut", {
-      motionPath: {
-        path: [
-          { x: 100, y: 0 },
-          { x: 100, y: -100 },
-          { x: 0, y: -100 },
-          { x: 0, y: 0 },
-        ],
-        curviness: 1.5,
-        autoRotate: true,
-      },
-      duration: 10,
-      ease: "linear",
-    });
-
-    // Continuous spin
-    gsap.to("#astronaut", {
-      rotation: "+=360",
-      duration: 5,
-      repeat: -1,
-      ease: "none",
-    });
+    animateDekToLanding(dekRef, landingRef);
+    animateCcmanToLanding(ccmanRef, landing2Ref);
+    animateAstronaut();
+    animateTextAreas();
   }, []);
 
   return (
@@ -165,7 +96,7 @@ const Frame1 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute top-0 w-[40%] text-black"
+                className="fade-textarea absolute top-0 w-[40%] text-black"
                 color="primary"
                 label="CCMan"
                 defaultValue="My lord, I wonder what's beneath us. It feels so hot down there."
@@ -173,7 +104,7 @@ const Frame1 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute top-24 right-0 w-[40%] text-black "
+                className="fade-textarea absolute top-24 right-0 w-[40%] text-black "
                 color="warning"
                 label="God"
                 defaultValue="You still don't know why it's so hot down below?"
@@ -191,7 +122,7 @@ const Frame1 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute bottom-0 w-[40%] text-black"
+                className="fade-textarea absolute bottom-0 w-[40%] text-black"
                 color="primary"
                 label="CCMan"
                 defaultValue="I'm not aware, sir."
@@ -199,7 +130,7 @@ const Frame1 = () => {
               <Textarea
                 isReadOnly
                 disableAutosize
-                className="absolute right-0 pt-2 w-[40%] text-black"
+                className="fade-textarea absolute right-0 pt-2 w-[40%] text-black"
                 color="warning"
                 label="God"
                 defaultValue="Well then, I'll send you down to see what's happening to our world below."
@@ -215,7 +146,7 @@ const Frame1 = () => {
           <Textarea
             isReadOnly
             disableAutosize
-            className="absolute  right-24 md:right-48 xl:right-72 text-black"
+            className="fade-textarea absolute right-24 md:right-48 xl:right-72 text-black"
             color="warning"
             label="God"
             defaultValue="But before you go down, you'll need to change your outfit because you'll have to pass through the atmosphere and encounter various gases, which might make it hard to breathe."
