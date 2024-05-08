@@ -24,7 +24,7 @@ const Frame7 = () => {
     <div className="overflow-hidden">
       <div className="bg-slate-500">
         <div className="flex">
-          <Image src={CCMan} className="w-[20%] ccman-animation" />
+          <Image src={CCMan} alt="CCMan" className="w-[20%] ccman-animation" />
           <div className="flex fade-textarea">
             <VoiceOver src="/audio-file-two.mp3" />
             <Textarea

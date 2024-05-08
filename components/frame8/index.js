@@ -19,7 +19,7 @@ const Frame8 = () => {
   return (
     <div className="overflow-hidden bg-rose-300">
       <div className="flex items-center justify-center py-10">
-        <Image src={CCMan} className="w-[20%]" />
+        <Image src={CCMan} alt="CCMan" className="w-[20%]" />
         <div className="flex fade-textarea w-[50%]">
           <VoiceOver src="/audio/frame8/1.m4a" />
           <Textarea
@@ -38,6 +38,7 @@ const Frame8 = () => {
           <Image
             src={CCmanWatering}
             className="md:w-[90%] xl:w-[70%] 2xl:w-[60%]"
+            alt="Watering"
           />
           <div className="flex fade-textarea py-4 w-[100%] xl:w-[75%]">
             <VoiceOver src="/audio/frame8/2.m4a" />
@@ -55,6 +56,7 @@ const Frame8 = () => {
           <Image
             src={CCmanDriving}
             className="md:w-[90%] xl:w-[70%] 2xl:w-[60%]"
+            alt="Driving"
           />
           <div className="flex fade-textarea py-4 w-[100%] xl:w-[75%]">
             <VoiceOver src="/audio/frame8/3.m4a" />
@@ -72,6 +74,7 @@ const Frame8 = () => {
           <Image
             src={CCmanTrashing}
             className="md:w-[90%] xl:w-[70%] 2xl:w-[60%]"
+            alt="Trashing"
           />
           <div className="flex fade-textarea py-4 w-[100%] xl:w-[75%]">
             <VoiceOver src="/audio/frame8/4.m4a" />
@@ -89,6 +92,7 @@ const Frame8 = () => {
           <Image
             src={CCmanShopping}
             className="md:w-[90%] xl:w-[70%] 2xl:w-[60%]"
+            alt="Shopping"
           />
           <div className="flex fade-textarea py-4 w-[100%] xl:w-[75%]">
             <VoiceOver src="/audio/frame8/5.m4a" />

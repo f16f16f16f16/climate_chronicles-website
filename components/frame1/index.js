@@ -305,6 +305,7 @@ const Frame1 = () => {
               src={Warp}
               className="w-[60%] md:w-[50%]"
               ref={landing2Ref}
+              alt="Black hole"
             />
           </div>
         </div>

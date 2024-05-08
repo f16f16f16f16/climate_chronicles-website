@@ -63,7 +63,7 @@ const Frame3 = () => {
   return (
     <div className="bg-neutral-500">
       <div className="flex">
-        <Image src={CCMan} className="absolute w-[20%] ccman-animation" />
+        <Image src={CCMan} alt="CCMan" className="absolute w-[20%] ccman-animation" />
         <div className="ml-[20%] md:ml-[30%] xl:ml-[30%]">
           <div className="flex fade-textarea ">
             <VoiceOver src="/audio-file-two.mp3" />
@@ -102,34 +102,38 @@ const Frame3 = () => {
         <Image
           src={Plane}
           className="w-28 md:w-52 xl:w-96 py-20 md:py-36 xl:py-52 2xl:py-72 plane-flip-animation"
+          alt="Plane"
         />
       </div>
 
       <div className="flex gap-x-4 overflow-hidden">
-        <Image src={Building} className="w-1/3" />
-        <Image src={Factory1} className="w-1/3" />
-        <Image src={Factory2} className="w-1/3" />
+        <Image src={Building} className="w-1/3" alt="Building"/>
+        <Image src={Factory1} className="w-1/3" alt="Factory"/>
+        <Image src={Factory2} className="w-1/3" alt="Factory"/>
       </div>
 
       <div>
-        <Image src={Road} className="-mt-[22%]" />
+        <Image src={Road} className="-mt-[22%]" alt="Road"/>
         <div className="flex gap-x-4">
           <div>
             <Image
               src={Car1}
               className="w-2/3 -mt-[60%] ml-10 md:ml-16 xl:ml-28 2xl:ml-36"
+              alt="Car"
             />
           </div>
           <div>
             <Image
               src={Car2}
               className="w-2/3 -mt-[65%] ml-10 md:ml-16 xl:ml-28 2xl:ml-36"
+              alt="Car"
             />
           </div>
           <div>
             <Image
               src={Car3}
               className="w-2/3 -mt-[35%] ml-4 md:ml-16 xl:ml-28 2xl:ml-36"
+              alt="Car"
             />
           </div>
         </div>

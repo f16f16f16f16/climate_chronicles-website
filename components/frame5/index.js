@@ -24,7 +24,7 @@ const Frame5 = () => {
     <div className="overflow-hidden">
       <div className="bg-yellow-200">
         <div className="flex">
-          <Image src={CCMan} className="w-[20%] ccman-animation" />
+          <Image src={CCMan} alt="CCMan" className="w-[20%] ccman-animation" />
           <div className="fade-textarea flex">
             <VoiceOver src="/audio-file-two.mp3" />
             <Textarea
@@ -40,7 +40,7 @@ const Frame5 = () => {
           </div>
         </div>
         <div className="">
-          <Image src={FarmFrame} alt="Farmer" className="" />
+          <Image src={FarmFrame} alt="Farm" className="" />
         </div>
         <div className="flex fade-textarea mt-2">
           <VoiceOver src="/audio-file-two.mp3" />
@@ -75,7 +75,7 @@ const Frame5 = () => {
                   helps reduce greenhouse gases. It also reduces the use of
                   energy from fossil sources and other natural resources. Where
                   GHG may be released, adjust the amount of fertiliser or soil
-                  improver correctly and appropriately to the plant's nutrient
+                  improver correctly and appropriately to the plant&apos;s nutrient
                   needs. Increase the use of organic fertilisers and biological
                   fertilisers to reduce the use of chemical fertilisers.
                 </div>
