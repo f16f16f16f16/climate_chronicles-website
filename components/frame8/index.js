@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import { Button, Link, Textarea } from "@nextui-org/react";
 
-import CCMan from "../../assets/frame8/gif/CCMan_Stand+hand+speak.gif";
-import CCmanWatering from "../../assets/frame8/gif/CCman_Watering.gif";
-import CCmanDriving from "../../assets/frame8/gif/Ccman_Driving.gif";
-import CCmanTrashing from "../../assets/frame8/gif/CCman_Trashing.gif";
-import CCmanShopping from "../../assets/frame8/gif/CCman_Shopping.gif";
+import CCMan from "../../assets/frame8/gif/CCMan_Stand+hand+speak.webp";
+import CCmanWatering from "../../assets/frame8/gif/CCman_Watering.webp";
+import CCmanDriving from "../../assets/frame8/gif/Ccman_Driving.webp";
+import CCmanTrashing from "../../assets/frame8/gif/CCman_Trashing.webp";
+import CCmanShopping from "../../assets/frame8/gif/CCman_Shopping.webp";
 
 const Frame8 = () => {
   return (
