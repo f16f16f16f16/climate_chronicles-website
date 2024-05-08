@@ -111,7 +111,7 @@ const Frame2 = () => {
               increase rapidly."
             />
             <div className={`${zIndexes.CO2 === 10 ? "z-10" : "z-0"}`}>
-              <VoiceOver src="/audio-file-two.mp3" />
+              <VoiceOver src="/audio/frame2/CO2.m4a" />
             </div>
             <button
               className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
@@ -160,7 +160,7 @@ const Frame2 = () => {
               than carbon dioxide."
             />
             <div className={`${zIndexes.CH4 === 10 ? "z-10" : "z-0"}`}>
-              <VoiceOver src="/audio-file-two.mp3" />
+              <VoiceOver src="/audio/frame2/CH4.m4a" />
             </div>
             <button
               className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
@@ -219,7 +219,7 @@ const Frame2 = () => {
               heat in the atmosphere."
             />
             <div className={`${zIndexes.N2O === 10 ? "z-10" : "z-0"}`}>
-              <VoiceOver src="/audio-file-two.mp3" />
+              <VoiceOver src="/audio/frame2/N2O.m4a" />
             </div>
             <button
               className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"

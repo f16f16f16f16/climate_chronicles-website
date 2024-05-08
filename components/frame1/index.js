@@ -133,7 +133,7 @@ const Frame1 = () => {
                 alt="God"
               />
               <div className="flex fade-textarea absolute bottom-0 w-[40%] ">
-                <VoiceOver src="/audio-file-two.mp3" />
+                <VoiceOver src="/audio/frame1/3.m4a" />
                 <Textarea
                   isReadOnly
                   disableAutosize
@@ -144,7 +144,7 @@ const Frame1 = () => {
                 />
               </div>
               <div className="flex fade-textarea absolute right-0 pt-2 w-[40%] ">
-                <VoiceOver src="/audio-file-two.mp3" buttonColor="warning" />
+                <VoiceOver src="/audio/frame1/4.m4a" buttonColor="warning" />
                 <Textarea
                   isReadOnly
                   disableAutosize
