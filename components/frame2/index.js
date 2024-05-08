@@ -100,7 +100,7 @@ const Frame2 = () => {
             />
             <VoiceOver src="/audio-file-two.mp3" />
             <button
-              className="absolute flex -space-x-[1%] scale-[.65] md:scale-50 xl:scale-100 overflow-hidden"
+              className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("CO2")}
             >
               <Image
@@ -140,7 +140,7 @@ const Frame2 = () => {
             />
             <VoiceOver src="/audio-file-two.mp3" />
             <button
-              className="absolute flex -space-x-[1%] scale-[.65] md:scale-50 xl:scale-100 overflow-hidden"
+              className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("CH4")}
             >
               <Image
@@ -180,7 +180,7 @@ const Frame2 = () => {
             />
             <VoiceOver src="/audio-file-two.mp3" />
             <button
-              className="absolute flex -space-x-[1%] scale-[.65] md:scale-50 xl:scale-100 overflow-hidden"
+              className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("N2O")}
             >
               <Image
@@ -220,7 +220,7 @@ const Frame2 = () => {
             />
             <VoiceOver src="/audio-file-two.mp3" />
             <button
-              className="absolute flex -space-x-[1%] scale-[.65] md:scale-50 xl:scale-100 overflow-hidden"
+              className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("HFCs")}
             >
               <Image
@@ -260,7 +260,7 @@ const Frame2 = () => {
             />
             <VoiceOver src="/audio-file-two.mp3" />
             <button
-              className="absolute flex -space-x-[1%] scale-[.65] md:scale-50 xl:scale-100 overflow-hidden"
+              className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("PFCs")}
             >
               <Image
@@ -300,7 +300,7 @@ const Frame2 = () => {
             />
             <VoiceOver src="/audio-file-two.mp3" />
             <button
-              className="absolute flex -space-x-[1%] scale-[.65] md:scale-50 xl:scale-100 overflow-hidden"
+              className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("SF6")}
             >
               <Image

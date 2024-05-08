@@ -156,7 +156,7 @@ const Frame1 = () => {
         <div className="mt-10 md:mt-12 xl:mt-18"></div>
 
         <div className="relative z-30 -bottom-10 md:-bottom-24 xl:-bottom-32">
-          <div className="flex fade-textarea absolute right-28 md:right-48 xl:right-72 w-36 md:w-64 xl:w-96">
+          <div className="flex fade-textarea absolute right-24 md:right-48 xl:right-72 w-36 md:w-64 xl:w-96">
             <VoiceOver src="/audio-file-two.mp3" buttonColor="warning"/>
             <Textarea
               isReadOnly
