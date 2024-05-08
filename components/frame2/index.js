@@ -87,7 +87,7 @@ const Frame2 = () => {
                 disableAutosize
                 color="primary"
                 label="CCMan"
-                defaultValue="Oh dear, I have no clue about these gases at all."
+                defaultValue="What is this"
               />
             </div>
             <Textarea
@@ -96,7 +96,19 @@ const Frame2 = () => {
               className={`h-full w-[75%] md:w-[150%] xl:w-[200%] text-white ${
                 zIndexes.CO2 === 10 ? "z-10" : "z-0"
               }`}
-              defaultValue="This is CO2 (Carbon dioxide), a greenhouse gas released into the atmosphere, having the most significant influence on trapping heat in the atmosphere. It can occur naturally, but humans have become the main contributors to its production and release. It's mainly from activities like burning fossil fuels, especially coal, oil, and natural gas, which rapidly increase the amount of carbon dioxide."
+              defaultValue="CO2 is a greenhouse gas that is
+              released into the atmosphere. and
+              has the greatest influence on the
+              accumulation of heat energy in
+              the atmosphere. Greenhouse gases
+              can occur naturally. But nowadays,
+              humans have become the main
+              contributor to the creation and
+              release of CO2, which is caused by
+              various activities, including the
+              burning of fossil fuels. This causes
+              the amount of carbon dioxide to
+              increase rapidly."
             />
             <div className={`${zIndexes.CO2 === 10 ? "z-10" : "z-0"}`}>
               <VoiceOver src="/audio-file-two.mp3" />
@@ -129,7 +141,7 @@ const Frame2 = () => {
                 disableAutosize
                 color="primary"
                 label="CCMan"
-                defaultValue="What is this, sir?"
+                defaultValue="Oh wow, we don't know anything about these gases."
               />
             </div>
             <Textarea
@@ -138,7 +150,14 @@ const Frame2 = () => {
               className={`h-full w-[80%] md:w-[150%] xl:w-[200%] text-white ${
                 zIndexes.CH4 === 10 ? "z-10" : "z-0"
               }`}
-              defaultValue="This is methane gas (CH4), a greenhouse gas released into the Earth's atmosphere in large quantities. It occurs naturally but 60% of it in the atmosphere is due to human activities, which can have a greater greenhouse effect than carbon dioxide, up to 25 times more."
+              defaultValue="Methane gas (CH4) is a greenhouse
+              gas that is released into the earth's
+              atmosphere in large amounts.
+              Released from both natural and
+              human activities. with a high value
+              of 60 percent, which can have a
+              greenhouse effect 25 times greater
+              than carbon dioxide."
             />
             <div className={`${zIndexes.CH4 === 10 ? "z-10" : "z-0"}`}>
               <VoiceOver src="/audio-file-two.mp3" />
@@ -171,7 +190,7 @@ const Frame2 = () => {
                 disableAutosize
                 color="primary"
                 label="CCMan"
-                defaultValue="I feel the same heat sensation here as well."
+                defaultValue="Why does this place feel so uncomfortable and hot?"
               />
             </div>
             <Textarea
@@ -180,7 +199,24 @@ const Frame2 = () => {
               className={`h-full w-[80%] md:w-[150%] xl:w-[200%] text-white ${
                 zIndexes.N2O === 10 ? "z-10" : "z-0"
               }`}
-              defaultValue="N2O (Nitrous oxide), Another important greenhouse gas affecting the Earth's climate. It's naturally occurring, like from lightning, volcanic eruptions, and the decay of organic matter. However, it's also produced by human activities such as agricultural practices like using chemical fertilizers, burning fossil fuels, and livestock farming, which accelerate its release into the atmosphere. This can have long-term environmental impacts and contribute to increased heat in the atmosphere."
+              defaultValue="N2O gas gives the
+              sensation of increased heat. It
+              has the potential to cause
+              global warming as high as 310
+              times compared to CO2 gas.
+              N2O gas is one of the important
+              greenhouse gases that affect
+              the world's climate. And it is
+              another type that occurs
+              naturally, such as lightning and
+              volcanic eruptions. Including
+              the decomposition of organic
+              matter. agricultural activities
+              such as using chemical
+              fertilizers, burning charcoal, and raising animals This is because it is an activity that results in
+              chemical processes that cause more N2O to be released into the atmosphere. This can
+              cause long-term effects on the environment and climate change and cause an increase in
+              heat in the atmosphere."
             />
             <div className={`${zIndexes.N2O === 10 ? "z-10" : "z-0"}`}>
               <VoiceOver src="/audio-file-two.mp3" />
@@ -222,7 +258,9 @@ const Frame2 = () => {
               className={`h-full w-[80%] md:w-[150%] xl:w-[200%] text-white ${
                 zIndexes.HFCs === 10 ? "z-10" : "z-0"
               }`}
-              defaultValue="HFCs (Hydrofluorocarbons) are synthetic greenhouse gases used in various cooling systems such as air conditioners, refrigerators, sprays, and fire extinguishers. They have a high heat-trapping potential and can contribute significantly to the greenhouse effect, even more so than carbon dioxide, ranging from 124 to 14,800 times."
+              defaultValue="HFCS is a greenhouse gas. that humans synthesize. Used in various cooling systems, it is a
+              substance used in air conditioners, refrigerators, and sprays. It is also used as an expanding
+              foam of a substance for fire extinguishing. They have a very high heat-trapping potential."
             />
             <div className={`${zIndexes.HFCs === 10 ? "z-10" : "z-0"}`}>
               <VoiceOver src="/audio-file-two.mp3" />
@@ -264,7 +302,9 @@ const Frame2 = () => {
               className={`h-full w-[80%] md:w-[150%] xl:w-[200%] text-black ${
                 zIndexes.PFCs === 10 ? "z-10" : "z-0"
               }`}
-              defaultValue="PFCs (Perfluorocarbons), synthetic greenhouse gases originating from industrial processes, primarily used as solvents and starting materials in various industrial productions. They have a high heat-trapping potential and can contribute significantly to the greenhouse effect, even more so than carbon dioxide."
+              defaultValue="PFCs are another greenhouse gas. that humans synthesise from some industrial sectors. It is
+              used as a solvent and precursor in various industrial productions. and causes a greater
+              greenhouse effect than carbon dioxide."
             />
             <div className={`${zIndexes.PFCs === 10 ? "z-10" : "z-0"}`}>
               <VoiceOver src="/audio-file-two.mp3" />
@@ -306,7 +346,12 @@ const Frame2 = () => {
               className={`h-full w-[80%] md:w-[150%] xl:w-[200%] text-black ${
                 zIndexes.SF6 === 10 ? "z-10" : "z-0"
               }`}
-              defaultValue="SF6 (Sulfur hexafluoride), a gas with high density and mass compared to air. It's commonly used in the electronics industry as electrical insulation to prevent electrical sparks from high-voltage electrical switchgear or to assist in dissipating heat from high-voltage electrical equipment."
+              defaultValue="SF6 gas is a gas with a high density and a mass higher than air. and is popularly used in the
+              electronics industry. This gas is used in various fields, such as automobile tyres, electrical
+              insulation, and the production of electrical semiconductors. magnesium industry, etc.
+              However, even if it is released in small quantities, it will have a very high impact with the
+              potential to cause global warming. Up to 14,800 more carbon dioxides, depending on gas
+              type."
             />
             <div className={`${zIndexes.SF6 === 10 ? "z-10" : "z-0"}`}>
               <VoiceOver src="/audio-file-two.mp3" />

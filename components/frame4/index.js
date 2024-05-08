@@ -25,7 +25,9 @@ const Frame4 = () => {
               disableAutosize
               color="primary"
               label="CCMan"
-              defaultValue="Hey, isn't that something? Forest animals fleeing from a forest fire raging in the background."
+              defaultValue="Oh, do you see that there? Wild
+              animals running away from a
+              burning forest fire."
             />
           </div>
         </div>
@@ -36,7 +38,31 @@ const Frame4 = () => {
             isReadOnly
             color="primary"
             label="CCMan"
-            defaultValue="Forest fires can occur due to various factors, whether natural, like lightning strikes coinciding with windy conditions, which can ignite fires, or due to excessively hot weather conditions. Another factor is human activity, such as deforestation for land expansion or during forest surveys, which can inadvertently lead to fires spreading. Agricultural burning, using fire to clear grass or unwanted vegetation, can also contribute to fires. The aftermath of forest fires includes the release of CO2, damage to the forest, destruction of food sources and habitats for wildlife, potentially leading to species extinction. "
+            defaultValue="Wildfires can occur for many
+            reasons. Whether it is caused by
+            nature, such as lightning causing
+            sparks along with the wind, when
+            these two things happen
+            together, they can cause wildfires
+            and extreme weather conditions
+            and temperatures. It can also
+            cause forest fires. Another factor
+            is caused by humans, such as
+            burning wood to destroy forests to expand the area or in the process of surveying the forest
+            floor, which may cause the fire to spread and cause a forest fire. agricultural burning Using
+            fire to burn grass or burn unwanted plants in agriculture may cause the fire to spread and
+            cause a forest fire as well."
+          />
+        </div>
+        <div className="flex fade-textarea mt-2">
+          <VoiceOver src="/audio-file-two.mp3" />
+          <Textarea
+            isReadOnly
+            color="primary"
+            label="CCMan"
+            defaultValue="And the consequences of forest fires are that carbon dioxide gas (CO2) is produced, forests
+            are damaged, and food sources and habitats for wild animals are destroyed. This may cause
+            wildlife to become extinct as well."
           />
         </div>
       </div>

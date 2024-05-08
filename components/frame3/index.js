@@ -73,7 +73,11 @@ const Frame3 = () => {
               className=""
               color="primary"
               label="CCMan"
-              defaultValue="Does everyone understand, right?"
+              defaultValue="In addition to the Earth receiving
+              heat from the sun and carbon
+              dioxide being released, there are
+              also other human activities that
+              create greenhouse gases."
             />
           </div>
           <div className="flex mt-12 fade-textarea xl:w-[230%]">
@@ -83,7 +87,13 @@ const Frame3 = () => {
               className=""
               color="primary"
               label="CCMan"
-              defaultValue="Next, Ccman will tell everyone about human activities that produce various gases, which also contribute to greenhouse gases. They also have the effect of increasing heat in the atmosphere"
+              defaultValue="Here, Ccman will tell everyone
+              about human activities that cause
+              GHGs and how these gases also
+              cause greenhouse gases. It also
+              has the effect of stimulating an
+              increase in heat in the
+              atmosphere."
             />
           </div>
         </div>
@@ -127,11 +137,15 @@ const Frame3 = () => {
           <VoiceOver src="/audio-file-two.mp3" />
           <Textarea
             isReadOnly
-            disableAutosize
             className=""
             color="primary"
             label="CCMan"
-            defaultValue="Whether it's industrial factories, machinery, transportation by land or air, or even shopping malls, all of the mentioned activities are involved in processes that result in the emission of carbon dioxide (CO2)"
+            defaultValue="Whether it be industrial plants,
+            machinery, land-air
+            transportation, or even a
+            department store, all that is said
+            here is in the process that causes
+            carbon dioxide gas (CO2)."
           />
         </div>
         <div className="flex fade-textarea mt-2">
@@ -141,10 +155,29 @@ const Frame3 = () => {
             className=""
             color="primary"
             label="CCMan"
-            defaultValue="When burning fossil fuels like gasoline for vehicles, coal for electricity generation, or wood for cooking, the combustion process releases carbon dioxide (CO2) into the atmosphere
-          The operation of machinery, such as factory equipment or transportation vehicles, requires energy, and this energy consumption often leads to the burning of fossil fuels within the machinery, resulting in the emission of carbon dioxide (CO2) 
-          Air conditioning: The use of air conditioning units in homes or buildings often relies on energy produced from burning fossil fuels, such as oil or natural gas 
-          The movement of vehicles, such as cars, airplanes, or ships, typically relies on energy derived from burning fossil fuels, such as gasoline or other combustible fuels. 
+            defaultValue="Burning fuels such as gasoline
+            used to drive cars, coal used to
+            produce electricity, or wood used
+            to cook food. When this fuel is
+            burned, carbon dioxide (CO2) is
+            released.
+          "
+          />
+        </div>
+        <div className="flex fade-textarea mt-2">
+          <VoiceOver src="/audio-file-two.mp3" />
+          <Textarea
+            isReadOnly
+            className=""
+            color="primary"
+            label="CCMan"
+            defaultValue="The rotation of machinery, such
+            as factory machinery or transportation machinery, when operating, uses energy and triggers
+            the combustion of fuel within the machine.
+            Air Conditioning Using air conditioning in a home or building. It uses energy produced from
+            combustion, such as oil or natural gas.
+            Vehicle movement: The use of automobiles, airplanes, or boats when moving is powered by
+            oil or other combustion fuel.
           "
           />
         </div>

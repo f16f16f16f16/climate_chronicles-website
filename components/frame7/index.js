@@ -25,20 +25,35 @@ const Frame7 = () => {
               disableAutosize
               color="primary"
               label="CCMan"
-              defaultValue="And when humans throw garbage into the water or the things that have not been decomposed These are all factors that can also cause greenhouse gases."
+              defaultValue="Hahaha, look at that polluted
+              water"
             />
           </div>
         </div>
         <Image src={BigFrame} alt="BigFrame" />
-        <div className="flex fade-textarea">
-        <VoiceOver src="/audio-file-two.mp3" />
-        <Textarea
-          isReadOnly
-          color="primary"
-          label="CCMan"
-          defaultValue="ha-ha-ha, those foul-smelling waters are indeed a result of human intervention. Stagnant or foul water often occurs due to the decomposition or fermentation of organic matter in oxygen-deprived conditions. This process can generate significant amounts of gases when sewage is trapped, possibly producing carbon dioxide (CO2) and methane (CH4) as it decomposes. The unpleasant odor emitted can be hydrogen sulfide gas (H2S), a byproduct of organic decomposition in anaerobic conditions, or other odors from various industrial facilities like fish processing plants and slaughterhouses."
-        />
-      </div>
+        <div className="flex fade-textarea mt-2">
+          <VoiceOver src="/audio-file-two.mp3" />
+          <Textarea
+            isReadOnly
+            color="primary"
+            label="CCMan"
+            defaultValue="It's all caused by humans.
+          And sewage water or water that
+          has been trapped for a long time
+          It is caused by the fermentation
+          or decomposition process of
+          organic substances in the absence
+          of air and is often the main
+          ingredient of gases that occur in
+          large quantities in trapped
+          wastewater. It may create carbon
+          dioxide (CO2) and methane (CH4)
+          when decomposed. And the bad
+          smell that is emitted is the smell caused by hydrogen sulphide gas (H2S), which is from the
+          decomposition of organic substances using air or other odours from various industrial plants
+          such as fishmeal factories and slaughterhouses, etc."
+          />
+        </div>
       </div>
     </div>
   );

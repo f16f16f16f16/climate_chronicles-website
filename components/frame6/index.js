@@ -9,7 +9,6 @@ import { animateCCMan, animateTextAreas } from "../gsap";
 import VoiceOver from "../voiceOver";
 
 const Frame6 = () => {
-  
   useEffect(() => {
     animateCCMan();
     animateTextAreas();
@@ -28,7 +27,9 @@ const Frame6 = () => {
                 disableAutosize
                 color="primary"
                 label="CCMan"
-                defaultValue="Having beautiful jewelry, diamonds, and minerals Did you know that these things also come from mining, and mining also can cause greenhouse gases?"
+                defaultValue="In addition, mining is another
+                factor that produces methane gas
+                (CH4)"
               />
             </div>
           </div>
@@ -40,13 +41,23 @@ const Frame6 = () => {
           />
         </div>
       </div>
-      <div className="flex fade-textarea">
+      <div className="absolute w-[100%] flex fade-textarea mt-2">
         <VoiceOver src="/audio-file-two.mp3" />
         <Textarea
           isReadOnly
           color="primary"
           label="CCMan"
-          defaultValue="Furthermore, mining is another factor contributing to the production of methane (CH4) and carbon dioxide (CO2). This is because mining involves drilling, blasting, and machinery for crushing rocks or minerals obtained from mining. Gases are released during coal extraction, and there are also trucks transporting rocks that emit CO2 and particulate matter. All of these activities have adverse effects on workers and people in nearby areas."
+          defaultValue="Carbon dioxide gas (CO2) as well
+          because mining involves drilling
+          or blasting. And mines will have
+          tools or machines for crushing
+          rocks or minerals obtained from
+          mining. Gases are released from
+          coal extraction. There are also
+          trucks transporting rocks that
+          create pollutant fumes (CO2) and
+          dust. All of this also affects
+          workers or people in the nearby areas."
         />
       </div>
     </>
