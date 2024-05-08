@@ -30,7 +30,7 @@ const Frame4 = () => {
           </div>
         </div>
         <Image src={BigFrame} alt="BigFrame" />
-        <div className="flex fade-textarea">
+        <div className="flex fade-textarea mt-2">
           <VoiceOver src="/audio-file-two.mp3" />
           <Textarea
             isReadOnly

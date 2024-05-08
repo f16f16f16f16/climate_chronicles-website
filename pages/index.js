@@ -25,8 +25,9 @@ const Home = () => {
       <Frame5 />
       <div className="bg-gradient-to-b from-yellow-200 to-amber-700 h-[40rem]" />
       <Frame6 />
-      <div className="bg-gradient-to-b from-amber-700 to-green-300 h-[40rem]" />
+      <div className="bg-gradient-to-b from-amber-700 to-slate-500 h-[40rem]" />
       <Frame7 />
+      <div className="bg-gradient-to-b from-slate-500 to-rose-300 h-[10rem]" />
       <Frame8/>
     </div>
   );

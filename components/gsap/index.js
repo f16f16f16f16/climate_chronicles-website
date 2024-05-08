@@ -162,3 +162,29 @@ export const animateAstronaut = () => {
     ease: "none",
   });
 };
+
+export const animateAlien = () => {
+  const tl = gsap.timeline({ repeat: -1, yoyo: true, ease: "power1.inOut" });
+  tl.to("#alien", {
+    motionPath: {
+      path: [
+        { x: 0, y: 0 },
+        { x: -100, y: 0 },
+        { x: -100, y: -100 },
+        { x: 0, y: -100 },
+        { x: 0, y: 0 },
+      ],
+      curviness: 1.5,
+      autoRotate: true,
+    },
+    duration: 10,
+    ease: "linear",
+  });
+
+  gsap.to("#alien", {
+    rotation: "+=360",
+    duration: 5,
+    repeat: -1,
+    ease: "none",
+  });
+};

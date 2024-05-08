@@ -65,7 +65,7 @@ const Frame3 = () => {
       <div className="flex">
         <Image src={CCMan} className="absolute w-[20%] ccman-animation" />
         <div className="ml-[20%] md:ml-[30%] xl:ml-[30%]">
-          <div className="flex fade-textarea">
+          <div className="flex fade-textarea ">
             <VoiceOver src="/audio-file-two.mp3" />
             <Textarea
               isReadOnly
@@ -76,7 +76,7 @@ const Frame3 = () => {
               defaultValue="Does everyone understand, right?"
             />
           </div>
-          <div className="flex mt-12 fade-textarea">
+          <div className="flex mt-12 fade-textarea xl:w-[230%]">
             <VoiceOver src="/audio-file-two.mp3" />
             <Textarea
               isReadOnly
@@ -123,7 +123,7 @@ const Frame3 = () => {
             />
           </div>
         </div>
-        <div className="flex fade-textarea">
+        <div className="flex fade-textarea mt-2">
           <VoiceOver src="/audio-file-two.mp3" />
           <Textarea
             isReadOnly
@@ -134,11 +134,11 @@ const Frame3 = () => {
             defaultValue="Whether it's industrial factories, machinery, transportation by land or air, or even shopping malls, all of the mentioned activities are involved in processes that result in the emission of carbon dioxide (CO2)"
           />
         </div>
-        <div className="flex fade-textarea">
+        <div className="flex fade-textarea mt-2">
           <VoiceOver src="/audio-file-two.mp3" />
           <Textarea
             isReadOnly
-            className="mt-2"
+            className=""
             color="primary"
             label="CCMan"
             defaultValue="When burning fossil fuels like gasoline for vehicles, coal for electricity generation, or wood for cooking, the combustion process releases carbon dioxide (CO2) into the atmosphere

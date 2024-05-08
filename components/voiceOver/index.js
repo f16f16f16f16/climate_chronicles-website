@@ -10,6 +10,10 @@ const VoiceOver = ({ src, buttonColor = "primary" }) => {
     setPlaying(!playing);
   };
 
+  const handleOnEnd = () => {
+    setPlaying(false);
+  };
+
   return (
     <div className="">
       <Button
@@ -17,7 +21,6 @@ const VoiceOver = ({ src, buttonColor = "primary" }) => {
         isIconOnly
         color={buttonColor}
         aria-label="Toggle audio"
-        className=""
       >
         {playing ? (
           <SpeakerXMarkIcon className="h-5 w-5" />
@@ -28,7 +31,7 @@ const VoiceOver = ({ src, buttonColor = "primary" }) => {
       <ReactHowler
         src={src}
         playing={playing}
-        loop={true}
+        onEnd={handleOnEnd}
         volume={1}
       />
     </div>

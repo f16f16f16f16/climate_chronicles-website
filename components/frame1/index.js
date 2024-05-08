@@ -14,8 +14,10 @@ import Sun from "../../assets/frame1/images/Sun.webp";
 import CCMan from "../../assets/frame1/gif/CCMan_Droping.webp";
 import Capsule from "../../assets/frame1/gif/TranformationCapsule.webp";
 import Astronaut from "../../assets/frame1/images/Astronaut.webp";
+import Alien from "../../assets/frame1/images/Alien.webp";
 import Warp from "../../assets/frame1/gif/Warp.webp";
 import {
+  animateAlien,
   animateAstronaut,
   animateCcmanToLanding,
   animateDekToLanding,
@@ -59,6 +61,7 @@ const Frame1 = () => {
     animateDekToLanding(dekRef, landingRef);
     animateCcmanToLanding(ccmanRef, landing2Ref);
     animateAstronaut();
+    animateAlien();
     animateTextAreas();
   }, []);
 
@@ -95,25 +98,28 @@ const Frame1 = () => {
           >
             <div className="relative">
               <div className="flex fade-textarea absolute top-0 w-[40%] ">
-                <VoiceOver src="/audio-file-two.mp3" />
+                <VoiceOver src="/audio/frame1/1.m4a" />
                 <Textarea
                   isReadOnly
                   disableAutosize
                   className="text-black"
                   color="primary"
                   label="CCMan"
-                  defaultValue="My lord, I wonder what's beneath us. It feels so hot down there."
+                  defaultValue="God, I want to know why the
+                  weather in the human world is so
+                  strange"
                 />
               </div>
               <div className="flex fade-textarea absolute top-24 right-0 w-[40%] ">
-                <VoiceOver src="/audio-file-two.mp3" buttonColor="warning"/>
+                <VoiceOver src="/audio/frame1/2.m4a" buttonColor="warning" />
                 <Textarea
                   isReadOnly
                   disableAutosize
                   className="text-black "
                   color="warning"
                   label="God"
-                  defaultValue="You still don't know why it's so hot down below?"
+                  defaultValue="You still don't know why the human
+                  world's weather is so unstable?"
                 />
               </div>
               <Image
@@ -134,18 +140,20 @@ const Frame1 = () => {
                   className="text-black"
                   color="primary"
                   label="CCMan"
-                  defaultValue="I'm not aware, sir."
+                  defaultValue="I don't know yet."
                 />
               </div>
               <div className="flex fade-textarea absolute right-0 pt-2 w-[40%] ">
-                <VoiceOver src="/audio-file-two.mp3" buttonColor="warning"/>
+                <VoiceOver src="/audio-file-two.mp3" buttonColor="warning" />
                 <Textarea
                   isReadOnly
                   disableAutosize
                   className="text-black"
                   color="warning"
                   label="God"
-                  defaultValue="Well then, I'll send you down to see what's happening to our world below."
+                  defaultValue="Then I'll send you down to see
+                  what's happening to the world
+                  below us."
                 />
               </div>
             </div>
@@ -157,13 +165,19 @@ const Frame1 = () => {
 
         <div className="relative z-30 -bottom-10 md:-bottom-24 xl:-bottom-32">
           <div className="flex fade-textarea absolute right-24 md:right-48 xl:right-72 w-36 md:w-64 xl:w-96">
-            <VoiceOver src="/audio-file-two.mp3" buttonColor="warning"/>
+            <VoiceOver src="/audio-file-two.mp3" buttonColor="warning" />
             <Textarea
               isReadOnly
               className="text-black"
               color="warning"
               label="God"
-              defaultValue="But before you go down, you'll need to change your outfit because you'll have to pass through the atmosphere and encounter various gases, which might make it hard to breathe."
+              defaultValue="But before going down, you must
+              change your clothes first. Because
+              when you go down into that world,
+              you must pass through the
+              atmosphere and encounter other
+              gases. It may make breathing
+              difficult."
             />
           </div>
           <Image
@@ -274,12 +288,23 @@ const Frame1 = () => {
             id="astronaut"
           />
 
+          <Image
+            src={Alien}
+            alt="Alien"
+            className="w-[15%]  absolute right-0"
+            id="alien"
+          />
+
           <div className="flex justify-center items-center">
             <Image src={Earth} className="w-[75%] slow-rotate" alt="Earth" />
           </div>
 
           <div className="z-20 relative flex justify-center items-center">
-            <Image src={Warp} className="w-[70%]" ref={landing2Ref} />
+            <Image
+              src={Warp}
+              className="w-[60%] md:w-[50%]"
+              ref={landing2Ref}
+            />
           </div>
         </div>
       </div>

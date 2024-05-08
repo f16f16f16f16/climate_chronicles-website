@@ -94,17 +94,17 @@ const Frame5 = () => {
           <Image
             src={Farmer1}
             alt="Farmer"
-            className="w-[8%] -mt-[8rem] md:-mt-[9rem] xl:-mt-[18rem] 2xl:-mt-[26rem] ml-[2rem] md:ml-[7rem] xl:ml-[12rem] 2xl:ml-[18rem]"
+            className="w-[8%] -mt-[8rem] md:-mt-[9rem] xl:-mt-[18rem] 2xl:-mt-[26rem] -ml-[2rem] md:ml-[2rem] xl:ml-[3rem] 2xl:ml-[2rem]"
           />
           <Image
             src={Tractor}
             alt="Tractor"
-            className="w-[25%] -mt-[12rem] md:-mt-[20rem] xl:-mt-[42rem] 2xl:-mt-[50rem]"
+            className="w-[25%] -mt-[12rem] md:-mt-[20rem] xl:-mt-[42rem] 2xl:-mt-[50rem] ml-[3rem] md:ml-[5rem] xl:ml-[10rem] 2xl:ml-[17rem]"
           />
           <Image
             src={Rice}
             alt="Rice"
-            className="w-[35%] -ml-48 md:-ml-[23rem] xl:-ml-[37rem] 2xl:-ml-[50rem] -mb-[3rem] md:-mb-[12rem] xl:-mb-[20rem] 2xl:-mb-[24rem]"
+            className="w-[35%] -ml-48 md:-ml-[20rem] xl:-ml-[37rem] 2xl:-ml-[50rem] -mb-[1rem] md:-mb-[4rem] xl:-m-[18rem] 2xl:-mb-[24rem]"
           />
         </div>
         <div>
@@ -115,7 +115,7 @@ const Frame5 = () => {
           />
         </div>
       </div>
-      <div className="flex fade-textarea">
+      <div className="flex fade-textarea bg-yellow-200">
         <VoiceOver src="/audio-file-two.mp3" />
         <Textarea
           isReadOnly
