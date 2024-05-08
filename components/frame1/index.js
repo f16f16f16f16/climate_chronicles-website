@@ -8,7 +8,7 @@ import Cloud1 from "../../assets/frame1/images/Cloud1.webp";
 import Cloud2 from "../../assets/frame1/images/Cloud2.webp";
 import Cloud3 from "../../assets/frame1/images/Cloud3.webp";
 import Heaven from "../../assets/frame1/images/Heaven.webp";
-import God from "../../assets/frameQuiz/images/GOD.webp";
+import GodSpeak from "../../assets/frameQuiz/gif/God_Speaking.webp";
 import Earth from "../../assets/frame1/images/Earth.webp";
 import Sun from "../../assets/frame1/images/Sun.webp";
 import CCMan from "../../assets/frame1/gif/CCMan_Droping.webp";
@@ -122,8 +122,8 @@ const Frame1 = () => {
                 alt="Heaven"
               />
               <Image
-                src={God}
-                className="w-32 md:w-64 xl:w-[28rem] h-auto absolute top-16 md:top-32 xl:top-52 left-1/2 transform -translate-x-1/2"
+                src={GodSpeak}
+                className="w-52 md:w-96 xl:w-[40rem] h-auto absolute top-16 md:top-32 xl:top-52 left-1/2 transform -translate-x-1/2"
                 alt="God"
               />
               <div className="flex fade-textarea absolute bottom-0 w-[40%] ">
