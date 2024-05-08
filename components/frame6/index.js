@@ -9,20 +9,7 @@ import { animateCCMan, animateTextAreas } from "../gsap";
 import VoiceOver from "../voiceOver";
 
 const Frame6 = () => {
-  const audioRef = useRef(null);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      audioRef.current = new Audio("/PCIII-Remembering-Past-Everything.mp3");
-    }
-  }, []);
-
-  const playAudio = () => {
-    if (audioRef.current) {
-      audioRef.current.play();
-    }
-  };
-
+  
   useEffect(() => {
     animateCCMan();
     animateTextAreas();

@@ -14,9 +14,10 @@ export const animateTextAreas = () => {
         autoAlpha: 1,
         scrollTrigger: {
           trigger: textarea,
-          start: "center center",
-          end: "center center",
+          start: "center bottom-=150",
+          end: "center bottom-=150",
           toggleActions: "play none none reverse",
+          markers: true,
         },
       }
     );

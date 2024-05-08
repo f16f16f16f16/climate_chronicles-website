@@ -7,6 +7,7 @@ import Frame6 from "@/components/frame6";
 import Frame7 from "@/components/frame7";
 import Navibar from "../components/navbar/index";
 import BackgroundAudio from "@/components/bgAudio";
+import Frame8 from "@/components/frame8";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
       <Frame6 />
       <div className="bg-gradient-to-b from-amber-700 to-green-300 h-[40rem]" />
       <Frame7 />
+      <Frame8/>
     </div>
   );
 };

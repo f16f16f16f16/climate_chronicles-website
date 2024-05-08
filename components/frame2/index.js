@@ -98,7 +98,9 @@ const Frame2 = () => {
               }`}
               defaultValue="This is CO2 (Carbon dioxide), a greenhouse gas released into the atmosphere, having the most significant influence on trapping heat in the atmosphere. It can occur naturally, but humans have become the main contributors to its production and release. It's mainly from activities like burning fossil fuels, especially coal, oil, and natural gas, which rapidly increase the amount of carbon dioxide."
             />
-            <VoiceOver src="/audio-file-two.mp3" />
+            <div className={`${zIndexes.CO2 === 10 ? "z-10" : "z-0"}`}>
+              <VoiceOver src="/audio-file-two.mp3" />
+            </div>
             <button
               className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("CO2")}
@@ -138,7 +140,9 @@ const Frame2 = () => {
               }`}
               defaultValue="This is methane gas (CH4), a greenhouse gas released into the Earth's atmosphere in large quantities. It occurs naturally but 60% of it in the atmosphere is due to human activities, which can have a greater greenhouse effect than carbon dioxide, up to 25 times more."
             />
-            <VoiceOver src="/audio-file-two.mp3" />
+            <div className={`${zIndexes.CH4 === 10 ? "z-10" : "z-0"}`}>
+              <VoiceOver src="/audio-file-two.mp3" />
+            </div>
             <button
               className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("CH4")}
@@ -178,7 +182,9 @@ const Frame2 = () => {
               }`}
               defaultValue="N2O (Nitrous oxide), Another important greenhouse gas affecting the Earth's climate. It's naturally occurring, like from lightning, volcanic eruptions, and the decay of organic matter. However, it's also produced by human activities such as agricultural practices like using chemical fertilizers, burning fossil fuels, and livestock farming, which accelerate its release into the atmosphere. This can have long-term environmental impacts and contribute to increased heat in the atmosphere."
             />
-            <VoiceOver src="/audio-file-two.mp3" />
+            <div className={`${zIndexes.N2O === 10 ? "z-10" : "z-0"}`}>
+              <VoiceOver src="/audio-file-two.mp3" />
+            </div>
             <button
               className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("N2O")}
@@ -218,7 +224,9 @@ const Frame2 = () => {
               }`}
               defaultValue="HFCs (Hydrofluorocarbons) are synthetic greenhouse gases used in various cooling systems such as air conditioners, refrigerators, sprays, and fire extinguishers. They have a high heat-trapping potential and can contribute significantly to the greenhouse effect, even more so than carbon dioxide, ranging from 124 to 14,800 times."
             />
-            <VoiceOver src="/audio-file-two.mp3" />
+            <div className={`${zIndexes.HFCs === 10 ? "z-10" : "z-0"}`}>
+              <VoiceOver src="/audio-file-two.mp3" />
+            </div>
             <button
               className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("HFCs")}
@@ -258,7 +266,9 @@ const Frame2 = () => {
               }`}
               defaultValue="PFCs (Perfluorocarbons), synthetic greenhouse gases originating from industrial processes, primarily used as solvents and starting materials in various industrial productions. They have a high heat-trapping potential and can contribute significantly to the greenhouse effect, even more so than carbon dioxide."
             />
-            <VoiceOver src="/audio-file-two.mp3" />
+            <div className={`${zIndexes.PFCs === 10 ? "z-10" : "z-0"}`}>
+              <VoiceOver src="/audio-file-two.mp3" />
+            </div>
             <button
               className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("PFCs")}
@@ -298,7 +308,9 @@ const Frame2 = () => {
               }`}
               defaultValue="SF6 (Sulfur hexafluoride), a gas with high density and mass compared to air. It's commonly used in the electronics industry as electrical insulation to prevent electrical sparks from high-voltage electrical switchgear or to assist in dissipating heat from high-voltage electrical equipment."
             />
-            <VoiceOver src="/audio-file-two.mp3" />
+            <div className={`${zIndexes.SF6 === 10 ? "z-10" : "z-0"}`}>
+              <VoiceOver src="/audio-file-two.mp3" />
+            </div>
             <button
               className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("SF6")}
