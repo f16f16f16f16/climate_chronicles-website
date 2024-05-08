@@ -1,11 +1,10 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Pagination } from '@nextui-org/react';
 import Navibar from '../components/navbar/index';
-import Image from 'next/image';
 
 const Article = ({ article }) => (
   <div className="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-500 ease-in-out">
-    <Image
+    <img
       src={article.urlToImage}
       alt={article.title}
       className="w-full h-48 object-cover"
