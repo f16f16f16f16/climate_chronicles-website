@@ -1,11 +1,18 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { Textarea } from "@nextui-org/react";
+import {
+  Textarea,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  Button,
+} from "@nextui-org/react";
+
+import { animateCCMan, animateTextAreas } from "../gsap";
+import VoiceOver from "../voiceOver";
 
 import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.webp";
 import BigFrame from "../../assets/frame4/gif/BigFrame.webp";
-import { animateCCMan, animateTextAreas } from "../gsap";
-import VoiceOver from "../voiceOver";
 
 const Frame4 = () => {
   useEffect(() => {
@@ -64,6 +71,41 @@ const Frame4 = () => {
             are damaged, and food sources and habitats for wild animals are destroyed. This may cause
             wildlife to become extinct as well."
           />
+        </div>
+
+        <div className="flex items-center justify-center fade-textarea mt-24 space-x-24 md:space-x-48 xl:space-x-96">
+          <Popover placement="bottom" color="secondary" showArrow={true}>
+            <PopoverTrigger>
+              <Button color="secondary">Tips</Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-[17rem]">
+              <div className="px-1 py-2">
+                <div className="text-md">
+                  Prevent deforestation Determining Forest conservation areas
+                  and maintaining forests appropriately to prevent violations
+                  and destruction of forests and to help promote reforestation
+                  projects or restore destroyed forests. To increase the
+                  absorption of greenhouse gases from the air and help reduce
+                  GHG emissions.
+                </div>
+              </div>
+            </PopoverContent>
+          </Popover>
+
+          <Popover placement="bottom" color="success" showArrow={true}>
+            <PopoverTrigger>
+              <Button color="success">Tips</Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-[17rem]">
+              <div className="px-1 py-2">
+                <div className="text-md ">
+                  One tree can absorb an average of 9–15 kilogrammes of carbon
+                  dioxide per year and also helps capture 1.4 kilogrammes of
+                  dust and air pollution per year.
+                </div>
+              </div>
+            </PopoverContent>
+          </Popover>
         </div>
       </div>
     </div>

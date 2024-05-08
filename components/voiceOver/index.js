@@ -28,12 +28,7 @@ const VoiceOver = ({ src, buttonColor = "primary" }) => {
           <SpeakerWaveIcon className="h-5 w-5" />
         )}
       </Button>
-      <ReactHowler
-        src={src}
-        playing={playing}
-        onEnd={handleOnEnd}
-        volume={1}
-      />
+      <ReactHowler src={src} playing={playing} onEnd={handleOnEnd} volume={1} />
     </div>
   );
 };

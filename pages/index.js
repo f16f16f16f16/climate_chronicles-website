@@ -17,18 +17,18 @@ const Home = () => {
       <Frame1 />
       <div className="bg-gradient-to-b from-[#00010d] to-zinc-900 h-[30rem]" />
       <Frame2 />
-      <div className="bg-gradient-to-b from-sky-200 to-neutral-500 h-[30rem]" />
+      <div className="bg-gradient-to-b from-sky-200 to-neutral-500 h-[20rem]" />
       <Frame3 />
-      <div className="bg-gradient-to-b from-neutral-500 to-orange-400 h-[30rem]" />
+      <div className="bg-gradient-to-b from-neutral-500 to-orange-400 h-[15rem]" />
       <Frame4 />
-      <div className="bg-gradient-to-b from-orange-400 to-yellow-200 h-[30rem]" />
+      <div className="bg-gradient-to-b from-orange-400 to-yellow-200 h-[15rem]" />
       <Frame5 />
-      <div className="bg-gradient-to-b from-yellow-200 to-amber-700 h-[40rem]" />
+      <div className="bg-gradient-to-b from-yellow-200 to-amber-700 h-[15rem]" />
       <Frame6 />
-      <div className="bg-gradient-to-b from-amber-700 to-slate-500 h-[40rem]" />
+      <div className="bg-gradient-to-b from-amber-700 to-slate-500 h-[15rem]" />
       <Frame7 />
-      <div className="bg-gradient-to-b from-slate-500 to-rose-300 h-[10rem]" />
-      <Frame8/>
+      <div className="bg-gradient-to-b from-slate-500 to-rose-300 h-[15rem]" />
+      <Frame8 />
     </div>
   );
 };

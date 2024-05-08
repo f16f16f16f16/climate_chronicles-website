@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Textarea } from "@nextui-org/react";
 
+import { animateTextAreas, ccmanZigzag, ufoZigzag } from "../gsap";
+import VoiceOver from "../voiceOver";
+
 import CCMan from "../../assets/frame2/gif/CCManFly.webp";
 import Aura from "../../assets/frame2/images/Aura.webp";
 import UFO from "../../assets/frame2/images/UFO.webp";
@@ -17,8 +20,6 @@ import PFCs_1 from "../../assets/frame2/images/gasSeparate/PFCs_1.webp";
 import PFCs_2 from "../../assets/frame2/images/gasSeparate/PFCs_2.webp";
 import SF6_1 from "../../assets/frame2/images/gasSeparate/SF6_1.webp";
 import SF6_2 from "../../assets/frame2/images/gasSeparate/SF6_2.webp";
-import { animateTextAreas, ccmanZigzag, ufoZigzag } from "../gsap";
-import VoiceOver from "../voiceOver";
 
 const Frame2 = () => {
   const ccmanRef = useRef(null);

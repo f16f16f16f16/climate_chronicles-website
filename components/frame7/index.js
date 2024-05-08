@@ -1,11 +1,18 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { Button, Link, Textarea } from "@nextui-org/react";
+import {
+  Textarea,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  Button,
+} from "@nextui-org/react";
+
+import { animateCCMan, animateTextAreas } from "../gsap";
+import VoiceOver from "../voiceOver";
 
 import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.webp";
 import BigFrame from "../../assets/frame7/gif/Wastewater.webp";
-import { animateCCMan, animateTextAreas } from "../gsap";
-import VoiceOver from "../voiceOver";
 
 const Frame7 = () => {
   useEffect(() => {
@@ -53,6 +60,25 @@ const Frame7 = () => {
           decomposition of organic substances using air or other odours from various industrial plants
           such as fishmeal factories and slaughterhouses, etc."
           />
+        </div>
+        <div className="flex items-center justify-center fade-textarea mt-24 space-x-24 md:space-x-48 xl:space-x-96">
+          <Popover placement="bottom" color="secondary" showArrow={true}>
+            <PopoverTrigger>
+              <Button color="secondary">Tips</Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-[17rem]">
+              <div className="px-1 py-2">
+                <div className="text-md">
+                  Construction of additional wastewater treatment plants Can
+                  reduce methane emissions caused by polluted water. Reduce
+                  nutrient leakage from agriculture. They contain nitrogen and
+                  phosphorus, which cause water pollution. Controlling
+                  industrial emissions and promoting clean production methods
+                  can prevent pollutants from entering waterways.
+                </div>
+              </div>
+            </PopoverContent>
+          </Popover>
         </div>
       </div>
     </div>

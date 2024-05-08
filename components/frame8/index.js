@@ -2,13 +2,14 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import { Button, Link, Textarea } from "@nextui-org/react";
 
+import { animateTextAreas } from "../gsap";
+import VoiceOver from "../voiceOver";
+
 import CCMan from "../../assets/frame8/gif/CCMan_Stand+hand+speak.webp";
 import CCmanWatering from "../../assets/frame8/gif/CCman_Watering.webp";
 import CCmanDriving from "../../assets/frame8/gif/Ccman_Driving.webp";
 import CCmanTrashing from "../../assets/frame8/gif/CCman_Trashing.webp";
 import CCmanShopping from "../../assets/frame8/gif/CCman_Shopping.webp";
-import { animateTextAreas } from "../gsap";
-import VoiceOver from "../voiceOver";
 
 const Frame8 = () => {
   useEffect(() => {

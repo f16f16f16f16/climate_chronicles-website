@@ -7,7 +7,9 @@ import {
   PopoverContent,
   Button,
 } from "@nextui-org/react";
-import { SpeakerWaveIcon } from "@heroicons/react/24/solid";
+
+import { animateCCMan, animateTextAreas } from "../gsap";
+import VoiceOver from "../voiceOver";
 
 import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.webp";
 import Plane from "../../assets/frame3/images/Plane.webp";
@@ -18,8 +20,6 @@ import Road from "../../assets/frame3/images/Road.webp";
 import Car1 from "../../assets/frame3/gif/Car1.webp";
 import Car2 from "../../assets/frame3/gif/Car2.webp";
 import Car3 from "../../assets/frame3/gif/Car3.webp";
-import { animateCCMan, animateTextAreas } from "../gsap";
-import VoiceOver from "../voiceOver";
 
 const Frame3 = () => {
   const audioRef = useRef(null);
@@ -181,18 +181,44 @@ const Frame3 = () => {
           "
           />
         </div>
-        {/* <div className="flex flex-wrap gap-4">
-          {colors.map((color) => (
-            <Popover key={color} placement="bottom" color={color}>
-              <PopoverTrigger>
-                <Button color={color} className="capitalize">
-                  {color}
-                </Button>
-              </PopoverTrigger>
-              {content}
-            </Popover>
-          ))}
-        </div> */}
+        <div className="flex items-center justify-center fade-textarea mt-24 space-x-24 md:space-x-48 xl:space-x-96">
+          <Popover placement="bottom" color="secondary" showArrow={true}>
+            <PopoverTrigger>
+              <Button color="secondary">Tips</Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-[17rem]">
+              <div className="px-1 py-2">
+                <div className="text-md">
+                  CO2 reduces the amount of GHG (greenhouse gases). Changing
+                  from vehicles that use gasoline to electric cars, EVs, or
+                  hybrid cars (cars that use engines and electric motors to
+                  work) because cars use fuel and engines to drive. Causes
+                  combustion and releases carbon dioxide up to 150–200 grammes
+                  per kilometer. Using CCS (carbon capture and storage)
+                  technology
+                </div>
+              </div>
+            </PopoverContent>
+          </Popover>
+
+          <Popover placement="bottom" color="success" showArrow={true}>
+            <PopoverTrigger>
+              <Button color="success">Tips</Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-[17rem]">
+              <div className="px-1 py-2">
+                <div className="text-md ">
+                  Using CCS (carbon capture and storage) technology means
+                  capturing and storing carbon. It is a process of capturing
+                  carbon dioxide from the work of industrial sectors or power
+                  plants. which is about to be released into the atmosphere.
+                  Then the carbon dioxide is injected deep underground. To store
+                  it safely, securely, and permanently.
+                </div>
+              </div>
+            </PopoverContent>
+          </Popover>
+        </div>
       </div>
     </div>
   );

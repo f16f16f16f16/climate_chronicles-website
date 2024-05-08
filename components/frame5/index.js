@@ -1,11 +1,18 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { Textarea } from "@nextui-org/react";
+import {
+  Textarea,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  Button,
+} from "@nextui-org/react";
+
+import { animateCCMan, animateTextAreas } from "../gsap";
+import VoiceOver from "../voiceOver";
 
 import CCMan from "../../assets/frame1/gif/CCMan_Stand&speak.webp";
 import FarmFrame from "../../assets/frame5/gif/Farmframe.webp";
-import { animateCCMan, animateTextAreas } from "../gsap";
-import VoiceOver from "../voiceOver";
 
 const Frame5 = () => {
   useEffect(() => {
@@ -35,7 +42,7 @@ const Frame5 = () => {
         <div className="">
           <Image src={FarmFrame} alt="Farmer" className="" />
         </div>
-        <div className="absolute w-[100%] flex fade-textarea mt-2">
+        <div className="flex fade-textarea mt-2">
           <VoiceOver src="/audio-file-two.mp3" />
           <Textarea
             isReadOnly
@@ -55,6 +62,26 @@ const Frame5 = () => {
             methane gas (CH4), such as agriculture and livestock. It is caused by waste from domestic
             animals, such as cattle and buffalo, and farming in flooded areas."
           />
+        </div>
+        <div className="flex items-center justify-center fade-textarea mt-24 space-x-24 md:space-x-48 xl:space-x-96">
+          <Popover placement="bottom" color="secondary" showArrow={true}>
+            <PopoverTrigger>
+              <Button color="secondary">Tips</Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-[17rem]">
+              <div className="px-1 py-2">
+                <div className="text-md">
+                  Using solar energy and wind energy to produce electricity. It
+                  helps reduce greenhouse gases. It also reduces the use of
+                  energy from fossil sources and other natural resources. Where
+                  GHG may be released, adjust the amount of fertiliser or soil
+                  improver correctly and appropriately to the plant's nutrient
+                  needs. Increase the use of organic fertilisers and biological
+                  fertilisers to reduce the use of chemical fertilisers.
+                </div>
+              </div>
+            </PopoverContent>
+          </Popover>
         </div>
       </div>
     </div>

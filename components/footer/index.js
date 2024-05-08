@@ -1,5 +1,5 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -13,8 +13,8 @@ export default function Footer() {
               Climate Chronicles
             </h6>
             <p>
-              Explore &apos;The Climate Chronicles&apos; for impactful stories on
-              environmental origins and effects. Discover tales of change,
+              Explore &apos;The Climate Chronicles&apos; for impactful stories
+              on environmental origins and effects. Discover tales of change,
               resilience, and innovation in our fight for a sustainable planet.
             </p>
           </div>

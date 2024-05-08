@@ -2,6 +2,15 @@ import { useRef, useEffect } from "react";
 import Image from "next/image";
 import { Textarea } from "@nextui-org/react";
 
+import {
+  animateAlien,
+  animateAstronaut,
+  animateCcmanToLanding,
+  animateDekToLanding,
+  animateTextAreas,
+} from "../gsap";
+import VoiceOver from "../voiceOver";
+
 import Climate from "../../assets/frame1/gif/Scene0.webp";
 import Dek from "../../assets/frame1/images/Dek.webp";
 import Cloud1 from "../../assets/frame1/images/Cloud1.webp";
@@ -16,14 +25,6 @@ import Capsule from "../../assets/frame1/gif/TranformationCapsule.webp";
 import Astronaut from "../../assets/frame1/images/Astronaut.webp";
 import Alien from "../../assets/frame1/images/Alien.webp";
 import Warp from "../../assets/frame1/gif/Warp.webp";
-import {
-  animateAlien,
-  animateAstronaut,
-  animateCcmanToLanding,
-  animateDekToLanding,
-  animateTextAreas,
-} from "../gsap";
-import VoiceOver from "../voiceOver";
 
 const generateStars = (count) => {
   const stars = [];
