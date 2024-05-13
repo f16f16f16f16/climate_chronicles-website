@@ -27,8 +27,6 @@ const MapHeat = () => {
     });
 
     map.current.on("load", () => {
-      // Add a geojson point source.
-      // Heatmap layers also work with a vector tile source.
       map.current.addSource("earthquakes", {
         type: "geojson",
         data: "https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson",
@@ -152,7 +150,7 @@ const MapHeat = () => {
       );
     });
   });
-  
+
   return (
     <div>
       <div className="bg-[rgb(35,55,75,0.9)] text-white px-3 py-1.5 font-mono z-10 absolute m-3 rounded">

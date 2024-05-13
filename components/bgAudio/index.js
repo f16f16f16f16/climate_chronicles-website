@@ -1,24 +1,26 @@
-import React, { useState } from "react";
-import ReactHowler from "react-howler";
+import React, { useState } from 'react';
+import ReactHowler from 'react-howler';
 
 const BackgroundAudio = () => {
-  const [playing, setPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  const togglePlay = () => {
-    setPlaying(!playing);
+  const handleTogglePlay = () => {
+    setIsPlaying(!isPlaying);
   };
 
   return (
     <div className="fixed bottom-5 right-5 z-50">
       <button
-        onClick={togglePlay}
+        onClick={handleTogglePlay}
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+        aria-pressed={isPlaying}
+        aria-label={isPlaying ? "Pause background music" : "Play background music"}
       >
-        {playing ? "Pause Music" : "Play Music"}
+        {isPlaying ? "Pause Music" : "Play Music"}
       </button>
       <ReactHowler
         src="/PCIII-Remembering-Past-Everything.mp3"
-        playing={playing}
+        playing={isPlaying}
         loop={true}
         volume={1}
       />

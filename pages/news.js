@@ -2,30 +2,6 @@ import { useState, useEffect, useMemo } from 'react';
 import { Pagination } from '@nextui-org/react';
 import Navibar from '../components/navbar/index';
 
-const Article = ({ article }) => (
-  <div className="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-500 ease-in-out">
-    <img
-      src={article.urlToImage}
-      alt={article.title}
-      className="w-full h-48 object-cover"
-    />
-    <div className="bg-white p-6">
-      <h2 className="font-semibold text-lg text-black mb-2">
-        {article.title}
-      </h2>
-      <p className="text-gray-600 mb-4">{article.description}</p>
-      <a
-        href={article.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-blue-500 hover:text-blue-700 transition-colors duration-300"
-      >
-        Read more
-      </a>
-    </div>
-  </div>
-);
-
 const News = ({ articles }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 12;
@@ -41,6 +17,30 @@ const News = ({ articles }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentPage]);
+
+  const Article = ({ article }) => (
+    <div className="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-500 ease-in-out">
+      <img
+        src={article.urlToImage}
+        alt={article.title}
+        className="w-full h-48 object-cover"
+      />
+      <div className="bg-white p-6">
+        <h2 className="font-semibold text-lg text-black mb-2">
+          {article.title}
+        </h2>
+        <p className="text-gray-600 mb-4">{article.description}</p>
+        <a
+          href={article.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 hover:text-blue-700 transition-colors duration-300"
+        >
+          Read more
+        </a>
+      </div>
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-gray-50">

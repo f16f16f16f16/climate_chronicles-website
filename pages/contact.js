@@ -11,73 +11,67 @@ import {
   Input,
   Textarea,
 } from "@nextui-org/react";
-
 import Navibar from "../components/navbar/index";
 
+// Custom hook for input management
+const useInput = (initialValue) => {
+  const [value, setValue] = useState(initialValue);
+  const [isInvalid, setIsInvalid] = useState(false);
+
+  const handleChange = (e) => {
+    const newValue = e.target.value;
+    setValue(newValue);
+    setIsInvalid(!newValue);
+  };
+
+  return [value, handleChange, isInvalid, setIsInvalid];
+};
+
 const Contact = () => {
-  const form = useRef(); // Reference for the form for EmailJS
+  const form = useRef();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-  const [email, setEmail] = useState("");
-  const [contactName, setContactName] = useState("");
-  const [isEmailInvalid, setEmailInvalid] = useState(false);
-  const [isContactNameInvalid, setContactNameInvalid] = useState(false);
+  const [email, handleEmailChange, isEmailInvalid, setEmailInvalid] =
+    useInput("");
+  const [
+    contactName,
+    handleContactNameChange,
+    isContactNameInvalid,
+    setContactNameInvalid,
+  ] = useInput("");
   const [modalMessage, setModalMessage] = useState("");
-
-  // Function to handle email change
-  const handleEmailChange = (e) => {
-    const value = e.target.value;
-    setEmail(value);
-    // Update isEmailInvalid state based on whether the input is empty
-    setEmailInvalid(!value);
-  };
-
-  // Function to handle contact name change
-  const handleContactNameChange = (e) => {
-    const value = e.target.value;
-    setContactName(value);
-    // Update isContactNameInvalid state based on whether the input is empty
-    setContactNameInvalid(!value);
-  };
 
   // Function to handle form submission
   const handleSubmit = () => {
-    let hasError = false;
-
-    if (!email) {
-      setEmailInvalid(true);
-      hasError = true;
-    }
-
-    if (!contactName) {
-      setContactNameInvalid(true);
-      hasError = true;
-    }
+    setEmailInvalid(!email);
+    setContactNameInvalid(!contactName);
+    const hasError = !email || !contactName;
 
     if (hasError) {
       setModalMessage(
         "Missing information. Please check your entries and try again."
       );
       onOpen();
-    } else {
-      emailjs
-        .sendForm(
-          process.env.NEXT_PUBLIC_EMAIL_SERVICE,
-          process.env.NEXT_PUBLIC_EMAIL_TEMPLATE,
-          form.current,
-          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-        )
-        .then(
-          (result) => {
-            setModalMessage("Thank you! Your information has been submitted.");
-            onOpen();
-          },
-          (error) => {
-            setModalMessage("Failed to send email. Please try again later.");
-            onOpen();
-          }
-        );
+      return;
     }
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE,
+        form.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setModalMessage("Thank you! Your information has been submitted.");
+          onOpen();
+        },
+        () => {
+          setModalMessage("Failed to send email. Please try again later.");
+          onOpen();
+        }
+      );
   };
 
   return (
@@ -85,14 +79,13 @@ const Contact = () => {
       <Navibar />
       <div>
         <div className="flex flex-col items-center justify-center">
-          <p className="font-bold text-red-500 text-xs mt-10 md:text-sm ">
+          <p className="font-bold text-red-500 text-xs mt-10 md:text-sm">
             FEEL FREE TO CONTACT US
           </p>
           <p className="font-bold text-black text-2xl py-2 md:text-3xl xl:text-4xl">
             Feedback Form
           </p>
         </div>
-
         <form
           ref={form}
           className="flex flex-col items-center justify-center space-y-8 py-10"
@@ -106,7 +99,7 @@ const Contact = () => {
             className="max-w-xs md:max-w-lg xl:max-w-xl"
             value={email}
             onChange={handleEmailChange}
-            name="email" // for EmailJS
+            name="email"
           />
           <Input
             isRequired
@@ -117,7 +110,7 @@ const Contact = () => {
             className="max-w-xs md:max-w-lg xl:max-w-xl"
             value={contactName}
             onChange={handleContactNameChange}
-            name="contactName" // for EmailJS
+            name="contactName"
           />
           <Textarea
             label="Tell us !!!"
@@ -128,38 +121,37 @@ const Contact = () => {
               base: "max-w-xs md:max-w-lg xl:max-w-xl",
               input: "resize-y min-h-[120px]",
             }}
-            name="message" // for EmailJS
+            name="message"
           />
           <Button
             className="w-28 md:w-36 xl:w-40"
-            onPress={() => {
-              handleSubmit();
-            }}
+            onPress={handleSubmit}
             radius="full"
             color="primary"
           >
             Submit
           </Button>
-          <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
-            <ModalContent>
-              {(onClose) => (
-                <>
-                  <ModalHeader className="flex flex-col gap-1 text-black">
-                    Notice
-                  </ModalHeader>
-                  <ModalBody>
-                    <p className="text-black">{modalMessage}</p>
-                  </ModalBody>
-                  <ModalFooter>
-                    <Button color="danger" variant="light" onPress={onClose}>
-                      Close
-                    </Button>
-                  </ModalFooter>
-                </>
-              )}
-            </ModalContent>
-          </Modal>
         </form>
+
+        <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+          <ModalContent>
+            {(onClose) => (
+              <>
+                <ModalHeader className="flex flex-col gap-1 text-black">
+                  Notice
+                </ModalHeader>
+                <ModalBody>
+                  <p className="text-black">{modalMessage}</p>
+                </ModalBody>
+                <ModalFooter>
+                  <Button color="danger" variant="light" onPress={onClose}>
+                    Close
+                  </Button>
+                </ModalFooter>
+              </>
+            )}
+          </ModalContent>
+        </Modal>
       </div>
     </div>
   );

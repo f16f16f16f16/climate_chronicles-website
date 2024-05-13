@@ -4,31 +4,36 @@ import React, { useState } from "react";
 import ReactHowler from "react-howler";
 
 const VoiceOver = ({ src, buttonColor = "primary" }) => {
-  const [playing, setPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  const togglePlay = () => {
-    setPlaying(!playing);
+  const handleTogglePlay = () => {
+    setIsPlaying(prevIsPlaying => !prevIsPlaying);
   };
 
-  const handleOnEnd = () => {
-    setPlaying(false);
+  const handleAudioEnd = () => {
+    setIsPlaying(false);
   };
 
   return (
-    <div className="">
+    <div>
       <Button
-        onClick={togglePlay}
+        onClick={handleTogglePlay}
         isIconOnly
         color={buttonColor}
-        aria-label="Toggle audio"
+        aria-label={isPlaying ? "Stop audio" : "Play audio"}
       >
-        {playing ? (
+        {isPlaying ? (
           <SpeakerXMarkIcon className="h-5 w-5" />
         ) : (
           <SpeakerWaveIcon className="h-5 w-5" />
         )}
       </Button>
-      <ReactHowler src={src} playing={playing} onEnd={handleOnEnd} volume={5} />
+      <ReactHowler
+        src={src}
+        playing={isPlaying}
+        onEnd={handleAudioEnd}
+        volume={1}
+      />
     </div>
   );
 };
