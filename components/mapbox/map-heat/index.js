@@ -12,7 +12,7 @@ const MapHeat = () => {
   const [zoom, setZoom] = useState(2);
 
   useEffect(() => {
-    if (map.current) return; // initialize map only once
+    if (map.current) return;
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/outdoors-v12",

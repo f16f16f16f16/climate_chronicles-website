@@ -24,6 +24,7 @@ import {
   Scale,
 } from "./icons.js";
 import { Logo } from "./logo";
+import { Logo2 } from "./logo2";
 
 export default function NaviBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -52,7 +53,7 @@ export default function NaviBar() {
     <Navbar className="bg-transparent" onMenuOpenChange={setIsMenuOpen}>
       <div className="hidden sm:flex xl:fixed xl:left-6">
         <Link href="/">
-          <Logo />
+          <Logo2 />
         </Link>
       </div>
       <NavbarContent className="flex justify-between items-center w-full">

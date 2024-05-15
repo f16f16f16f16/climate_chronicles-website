@@ -23,7 +23,6 @@ import SF6_2 from "../../assets/frame2/images/gasSeparate/SF6_2.webp";
 
 const Frame2 = () => {
   const ccmanRef = useRef(null);
-  // Initialize state as an object where keys are image set identifiers and values are booleans
   const [isActive, setIsActive] = useState({
     CH4: false,
     CO2: false,

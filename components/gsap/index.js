@@ -45,11 +45,11 @@ export const animateCCMan = () => {
 
 export const ufoZigzag = () => {
   const ufoPath = [
-    { x: -100, y: 0 }, // start outside the screen on the left
-    { x: window.innerWidth * 0.25, y: 100 }, // move to 1/4 of the screen width and down
-    { x: window.innerWidth * 0.5, y: -100 }, // move to 1/2 of the screen width and up
-    { x: window.innerWidth * 0.75, y: 100 }, // move to 3/4 of the screen width and down
-    { x: window.innerWidth, y: -100 }, // exit the screen on the right and up
+    { x: -100, y: 0 },
+    { x: window.innerWidth * 0.25, y: 100 },
+    { x: window.innerWidth * 0.5, y: -100 },
+    { x: window.innerWidth * 0.75, y: 100 },
+    { x: window.innerWidth, y: -100 },
   ];
 
   // Animate UFO separately as before
