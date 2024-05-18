@@ -12,7 +12,7 @@ const courierPrime = Courier_Prime({   weight: '400', subsets: ['latin'] })
 
 function MyApp({ Component, pageProps }) {
   return (
-    <NextUIProvider className={`bg-blue-200 ${courierPrime.className}`}>
+    <NextUIProvider className={`bg-gray-50 ${courierPrime.className}`}>
       <Head>
         <title>Climate Chronicles - Stories of Origin &amp; Impact in Our Environment.</title>
         <meta name="description" content="Explore 'The Climate Chronicles' for impactful stories on environmental origins and effects. Discover tales of change, resilience, and innovation in our fight for a sustainable planet." />
