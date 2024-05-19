@@ -82,7 +82,7 @@ export default function NaviBar() {
           </Link>
         </NavbarItem>
 
-        <Dropdown className="bg-blue-200 text-black">
+        <Dropdown className="bg-neutral-50 text-black">
           <NavbarItem className="basis-1/4 flex justify-center">
             <DropdownTrigger>
               <Button
