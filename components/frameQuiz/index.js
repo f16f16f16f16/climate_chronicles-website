@@ -223,71 +223,81 @@ const FrameQuiz = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center py-10 md:py-20 space-y-4 md:space-x-4">
-      <div className="flex flex-row justify-center items-center w-full md:w-auto">
-        <div className="w-1/2 ml-12">
-          <Image src={CCManImg} alt="CCMan" />
-        </div>
-        <div className="w-[70%] px-4">
-          <Image src={GodImg} alt="God" />
-        </div>
+    <div className="flex flex-col md:flex-row justify-center items-center py-8 md:py-20 space-y-4 md:space-x-4">
+      <div className="hidden md:block w-full md:w-1/4 flex justify-center">
+        <Image src={GodImg} alt="God" />
       </div>
-      {currentQuestion !== -1 ? (
-        <div className="w-full flex flex-col items-center px-4">
-          <p className="text-xl md:text-2xl xl:text-3xl font-semibold mb-6 md:mb-10 xl:mb-12 text-center text-black">
-            {questions[currentQuestion].questionText}
-          </p>
-          {!showAnswers &&
-            questions[currentQuestion].answerOptions.map(
-              (answerOption, index) => (
-                <button
-                  key={index}
-                  className="w-full md:max-w-xs py-2 px-4 bg-neutral-100 text-black text-xs md:text-xl xl:text-2xl rounded hover:bg-slate-200 transition duration-300"
-                  onClick={() => handleAnswerOptionClick(answerOption)}
+      <div className="w-full md:w-1/2 flex flex-col items-center px-4">
+        {currentQuestion !== -1 ? (
+          <>
+            <div className="bg-[#EEF1F5] rounded-lg drop-shadow-lg p-4 mb-6">
+              <p className="text-2xl md:text-3xl xl:text-4xl font-semibold text-center text-black">
+                Question {currentQuestion + 1}
+              </p>
+            </div>
+            <div className="bg-[#EEF1F5] rounded-lg drop-shadow-lg p-4 mb-6 md:mb-10 xl:mb-12 ">
+              <p className="text-xl md:text-2xl xl:text-3xl font-semibold text-center text-black">
+                {questions[currentQuestion].questionText}
+              </p>
+            </div>
+            {!showAnswers &&
+              questions[currentQuestion].answerOptions.map(
+                (answerOption, index) => (
+                  <button
+                    key={index}
+                    className="w-3/4 md:w-full xl:w-3/4 py-2 px-4 mb-6 bg-[#EEF1F5] text-black text-sm md:text-xl xl:text-2xl rounded-lg drop-shadow-xl hover:bg-slate-200 transition duration-300"
+                    onClick={() => handleAnswerOptionClick(answerOption)}
+                  >
+                    {answerOption.answerText}
+                  </button>
+                )
+              )}
+            {showAnswers && (
+              <>
+                <p
+                  className={`${
+                    isAnswerCorrect ? "text-green-500" : "text-red-500"
+                  } py-4 text-md md:text-2xl xl:text-3xl text-center`}
                 >
-                  {answerOption.answerText}
+                  {isAnswerCorrect ? "Correct!" : "Wrong!"}
+                </p>
+                <p className="text-amber-700 pb-4 text-md md:text-xl xl:text-2xl">
+                  {explanation}
+                </p>
+                <button
+                  className="w-full md:max-w-xs py-2 px-4 bg-blue-500 text-white text-sm md:text-xl xl:text-2xl rounded hover:bg-blue-700 transition duration-300"
+                  onClick={nextQuestion}
+                >
+                  {currentQuestion === questions.length - 1
+                    ? "Show Scores"
+                    : "Next Question"}
                 </button>
-              )
+              </>
             )}
-          {showAnswers && (
-            <>
-              <p
-                className={`${
-                  isAnswerCorrect ? "text-green-500" : "text-red-500"
-                } py-4 text-sm md:text-xl xl:text-2xl`}
-              >
-                {isAnswerCorrect ? "Correct!" : "Wrong!"}
-              </p>
-              <p className="text-amber-700 pb-4 text-sm md:text-lg">
-                {explanation}
-              </p>
-              <button
-                className="w-full md:max-w-xs py-2 px-4 bg-blue-500 text-white text-sm md:text-xl xl:text-2xl rounded hover:bg-blue-700 transition duration-300"
-                onClick={nextQuestion}
-              >
-                {currentQuestion === questions.length - 1
-                  ? "Show Scores"
-                  : "Next Question"}
-              </button>
-            </>
-          )}
-        </div>
-      ) : (
-        <div className="w-full md:w-3/4 px-4 py-10 text-center">
-          <p className="text-lg md:text-2xl xl:text-3xl font-bold mb-3 text-blue-600">
-            Quiz Complete!
-          </p>
-          <p className="text-md md:text-xl font-semibold text-black">
-            {explanation}
-          </p>
-          <button
-            className="mt-4 px-6 py-2 bg-green-500 text-white rounded hover:bg-green-700 transition duration-300"
-            onClick={resetQuiz}
-          >
-            Restart Quiz
-          </button>
-        </div>
-      )}
+          </>
+        ) : (
+          <div className="w-full px-4 py-10 text-center">
+            <p className="text-xl md:text-3xl xl:text-4xl font-bold mb-3 text-blue-600">
+              Quiz Complete!
+            </p>
+            <p className="text-md md:text-xl xl:text-2xl font-semibold text-black">
+              {explanation}
+            </p>
+            <button
+              className="mt-4 px-6 py-2 bg-green-500 text-white rounded hover:bg-green-700 transition duration-300"
+              onClick={resetQuiz}
+            >
+              Restart Quiz
+            </button>
+          </div>
+        )}
+      </div>
+      <div className="hidden md:block w-full md:w-1/4 flex justify-center">
+        <Image src={CCManImg} alt="CCMan" />
+      </div>
+      <div className="block md:hidden w-2/4 flex justify-center mt-4">
+        <Image src={GodImg} alt="God" />
+      </div>
     </div>
   );
 };
