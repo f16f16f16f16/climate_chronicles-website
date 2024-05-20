@@ -26,7 +26,7 @@ const Frame4 = () => {
         <div className="flex">
           <Image src={CCMan} alt="CCMan" className="w-[20%] ccman-animation" />
           <div className="flex fade-textarea">
-            <VoiceOver src="/audio-file-two.mp3" />
+            <VoiceOver src="/audio/frame4/Do_u_c_that.m4a" />
             <Textarea
               isReadOnly
               disableAutosize
@@ -40,7 +40,7 @@ const Frame4 = () => {
         </div>
         <Image src={BigFrame} alt="BigFrame" />
         <div className="flex fade-textarea mt-2">
-          <VoiceOver src="/audio-file-two.mp3" />
+          <VoiceOver src="/audio/frame4/Wildfires.m4a" />
           <Textarea
             isReadOnly
             color="primary"
@@ -62,7 +62,7 @@ const Frame4 = () => {
           />
         </div>
         <div className="flex fade-textarea mt-2">
-          <VoiceOver src="/audio-file-two.mp3" />
+          <VoiceOver src="/audio/frame4/And_the_consequences.m4a" />
           <Textarea
             isReadOnly
             color="primary"

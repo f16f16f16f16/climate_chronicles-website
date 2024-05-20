@@ -82,7 +82,7 @@ const Frame2 = () => {
         <div className="space-y-48 md:space-y-[34rem] xl:space-y-[60rem]">
           <div className="flex flex-col items-center justify-center mt-12">
             <div className="flex fade-textarea absolute left-0 md:left-20 xl:left-32 2xl:left-48 -mt-[100%] md:-mt-[75%] xl:-mt-[70%] 2xl:-mt-[50%] w-[40%] md:w-[30%] xl:w-[20%]">
-              <VoiceOver src="/audio-file-two.mp3" />
+              <VoiceOver src="/audio/frame2/What_is_this.m4a" />
               <Textarea
                 isReadOnly
                 disableAutosize
@@ -112,10 +112,10 @@ const Frame2 = () => {
               increase rapidly."
             />
             <div className={`${zIndexes.CO2 === 10 ? "z-10" : "z-0"}`}>
-              <VoiceOver src="/audio/frame2/CO2.m4a" />
+              <VoiceOver src="/audio/frame2/co2.m4a" />
             </div>
             <button
-              className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
+              className="absolute flex -space-x-[1%] scale-[.75] md:scale-[.55] xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("CO2")}
             >
               <Image
@@ -136,7 +136,7 @@ const Frame2 = () => {
           </div>
           <div className="flex flex-col items-center justify-center">
             <div className="flex fade-textarea absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[100%] md:-mt-[90%] xl:-mt-[70%] 2xl:-mt-[50%] w-[40%] md:w-[30%] xl:w-[20%]">
-              <VoiceOver src="/audio-file-two.mp3" />
+              <VoiceOver src="/audio/frame2/Oh_wow.m4a" />
               <Textarea
                 isReadOnly
                 disableAutosize
@@ -161,10 +161,10 @@ const Frame2 = () => {
               than carbon dioxide."
             />
             <div className={`${zIndexes.CH4 === 10 ? "z-10" : "z-0"}`}>
-              <VoiceOver src="/audio/frame2/CH4.m4a" />
+              <VoiceOver src="/audio/frame2/ch4.m4a" />
             </div>
             <button
-              className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
+              className="absolute flex -space-x-[1%] scale-[.75] md:scale-[.55] xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("CH4")}
             >
               <Image
@@ -185,7 +185,7 @@ const Frame2 = () => {
           </div>
           <div className="flex flex-col items-center justify-center">
             <div className="flex fade-textarea absolute left-0 md:left-20 xl:left-32 2xl:left-48 -mt-[100%] md:-mt-[90%] xl:-mt-[70%] 2xl:-mt-[50%] w-[40%] md:w-[30%] xl:w-[20%]">
-              <VoiceOver src="/audio-file-two.mp3" />
+              <VoiceOver src="/audio/frame2/Why_does_this_place.m4a" />
               <Textarea
                 isReadOnly
                 disableAutosize
@@ -220,10 +220,10 @@ const Frame2 = () => {
               heat in the atmosphere."
             />
             <div className={`${zIndexes.N2O === 10 ? "z-10" : "z-0"}`}>
-              <VoiceOver src="/audio/frame2/N2O.m4a" />
+              <VoiceOver src="/audio/frame2/n2o.m4a" />
             </div>
             <button
-              className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
+              className="absolute flex -space-x-[1%] scale-[.75] md:scale-[.55] xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("N2O")}
             >
               <Image
@@ -243,16 +243,6 @@ const Frame2 = () => {
             </button>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <div className="flex fade-textarea absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[100%] md:-mt-[90%] xl:-mt-[70%] 2xl:-mt-[50%] w-[40%] md:w-[30%] xl:w-[20%]">
-              <VoiceOver src="/audio-file-two.mp3" />
-              <Textarea
-                isReadOnly
-                disableAutosize
-                color="primary"
-                label="CCMan"
-                defaultValue="Why does it feel so stifling and hot here?"
-              />
-            </div>
             <Textarea
               isReadOnly
               variant="bordered"
@@ -264,10 +254,10 @@ const Frame2 = () => {
               foam of a substance for fire extinguishing. They have a very high heat-trapping potential."
             />
             <div className={`${zIndexes.HFCs === 10 ? "z-10" : "z-0"}`}>
-              <VoiceOver src="/audio-file-two.mp3" />
+              <VoiceOver src="/audio/frame2/HFCS.m4a" />
             </div>
             <button
-              className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
+              className="absolute flex -space-x-[1%] scale-[.75] md:scale-[.55] xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("HFCs")}
             >
               <Image
@@ -287,16 +277,6 @@ const Frame2 = () => {
             </button>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <div className="flex fade-textarea absolute left-0 md:left-20 xl:left-32 2xl:left-48 -mt-[100%] md:-mt-[90%] xl:-mt-[70%] 2xl:-mt-[50%] w-[40%] md:w-[30%] xl:w-[20%]">
-              <VoiceOver src="/audio-file-two.mp3" />
-              <Textarea
-                isReadOnly
-                disableAutosize
-                color="primary"
-                label="CCMan"
-                defaultValue="There are several gases here that can both destroy greenhouse gases and contribute to increased atmospheric heat."
-              />
-            </div>
             <Textarea
               isReadOnly
               variant="bordered"
@@ -308,10 +288,10 @@ const Frame2 = () => {
               greenhouse effect than carbon dioxide."
             />
             <div className={`${zIndexes.PFCs === 10 ? "z-10" : "z-0"}`}>
-              <VoiceOver src="/audio-file-two.mp3" />
+              <VoiceOver src="/audio/frame2/pfcs.m4a" />
             </div>
             <button
-              className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
+              className="absolute flex -space-x-[1%] scale-[.75] md:scale-[.55] xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("PFCs")}
             >
               <Image
@@ -331,16 +311,6 @@ const Frame2 = () => {
             </button>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <div className="flex fade-textarea absolute right-0 md:right-20 xl:right-32 2xl:right-48 -mt-[100%] md:-mt-[90%] xl:-mt-[70%] 2xl:-mt-[50%] w-[40%] md:w-[30%] xl:w-[20%]">
-              <VoiceOver src="/audio-file-two.mp3" />
-              <Textarea
-                isReadOnly
-                disableAutosize
-                color="primary"
-                label="CCMan"
-                defaultValue="Before reaching the Earth's surface, we have to pass through multiple atmospheric layers and encounter gases that are destroying greenhouse gases."
-              />
-            </div>
             <Textarea
               isReadOnly
               variant="bordered"
@@ -355,10 +325,10 @@ const Frame2 = () => {
               type."
             />
             <div className={`${zIndexes.SF6 === 10 ? "z-10" : "z-0"}`}>
-              <VoiceOver src="/audio-file-two.mp3" />
+              <VoiceOver src="/audio/frame2/sf6.m4a" />
             </div>
             <button
-              className="absolute flex -space-x-[1%] scale-[.75] md:scale-50 xl:scale-100 overflow-hidden"
+              className="absolute flex -space-x-[1%] scale-[.75] md:scale-[.55] xl:scale-100 overflow-hidden"
               onClick={() => handleImageClick("SF6")}
             >
               <Image

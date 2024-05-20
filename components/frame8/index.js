@@ -21,7 +21,7 @@ const Frame8 = () => {
       <div className="flex items-center justify-center py-10">
         <Image src={CCMan} alt="CCMan" className="w-[20%]" />
         <div className="flex fade-textarea w-[50%]">
-          <VoiceOver src="/audio/frame8/1.m4a" />
+          <VoiceOver src="/audio/frame8/I_think_we_need.m4a" />
           <Textarea
             isReadOnly
             disableAutosize
@@ -41,7 +41,7 @@ const Frame8 = () => {
             alt="Watering"
           />
           <div className="flex fade-textarea py-4 w-[100%] xl:w-[75%]">
-            <VoiceOver src="/audio/frame8/2.m4a" />
+            <VoiceOver src="/audio/frame8/Trees_are_very.m4a" />
             <Textarea
               isReadOnly
               disableAutosize
@@ -59,7 +59,7 @@ const Frame8 = () => {
             alt="Driving"
           />
           <div className="flex fade-textarea py-4 w-[100%] xl:w-[75%]">
-            <VoiceOver src="/audio/frame8/3.m4a" />
+            <VoiceOver src="/audio/frame8/Human_transportation.m4a" />
             <Textarea
               isReadOnly
               disableAutosize
@@ -77,7 +77,7 @@ const Frame8 = () => {
             alt="Trashing"
           />
           <div className="flex fade-textarea py-4 w-[100%] xl:w-[75%]">
-            <VoiceOver src="/audio/frame8/4.m4a" />
+            <VoiceOver src="/audio/frame8/Garbage_separation.m4a" />
             <Textarea
               isReadOnly
               disableAutosize
@@ -95,7 +95,7 @@ const Frame8 = () => {
             alt="Shopping"
           />
           <div className="flex fade-textarea py-4 w-[100%] xl:w-[75%]">
-            <VoiceOver src="/audio/frame8/5.m4a" />
+            <VoiceOver src="/audio/frame8/The_cloth_bag.m4a" />
             <Textarea
               isReadOnly
               disableAutosize

@@ -28,7 +28,7 @@ const Frame6 = () => {
           <div className="flex">
             <Image src={CCMan} alt="CCMan" className="w-[20%] ccman-animation" />
             <div className="flex fade-textarea">
-              <VoiceOver src="/audio-file-two.mp3" />
+              <VoiceOver src="/audio/frame6/In_addition_mining.m4a" />
               <Textarea
                 isReadOnly
                 disableAutosize
@@ -47,7 +47,7 @@ const Frame6 = () => {
             className="w-1/3 -mt-[24%] ml-[60%]"
           />
           <div className="flex fade-textarea mt-8 md:mt-14 xl:mt-24 2xl:mt-32">
-            <VoiceOver src="/audio-file-two.mp3" />
+            <VoiceOver src="/audio/frame6/Carbon_dioxide.m4a" />
             <Textarea
               isReadOnly
               color="primary"

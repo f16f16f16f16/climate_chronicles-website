@@ -99,7 +99,7 @@ const Frame1 = () => {
           >
             <div className="relative">
               <div className="flex fade-textarea absolute top-0 w-[40%] ">
-                <VoiceOver src="/audio/frame1/1.m4a" />
+                <VoiceOver src="/audio/frame1/God_i_want_to _know.m4a" />
                 <Textarea
                   isReadOnly
                   disableAutosize
@@ -112,7 +112,7 @@ const Frame1 = () => {
                 />
               </div>
               <div className="flex fade-textarea absolute top-24 right-0 w-[40%] ">
-                <VoiceOver src="/audio/frame1/2.m4a" buttonColor="warning" />
+                <VoiceOver src="/audio/frame1/You_still_dont _know.m4a" buttonColor="warning" />
                 <Textarea
                   isReadOnly
                   disableAutosize
@@ -134,7 +134,7 @@ const Frame1 = () => {
                 alt="God"
               />
               <div className="flex fade-textarea absolute bottom-0 w-[40%] ">
-                <VoiceOver src="/audio/frame1/3.m4a" />
+                <VoiceOver src="/audio/frame1/I_don’t_know_yet.m4a" />
                 <Textarea
                   isReadOnly
                   disableAutosize
@@ -145,7 +145,7 @@ const Frame1 = () => {
                 />
               </div>
               <div className="flex fade-textarea absolute right-0 pt-2 w-[40%] ">
-                <VoiceOver src="/audio/frame1/4.m4a" buttonColor="warning" />
+                <VoiceOver src="/audio/frame1/Then_i_ll_send_you.m4a" buttonColor="warning" />
                 <Textarea
                   isReadOnly
                   disableAutosize
@@ -166,7 +166,7 @@ const Frame1 = () => {
 
         <div className="relative z-30 -bottom-10 md:-bottom-24 xl:-bottom-32">
           <div className="flex fade-textarea absolute right-24 md:right-48 xl:right-72 w-36 md:w-64 xl:w-96">
-            <VoiceOver src="/audio-file-two.mp3" buttonColor="warning" />
+            <VoiceOver src="/audio/frame1/But_before_going_down.m4a" buttonColor="warning" />
             <Textarea
               isReadOnly
               className="text-black"

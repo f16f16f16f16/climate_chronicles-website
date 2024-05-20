@@ -66,7 +66,7 @@ const Frame3 = () => {
         <Image src={CCMan} alt="CCMan" className="absolute w-[20%] ccman-animation" />
         <div className="ml-[20%] md:ml-[30%] xl:ml-[30%]">
           <div className="flex fade-textarea ">
-            <VoiceOver src="/audio-file-two.mp3" />
+            <VoiceOver src="/audio/frame3/In_addition.m4a" />
             <Textarea
               isReadOnly
               disableAutosize
@@ -81,7 +81,7 @@ const Frame3 = () => {
             />
           </div>
           <div className="flex mt-12 fade-textarea xl:w-[230%]">
-            <VoiceOver src="/audio-file-two.mp3" />
+            <VoiceOver src="/audio/frame3/Here_ccman.m4a" />
             <Textarea
               isReadOnly
               className=""
@@ -138,7 +138,7 @@ const Frame3 = () => {
           </div>
         </div>
         <div className="flex fade-textarea mt-2">
-          <VoiceOver src="/audio-file-two.mp3" />
+          <VoiceOver src="/audio/frame3/Whether.m4a" />
           <Textarea
             isReadOnly
             className=""
@@ -153,7 +153,7 @@ const Frame3 = () => {
           />
         </div>
         <div className="flex fade-textarea mt-2">
-          <VoiceOver src="/audio-file-two.mp3" />
+          <VoiceOver src="/audio/frame3/Buring_fuels.m4a" />
           <Textarea
             isReadOnly
             className=""
@@ -169,7 +169,7 @@ const Frame3 = () => {
           />
         </div>
         <div className="flex fade-textarea mt-2">
-          <VoiceOver src="/audio-file-two.mp3" />
+          <VoiceOver src="/audio/frame3/The_rotation.m4a" />
           <Textarea
             isReadOnly
             className=""
