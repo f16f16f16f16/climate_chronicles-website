@@ -75,7 +75,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-neutral-200">
+    <div className="bg-neutral-300">
       <Navibar />
       <div>
         <div className="flex flex-col items-center justify-center">
