@@ -32,7 +32,7 @@ const VoiceOver = ({ src, buttonColor = "primary" }) => {
         src={src}
         playing={isPlaying}
         onEnd={handleAudioEnd}
-        volume={1}
+        volume={7}
       />
     </div>
   );
