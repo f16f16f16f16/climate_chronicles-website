@@ -180,7 +180,7 @@ const questions = [
     answerOptions: [
       {
         answerText: "Using renewable energy",
-        isCorrect: false,
+        isCorrect: true,
         explanation:
           "Using renewable energy, such as energy derived from solar or wind energy, it will help reduce energy use from sources that emit GHG.",
       },
@@ -192,7 +192,7 @@ const questions = [
       },
       {
         answerText: "Using chemical fertilizers",
-        isCorrect: true,
+        isCorrect: false,
         explanation:
           "The use of chemical fertilizers may have an impact on GHG generation, especially in the production process.",
       },
