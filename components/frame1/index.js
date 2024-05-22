@@ -103,13 +103,16 @@ const Frame1 = () => {
                 <Textarea
                   isReadOnly
                   disableAutosize
-                  className="text-black"
+                  className="text-black shadow-xl"
                   color="primary"
                   label="CCMan"
                   defaultValue="God, I want to know why the
                   weather in the human world is so
                   strange"
                 />
+                <p className="text-black shadow-xl bg-neutral-200 p-4 rounded-lg overflow-auto hidden">God, I want to know why the
+                  weather in the human world is so
+                  strange</p>
               </div>
               <div className="flex fade-textarea absolute top-24 right-0 w-[40%] ">
                 <VoiceOver src="/audio/frame1/You_still_dont _know.m4a" buttonColor="warning" />
@@ -300,10 +303,10 @@ const Frame1 = () => {
             <Image src={Earth} className="w-[75%] slow-rotate" alt="Earth" />
           </div>
 
-          <div className="z-20 relative flex justify-center items-center">
+          <div className="z-20 p-[10%]  relative flex justify-center items-center">
             <Image
               src={Warp}
-              className="w-[60%] md:w-[50%]"
+              className="absolute w-[60%] md:w-[50%]"
               ref={landing2Ref}
               alt="Black hole"
             />
